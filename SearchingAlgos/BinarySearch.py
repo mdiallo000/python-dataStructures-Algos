@@ -17,3 +17,28 @@ def binary_search(arr, target):
 
 
 print(binary_search([4, 5, 75, 82, 92, 105, 230], 105))
+
+
+def recursive_binary_search(array, x, low, high):
+    if high >= low:
+
+        mid = low + (high - low)//2
+
+        # If found at mid, then return it
+        if array[mid] == x:
+            return mid
+
+        # Search the left half
+        elif array[mid] > x:
+            return recursive_binary_search(array, x, low, mid-1)
+
+        # Search the right half
+        else:
+            return recursive_binary_search(array, x, mid + 1, high)
+
+    else:
+        return -1
+
+
+print(recursive_binary_search(
+    [4, 5, 75, 82, 92, 105, 230], 105, 0, len([4, 5, 75, 82, 92, 105, 230])))
