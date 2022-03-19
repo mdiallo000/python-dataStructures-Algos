@@ -16,3 +16,16 @@ class Solution:
         for k, v in myDict.items():
             if v == 1:
                 return k
+
+#  This methdo rather than giving duplicates one value and non-duplicates another value, instead we delete any elem that we have already encounter and return the one non-dup in our dictionary
+
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        myDict = {}
+        for elem in nums:
+            if elem in myDict:
+                myDict.pop(elem)
+            else:
+                myDict[elem] = 1
+        return list(myDict.keys())[0]
