@@ -1,4 +1,6 @@
+import string
 # Binary search is a higly efficient searching Algo that will find a target witing a array. The array must be sorted or the algo will not work since it relies on comparing the elements
+
 
 def binary_search(arr, target):
     left = 0
@@ -40,5 +42,8 @@ def recursive_binary_search(array, x, low, high):
         return -1
 
 
-print(recursive_binary_search(
-    [4, 5, 75, 82, 92, 105, 230], 105, 0, len([4, 5, 75, 82, 92, 105, 230])))
+print(binary_search(list(string.ascii_lowercase), 'a'))
+
+
+# class Solution:
+#     def nextGreatestLetter(self, letters: List[str], target: str) -> str:

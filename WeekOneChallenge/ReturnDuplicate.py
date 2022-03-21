@@ -12,3 +12,4 @@ class Solution:
                 mySet.add(elem)
             else:
                 return elem
+        
