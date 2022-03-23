@@ -1,4 +1,5 @@
 from logging import NullHandler
+from traceback import print_tb
 
 
 class Node:
@@ -18,6 +19,7 @@ class MylinkedList:
         if self.head is None:
             self.head = newNode
             self.tail = newNode
+            self.length += 1
         else:
             self.tail.next = newNode
             self.tail = newNode
@@ -52,10 +54,18 @@ class MylinkedList:
             self.head = self.head.next
             self.length -= 1
 
+    def print_list(self):
+
+        cur = self.head
+
+        while cur:
+            print(cur.value)
+            cur = cur.next
+
 
 data = MylinkedList()
 data.Append(2554)
 data.Append(0.35)
 data.Append(7)
 data.Append(45)
-print(data.size)
+data.print_list()
