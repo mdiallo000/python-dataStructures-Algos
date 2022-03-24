@@ -14,18 +14,38 @@ class MylinkedList:
         self.tail = None
         self.length = 0
 
-    def Append(self, value):
+    def append_to_tail(self, value):
         newNode = Node(value)
         if self.head is None:
+
             self.head = newNode
             self.tail = newNode
-            self.length += 1
+
         else:
             self.tail.next = newNode
             self.tail = newNode
             self.length += 1
 
-    def Pop(self):
+    def get_location(self, index):
+        counter = 0
+        target_position = self.head
+        while (counter != index):
+            target_position = target_position.next
+            counter += 1
+        return target_position
+
+    def insert_node(self, value, index):
+        new_node = Node(value)
+        if index == 0:
+            return self.append_to_head(value)
+        if index > self.length:
+            return None
+        back_node = self.get_location(index - 1)
+        new_node.next = back_node.next
+        back_node.next = new_node
+        self.length += 1
+
+    def pop(self):
 
         lastNode = self.head
 
@@ -33,7 +53,7 @@ class MylinkedList:
             last_node = last_node.next
 
         last_node.next = None
-        self.length += 1
+        self.length -= 1
 
     def size(self):
         return self.length
@@ -50,22 +70,21 @@ class MylinkedList:
 
     def remove_first_node(self):
         if self.head is not None:
-
             self.head = self.head.next
             self.length -= 1
 
     def print_list(self):
-
         cur = self.head
-
         while cur:
             print(cur.value)
             cur = cur.next
 
 
 data = MylinkedList()
-data.Append(2554)
-data.Append(0.35)
-data.Append(7)
-data.Append(45)
+data.append_to_tail(2554)
+data.append_to_tail(0.35)
+data.append_to_tail(7)
+data.append_to_head(45)
+data.insert_node(100012, 2)
+data.remove_first_node()
 data.print_list()
