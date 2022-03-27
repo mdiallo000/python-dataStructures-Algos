@@ -3,7 +3,7 @@
 from hashlib import new
 
 
-class Node:
+class Stack_Node:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -23,7 +23,7 @@ class MyStackLinkedList:
             cur = cur.next
 
     def push(self, data):
-        newItem = Node(data)
+        newItem = Stack_Node(data)
         if self.head is None:
             self.head = newItem
             self.tail = newItem
@@ -45,8 +45,13 @@ class MyStackLinkedList:
         return print(self.length)
 
     def is_empty(self):
-        if self.length is 0:
+        if self.length == 0:
             return True
+        return False
+
+    def peek(self):
+        if self.head:
+            return self.head.data
 
 
 myStack = MyStackLinkedList()
@@ -60,14 +65,8 @@ myStack.push(6)
 myStack.push('oldhead')
 myStack.push('I am at the top')
 myStack.pop()
-myStack.pop()
-myStack.pop()
-myStack.pop()
-myStack.pop()
-myStack.pop()
-myStack.pop()
+print(myStack.is_empty())
 
-
-myStack.size()
+print(f'value:{myStack.peek()}')
 
 myStack.print_stack()
