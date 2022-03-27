@@ -15,6 +15,9 @@ class MyStackLinkedList:
         self.tail = None
         self.length = 0
 
+    def print_stack(self):
+        print(self.data)
+
     def push(self, data):
         newItem = Node(data)
         if self.head is None:
