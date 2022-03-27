@@ -44,6 +44,10 @@ class MyStackLinkedList:
     def size(self):
         return print(self.length)
 
+    def is_empty(self):
+        if self.length is 0:
+            return True
+
 
 myStack = MyStackLinkedList()
 
