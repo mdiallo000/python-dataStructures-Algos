@@ -68,6 +68,9 @@ class Stack_Array:
         return self.items[len(self.items)-1]
 
     def is_empty(self):
-        if len(self.items) == 0:
+        if self.items == []:
             return True
         return False
+
+    def size(self):
+        return len(self.items)
