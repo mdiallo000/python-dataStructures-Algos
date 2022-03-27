@@ -1,8 +1,5 @@
 
 
-from hashlib import new
-
-
 class Stack_Node:
     def __init__(self, data):
         self.data = data
@@ -53,20 +50,13 @@ class MyStackLinkedList:
         if self.head:
             return self.head.data
 
+# Above is an implementation with an linkedLIST
+# Now ill do one with an array
 
-myStack = MyStackLinkedList()
 
-myStack.push("I am at the bottom")
-myStack.push(452)
-myStack.push(98)
-myStack.push(112)
-myStack.push(78)
-myStack.push(6)
-myStack.push('oldhead')
-myStack.push('I am at the top')
-myStack.pop()
-print(myStack.is_empty())
+class Stack_Array:
+    def _init_(self):
+        self.items = []
 
-print(f'value:{myStack.peek()}')
-
-myStack.print_stack()
+    def append(self, data):
+        self.items.append(data)
