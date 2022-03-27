@@ -1,5 +1,6 @@
 
-from types import NoneType
+
+from hashlib import new
 
 
 class Node:
@@ -18,7 +19,7 @@ class MyStackLinkedList:
     def print_stack(self):
         cur = self.head
         while cur:
-            print(cur.value)
+            print(cur.data)
             cur = cur.next
 
     def push(self, data):
@@ -28,9 +29,21 @@ class MyStackLinkedList:
             self.tail = newItem
 
         else:
-            self.tail.next = newItem
-            self.tail = newItem
+            newItem.next = self.head
+            self.head = newItem
             self.length += 1
+
+    def pop(self):
+        if self.head is not None:
+            sec_last = self.head
+            last_item = sec_last
+            while last_item:
+                sec_last = last_item
+                last_item = last_item.next
+
+            self.tail = sec_last
+            sec_last.next = None
+        return last_item
 
 
 myStack = MyStackLinkedList()
