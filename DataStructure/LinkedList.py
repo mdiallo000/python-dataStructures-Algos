@@ -38,8 +38,10 @@ class MylinkedList:
         new_node = Node(value)
         if index == 0:
             return self.append_to_head(value)
-        if index > self.length:
-            return None
+        
+        if index == self.length:
+            return self.append_to_tail(value)
+        
         back_node = self.get_location(index - 1)
         new_node.next = back_node.next
         back_node.next = new_node
