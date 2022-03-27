@@ -66,3 +66,8 @@ class Stack_Array:
 
     def peek(self):
         return self.items[len(self.items)-1]
+
+    def is_empty(self):
+        if len(self.items) == 0:
+            return True
+        return False
