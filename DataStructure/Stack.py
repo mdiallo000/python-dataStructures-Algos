@@ -58,5 +58,11 @@ class Stack_Array:
     def _init_(self):
         self.items = []
 
-    def append(self, data):
-        self.items.append(data)
+    def push(self, data):
+        return self.items.append(data)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[len(self.items)-1]
