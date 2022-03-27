@@ -16,7 +16,10 @@ class MyStackLinkedList:
         self.length = 0
 
     def print_stack(self):
-        print(self.data)
+        cur = self.head
+        while cur:
+            print(cur.value)
+            cur = cur.next
 
     def push(self, data):
         newItem = Node(data)
@@ -28,3 +31,12 @@ class MyStackLinkedList:
             self.tail.next = newItem
             self.tail = newItem
             self.length += 1
+
+
+myStack = MyStackLinkedList()
+
+myStack.push(56)
+myStack.push(452)
+myStack.push(156)
+myStack.push(6)
+myStack.print_stack()
