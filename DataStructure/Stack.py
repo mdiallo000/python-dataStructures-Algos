@@ -27,6 +27,7 @@ class MyStackLinkedList:
         if self.head is None:
             self.head = newItem
             self.tail = newItem
+            self.length += 1
 
         else:
             newItem.next = self.head
@@ -34,22 +35,35 @@ class MyStackLinkedList:
             self.length += 1
 
     def pop(self):
-        if self.head is not None:
-            sec_last = self.head
-            last_item = sec_last
-            while last_item:
-                sec_last = last_item
-                last_item = last_item.next
+        if self.head:
+            current_head = self.head
+            self.head = current_head.next
+        self.length -= 1
+        return current_head
 
-            self.tail = sec_last
-            sec_last.next = None
-        return last_item
+    def size(self):
+        return print(self.length)
 
 
 myStack = MyStackLinkedList()
 
-myStack.push(56)
+myStack.push("I am at the bottom")
 myStack.push(452)
-myStack.push(156)
+myStack.push(98)
+myStack.push(112)
+myStack.push(78)
 myStack.push(6)
+myStack.push('oldhead')
+myStack.push('I am at the top')
+myStack.pop()
+myStack.pop()
+myStack.pop()
+myStack.pop()
+myStack.pop()
+myStack.pop()
+myStack.pop()
+
+
+myStack.size()
+
 myStack.print_stack()
