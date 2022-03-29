@@ -42,3 +42,28 @@ myQueue = QueueArray()
 myQueue.print_items()
 print(myQueue.is_empty())
 myQueue.size()
+
+# Bellow I will attempt to do one with an array.
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class Queuelist:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+
+    def enqueue(self, data):
+        newNode = Node(data)
+        if self.head is None:
+            self.head = newNode
+            self.tail = newNode
+        else:
+            self.tail.next = newNode
+            self.tail = newNode
+        self.length += 1
