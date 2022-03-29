@@ -32,17 +32,6 @@ class QueueArray:
         print(len(self.items))
 
 
-myQueue = QueueArray()
-# myQueue.enqueue("first added: 1")
-# myQueue.enqueue(45)
-# myQueue.enqueue(123)
-# myQueue.enqueue(78)
-# myQueue.enqueue(5)
-# myQueue.enqueue('last added: 0')
-myQueue.print_items()
-print(myQueue.is_empty())
-myQueue.size()
-
 # Bellow I will attempt to do one with an array.
 
 
@@ -72,13 +61,20 @@ class Queuelist:
         if self.head:
             currentHead = self.head
             self.head = self.head.next
-        return currentHead
+        self.length -= 1
+        return currentHead.data
 
-    def print_node(self):
+    def print_queue(self):
         curr = self.head
         while curr is not None:
             print(curr.data)
             curr = curr.next
+
+    def size(self):
+        return self.length
+
+    def is_empty(self):
+        return True if self.length == 0 else False
 
 
 line = Queuelist()
@@ -86,3 +82,11 @@ line.enqueue(45)
 line.enqueue(78)
 line.enqueue(450)
 line.enqueue(5)
+line.dequeue()
+line.dequeue()
+line.dequeue()
+
+
+line.print_queue()
+print(line.size())
+print(line.is_empty())
