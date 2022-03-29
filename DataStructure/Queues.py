@@ -6,13 +6,14 @@ from re import M
 
 
 class QueueArray:
+
     def __init__(self):
         self.items = []
 
     def enqueue(self, data):
         self.items.append(data)
 
-    def denqueue(self):
+    def dequeue(self):
         item = self.items[0]
         self.items.pop(0)
         return item
@@ -26,6 +27,9 @@ class QueueArray:
             return True
         return False
 
+    def size(self):
+        print(len(self.items))
+
 
 myQueue = QueueArray()
 myQueue.enqueue("first added: 1")
@@ -35,11 +39,5 @@ myQueue.enqueue(78)
 myQueue.enqueue(5)
 myQueue.enqueue('last added: 0')
 myQueue.print_items()
-myQueue.remove()
-# myQueue.remove()
-# myQueue.remove()
-# myQueue.remove()
-# myQueue.remove()
-print('AFTER REMOVE METHODE')
 print(myQueue.is_empty())
-myQueue.print_items()
+myQueue.size()
