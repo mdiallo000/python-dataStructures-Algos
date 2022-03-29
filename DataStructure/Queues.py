@@ -67,3 +67,9 @@ class Queuelist:
             self.tail.next = newNode
             self.tail = newNode
         self.length += 1
+
+    def dequeue(self):
+        if self.head:
+            currentHead = self.head
+            self.head = self.head.next
+        return currentHead
