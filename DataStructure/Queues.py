@@ -85,7 +85,11 @@ line.enqueue(5)
 line.dequeue()
 line.dequeue()
 line.dequeue()
-
+line.dequeue()
+line.enqueue('new item')
+line.enqueue('second item')
+line.dequeue()
+line.dequeue()
 
 line.print_queue()
 print(line.size())
