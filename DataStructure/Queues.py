@@ -73,3 +73,16 @@ class Queuelist:
             currentHead = self.head
             self.head = self.head.next
         return currentHead
+
+    def print_node(self):
+        curr = self.head
+        while curr is not None:
+            print(curr.data)
+            curr = curr.next
+
+
+line = Queuelist()
+line.enqueue(45)
+line.enqueue(78)
+line.enqueue(450)
+line.enqueue(5)
