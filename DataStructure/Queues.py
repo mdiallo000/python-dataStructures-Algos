@@ -14,6 +14,10 @@ class QueueArray:
         self.items.pop(0)
         return item
 
+    def print_items(self):
+        for i in self.items:
+            print(i)
+
 
 myQueue = QueueArray()
 myQueue.append_elem("first added: 1")
@@ -22,3 +26,11 @@ myQueue.append_elem(123)
 myQueue.append_elem(78)
 myQueue.append_elem(5)
 myQueue.append_elem('last added: 0')
+myQueue.print_items()
+myQueue.remove()
+# myQueue.remove()
+# myQueue.remove()
+# myQueue.remove()
+# myQueue.remove()
+print('AFTER REMOVE METHODE')
+myQueue.print_items()
