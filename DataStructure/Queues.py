@@ -19,6 +19,7 @@ class QueueArray:
         return item
 
     def print_items(self):
+        # if self.items != []:
         for i in self.items:
             print(i)
 
@@ -32,12 +33,12 @@ class QueueArray:
 
 
 myQueue = QueueArray()
-myQueue.enqueue("first added: 1")
-myQueue.enqueue(45)
-myQueue.enqueue(123)
-myQueue.enqueue(78)
-myQueue.enqueue(5)
-myQueue.enqueue('last added: 0')
+# myQueue.enqueue("first added: 1")
+# myQueue.enqueue(45)
+# myQueue.enqueue(123)
+# myQueue.enqueue(78)
+# myQueue.enqueue(5)
+# myQueue.enqueue('last added: 0')
 myQueue.print_items()
 print(myQueue.is_empty())
 myQueue.size()
