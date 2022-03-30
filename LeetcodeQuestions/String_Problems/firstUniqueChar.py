@@ -14,3 +14,8 @@ class Solution:
                 return idx
 
         return -1
+
+    def With_a_set(sefl, str):
+        myDict = {}
+        seen = ()
+        
