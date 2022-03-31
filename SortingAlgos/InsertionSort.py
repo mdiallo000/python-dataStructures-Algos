@@ -7,9 +7,10 @@ def selection_sort(arr: int):
             arr[j+1] = arr[j]
             j -= 1
         arr[j+1] = key
+    print(arr)
     return arr
 
 
-arr = [45, 78, 12, 66, 45, 79, 2, 31, 45, 9]
+arr = [45, 78, 12, 66, 79, 2, 31, 9, 45, 72, 100]
 
-print(selection_sort(arr))
+selection_sort(arr)
