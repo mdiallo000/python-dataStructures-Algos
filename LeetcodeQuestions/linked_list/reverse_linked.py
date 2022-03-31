@@ -18,3 +18,5 @@ def reverseList(self, head: Optional[ListNode]):
         prev = current
         current = after_curr
     return prev
+#  Time complexity of O(n) since we need to traverse N number of Nodes and reverse them as we go on
+#  Space complexity of O(1)
