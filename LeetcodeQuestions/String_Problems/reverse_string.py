@@ -8,8 +8,11 @@ from turtle import right
 
 class Solution:
     def reverseString(self, s: List[str]):
+        if len(s) == 0: 
+            return  
+       
         left = 0
-        right = len(s)
+        right = len(s)-1
 
         while(left < right):
             temp = s[right]
