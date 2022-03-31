@@ -5,7 +5,7 @@ mylist = [1, 456, 71, 5, 67, 20, 35, 16]
 
 def selection_sort(arr):
 
-    for i in range(0, len(arr)-1):
+    for i in range(0, len(arr)):
 
         minval = i
 
