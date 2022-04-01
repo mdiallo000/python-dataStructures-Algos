@@ -10,3 +10,6 @@ class BinaryTree:
         for child in self.children:
             ret += child.__str__(level+1)
         return ret
+
+    def addChild(self, BinaryTree):
+        self.children.append(BinaryTree)
