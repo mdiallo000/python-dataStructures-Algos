@@ -13,3 +13,10 @@ class BinaryTree:
 
     def addChild(self, BinaryTree):
         self.children.append(BinaryTree)
+
+
+tree = BinaryTree("Uefa", [])
+ucl = BinaryTree('Champions League', [])
+uel = BinaryTree('Europe League', [])
+tree.addChild(ucl)
+tree.addChild(uel)
