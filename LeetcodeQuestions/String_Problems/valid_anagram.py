@@ -2,11 +2,19 @@
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        my_collection = {}
+        # my_collection = {}
+        # for char in s:
+        #     my_collection[char] = 0
+
+        # for T in t:
+        #     if T in my_collection:
+        #         return True
+        # return False
+        my_set = ()
         for char in s:
-            my_collection[char] = 0
+            my_set.add(char)
 
         for T in t:
-            if T in my_collection:
+            if T in my_set:
                 return True
         return False
