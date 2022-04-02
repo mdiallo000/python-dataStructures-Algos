@@ -41,3 +41,7 @@ class Solution:
                 t_dict[char] += 1
 
         return True if s_dict == t_dict else False
+
+# This solution has 0(1) space complexity since once we create our Hash MAP we arent inputing more characters. It will remain constant
+
+# The Big O(n)
