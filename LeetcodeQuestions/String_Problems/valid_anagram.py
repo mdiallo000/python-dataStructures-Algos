@@ -24,6 +24,8 @@ class Solution:
         return False
 
     def valid_anagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
         s_dict = {}
         t_dict = {}
         for char in s:
