@@ -14,11 +14,11 @@ class Solution:
             else:
                 return False
         return False
-        # my_set = ()
-        # for char in s:
-        #     my_set.add(char)
 
-        # for T in t:
-        #     if T in my_set:
-        #         return True
-        # return False
+    def is_Valid(self, s: str, t: str) -> bool:
+        s = ''.join(sorted(s))
+        t = ''.join(sorted(t))
+        for char in s:
+            if T in t == char:
+                return True
+        return False
