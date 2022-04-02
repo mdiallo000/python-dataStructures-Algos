@@ -3,6 +3,18 @@
 #  amanaplanacanalpanama
 #  l                   r
 
+from hashlib import new
+
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        return all(s[1:] == s[:-1] for i in range(len(s)//2))
+       allowedWord = '0123456789qwertyuiopasdfghjklzxcvbnm'
+       newStr = ''
+       for char in s:
+           if char not in allowedWord:
+              continue
+           else:
+                newStr += char
+
+        left = 0
+        right= len(s)
