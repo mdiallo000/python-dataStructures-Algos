@@ -5,12 +5,18 @@
 
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        stack = []
         curr = head
-        copy = curr
+
         while curr:
-            copy = curr
+            stack.append(curr.val)
             curr = curr.next
-        while curr is not copy:
-            if curr.val != copy.val:
+
+        while stack:
+            if curr.val != stack[-1]:
                 return False
-        return True
+            else:
+                stack.pop()
+                curr = curr.next
+
+        return True if stack == [] else False
