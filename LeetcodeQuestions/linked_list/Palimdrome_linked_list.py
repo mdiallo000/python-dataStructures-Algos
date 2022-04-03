@@ -12,9 +12,12 @@ class Solution:
             stack.append(curr.val)
             curr = curr.next
 
-        while stack:
-            if curr.val != stack[-1]:
+        l, r = 0, len(stack)-1
+        while l < r:
+            if stack[l] != stack[r]:
                 return False
-
-            curr = curr.next
+            l += 1
+            r -= 1
         return True
+
+# This solution gets it done but it is has a bIG O(n) time complexity and a Space complexity O(n) since we are using extra memory for our Stack and its size may increase as our list Updates.
