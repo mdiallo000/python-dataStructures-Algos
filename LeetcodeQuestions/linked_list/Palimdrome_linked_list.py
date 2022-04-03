@@ -32,5 +32,13 @@ class Solution:
         curr = slow
         while curr:
             tmp = curr.next
-            curr.next = None
-# This solution gets it done but it is has a bIG O(n) time complexity and a Space complexity O(n) since we are using extra memory for our Stack and its size may increase as our list Updates.
+            curr.next = prev
+            prev = curr
+            curr = tmp
+        left, right = head, prev
+        while right:
+            if left.val != right.val:
+                return False
+            left = left.next
+            right = right.next
+# The first solution gets it done but it is has a bIG O(n) time complexity and a Space complexity O(n) since we are using extra memory for our Stack and its size may increase as our list Updates.
