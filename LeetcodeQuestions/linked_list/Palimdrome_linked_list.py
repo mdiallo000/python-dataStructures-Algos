@@ -15,8 +15,6 @@ class Solution:
         while stack:
             if curr.val != stack[-1]:
                 return False
-            else:
-                stack.pop()
-                curr = curr.next
 
-        return True if stack == [] else False
+            curr = curr.next
+        return True
