@@ -13,7 +13,7 @@ class Solution:
                 return True
             else:
                 my_set.add(elem)
-                return True
+
         return False
 
     def using_hashmap(self, nums: List[int]) -> bool:
