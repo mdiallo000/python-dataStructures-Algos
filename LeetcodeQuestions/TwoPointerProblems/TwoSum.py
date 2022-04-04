@@ -25,11 +25,20 @@ class Solution:
 
 class Answer:
     def TwoSumDict(self, nums: List[int], target: int) -> List[int]:
+        # 1 Declare hash map
         myDict = {}
+        # 2 Loop through the entire array
         for i in range(len(nums)-1):
+            #  3 Save current element in curr
             curr = nums[i]
+        # 4 find the difference bewtween curr and Target
             difference = target - curr
+        # 5 Look if we already have the difference in our Map
             if difference in myDict:
+                # 7 If we due then return the index of where we currently are and the location of where we found our difference
                 return [i, myDict[difference]]
+        # 8 If difference wasnt in Map then add curr into map and set its value to be its index
             else:
                 myDict[curr] = i
+
+# Space complexity is O(n) since we might have to map every element in our array.
