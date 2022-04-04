@@ -9,6 +9,6 @@ class Solution:
             curr = numbers[i]
             difference = target - curr
             if difference in myMap:
-                return [i+1, myMap[difference] + 1]
+                return [myMap[difference] + 1, i+1]
             else:
                 myMap[curr] = i
