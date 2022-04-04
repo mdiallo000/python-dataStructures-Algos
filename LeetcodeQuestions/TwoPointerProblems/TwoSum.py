@@ -10,7 +10,7 @@ class Solution:
         for i, k in enumerate(nums, start=0):
             for i2, k2 in enumerate(nums[i+1:], start=0):
                 if k + k2 == target:
-                    return i, i2
+                    return i, i2+i+1
 
 
 class Answer:
