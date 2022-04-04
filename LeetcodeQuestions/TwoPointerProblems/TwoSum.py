@@ -7,12 +7,8 @@
 #          l                       R
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for idx, elm in enumerate(nums):
-            for idx2, elm2 in enumerate(nums[idx+1]):
-                if elm + elm2 == target:
-                    return (idx, idx2+idx+1)
+
 
 class Answer:
-    def TwoSumDict(self, nums:List[int],target:int) -> List[int]:
+    def TwoSumDict(self, nums: List[int], target: int) -> List[int]:
         myDict = {}
-            
