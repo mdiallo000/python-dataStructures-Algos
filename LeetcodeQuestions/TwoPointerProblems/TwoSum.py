@@ -18,6 +18,9 @@ class Solution:
             for j in range(i+1, len(nums)):
                 if nums[i] + nums[j] == target:
                     return i, j
+# Both of the above approaches are easy and utlize very inefficient approaches. We do find the locations of the two elements which add up to our target but in the worst case scenario it will take O(n^2) time complexity since we would have to compare each element of the array with every other element.
+
+#  Below is a much more effiecient approach with a time Complexity of O(n)
 
 
 class Answer:
