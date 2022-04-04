@@ -9,9 +9,10 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         my_set = set()
         for elem in nums:
-            if elem not in my_set:
-                my_set.add(elem)
+            if elem in my_set:
+                return True
             else:
+                my_set.add(elem)
                 return True
         return False
 
@@ -30,7 +31,7 @@ class Solution:
         return False
 
     def brute_force(self, nums: List[int]) -> bool:
-
+        # In this case the Big is quadratic O(n^2) since we need to comapre each indiv
         for i in range(len(nums)-1):
             elem = nums[i]
             for j in range(i+1, len(nums)):
