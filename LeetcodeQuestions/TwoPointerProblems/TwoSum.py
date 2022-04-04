@@ -26,3 +26,10 @@ class Solution:
 class Answer:
     def TwoSumDict(self, nums: List[int], target: int) -> List[int]:
         myDict = {}
+        for i in range(len(nums)-1):
+            curr = nums[i]
+            difference = target - curr
+            if difference in myDict:
+                return [i, myDict[difference]]
+            else:
+                myDict[curr] = i
