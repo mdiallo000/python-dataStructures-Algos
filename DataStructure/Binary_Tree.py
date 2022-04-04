@@ -1,5 +1,6 @@
 #  A binary search Tree is an hierichal abstract data structure which offers some Unique benefits.
-
+#  The structure of the tree requires at least two nodes
+#  Binary Trees are required before learning more advanced trees
 class BinaryTree:
     def __init__(self, data, children=[]):
         self.data = data
