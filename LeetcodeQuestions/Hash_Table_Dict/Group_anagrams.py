@@ -15,9 +15,9 @@ class Solution:
 
         for elem in strs:
             key = ''.join(sorted(elem))
-            if key in hashmap:
+            if key not in hashmap:
+                hashmap[key] = []
                 hashmap[key].append(elem)
             else:
-                hashmap[key] = []
                 hashmap[key].append(elem)
         return list(hashmap.values())
