@@ -14,4 +14,6 @@ class Solution:
         profit_that_day = 0
         for i in range(len(prices)):
             for j in range(i+1, len(prices)):
-                max =
+                profit_that_day = j - i
+                maxprofit = max(maxprofit, profit_that_day)
+        return maxprofit
