@@ -9,7 +9,7 @@
 # Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfitBruteForce(self, prices: List[int]) -> int:
         maxprofit = 0
         profit_that_day = 0
         for i in range(len(prices)):
@@ -17,3 +17,5 @@ class Solution:
                 profit_that_day = j - i
                 maxprofit = max(maxprofit, profit_that_day)
         return maxprofit
+
+    def maxProfit(self, prices: List[int]) -> int:
