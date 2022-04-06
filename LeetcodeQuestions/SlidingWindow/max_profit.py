@@ -19,3 +19,15 @@ class Solution:
         return maxprofit
 
     def maxProfit(self, prices: List[int]) -> int:
+        left = 0
+        right = 0
+        profit_of_the_day = 0
+        max_profit = 0
+        while right < len(nums):
+            if prices[left] > prices[right]:
+                left = right
+            else:
+                profit_of_the_day = prices[right] - prices[left]
+                max_profit = max(max_profit, profit_of_the_day)
+                right += 1
+        return max_profit
