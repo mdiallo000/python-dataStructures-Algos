@@ -31,3 +31,5 @@ class BST:
                 cur_node.right_child = Node(data)
             else:
                 self._insert(data, cur_node.right_child)
+        else:
+            print("No Duplicates Allowed")
