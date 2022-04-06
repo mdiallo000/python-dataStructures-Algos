@@ -20,7 +20,7 @@ class Solution:
 
     def maxProfit(self, prices: List[int]) -> int:
         left = 0
-        right = 0
+        right = 1
         profit_of_the_day = 0
         max_profit = 0
         while right < len(prices):
