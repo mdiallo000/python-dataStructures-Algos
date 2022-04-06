@@ -1,4 +1,7 @@
 
+from readline import insert_text
+
+
 class Node:
     def __init__(self, value):
 
@@ -18,3 +21,9 @@ class Node:
                 insert_node(rootnode.left_child, value)
 
     # If the value is greater that means we go towards the right side
+        else:
+            if rootnode.right_child == None:
+                rootnode.right_child = Node(value)
+            else:
+                insert_node(rootnode.right_child, value)
+        print('A node has been succesfully added')
