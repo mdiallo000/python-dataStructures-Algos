@@ -23,7 +23,7 @@ class Solution:
         right = 0
         profit_of_the_day = 0
         max_profit = 0
-        while right < len(nums):
+        while right < len(prices):
             if prices[left] > prices[right]:
                 left = right
             else:
