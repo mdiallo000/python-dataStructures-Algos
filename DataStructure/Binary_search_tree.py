@@ -82,6 +82,22 @@ class BST:
         parent, node = self.get_node_with_parent(data)
         if parent is None and node is None:
             return False
+        # NOW check how many child Nodes are attached to this parent since the number of children determine the approach we will take to solve
+        children_count = 0
+        if node.left_child and node.right_child:
+            children_count = 2
+        elif (node.left_child is None) and (node.right_child is None):
+            children_count = 0
+        else:
+            children_count = 1
+
+        # Now we can begin the proccess of removing the Nodes, first with a child with no nodes attached
+        if children_count == 0:
+            if parent:
+                if parent.right_child is node:
+                    parent.right_child = None
+                else:
+                    parent.left_child = None
 
 
 dummy = BST()
