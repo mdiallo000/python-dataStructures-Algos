@@ -63,6 +63,26 @@ class BST:
             curr = curr.right_child
         return curr.data
 
+    def get_node_with_parent(self, data):
+        parent = None
+        current = self.root
+        if current is None:
+            return (parent, None)
+        while True:
+            if current.data == data:
+                return (parent, current)
+            elif current.data > data:
+                parent = current
+                current = current.left_child
+            else:
+                parent = current
+                current = current.right_child
+
+    def remove(self, data):
+        parent, node = self.get_node_with_parent(data)
+        if parent is None and node is None:
+            return False
+
 
 dummy = BST()
 dummy.insert_Node(78)
