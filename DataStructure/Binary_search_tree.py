@@ -51,10 +51,16 @@ class BST:
         if data == cur_node.data:
             return True
 
-    def fin_min_node(self):
+    def find_min_node(self):
         curr = self.root
         while curr.left_child:
             curr = curr.left_child
+        return curr.data
+
+    def find_max_node(self):
+        curr = self.root
+        while curr.right_child:
+            curr = curr.right_child
         return curr.data
 
 
@@ -65,4 +71,4 @@ dummy.insert_Node(45)
 dummy.insert_Node(10)
 dummy.insert_Node(42)
 dummy.insert_Node(8)
-print(dummy.fin_min_node())
+print(dummy.find_max_node())
