@@ -1,5 +1,8 @@
 
 
+from turtle import left
+
+
 class Node:
     def __init__(self, data):
 
@@ -98,6 +101,29 @@ class BST:
                     parent.right_child = None
                 else:
                     parent.left_child = None
+        elif children_count == 1:
+            grandchild = None
+
+            if node.left_child:
+                grandchild = node.left_child
+            else:
+                grandchild = node.right_child
+
+            if parent:
+                if parent.right_child is node:
+                    parent.right_child = grandchild
+                else:
+                    parent.left_child = grandchild
+            else:
+                self.root = grandchild
+        # Now if the child node has two children of its own
+        else:
+            parent_of_leftmost_node = node
+            leftmost_node = node.right_child
+            while leftmost_node.left_child:
+                parent_of_leftmost_node = leftmost_node
+                leftmost_node = leftmost_node.left_child
+            node.data = leftmost_node.data
 
 
 dummy = BST()
