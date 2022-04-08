@@ -8,3 +8,8 @@ class MinStack:
 
     def pop(self):
         self.stack.pop()
+
+    def top(self):
+        topval = 0
+        topval = self.pop()
+        return topval
