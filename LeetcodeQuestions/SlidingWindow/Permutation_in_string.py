@@ -8,3 +8,8 @@ class Solution:
         l, r = 0, 1
 
         while r <= len(s2):
+            if s2[l] and s2[r] in s1:
+                return True
+            else:
+                l, r += 1
+        return False
