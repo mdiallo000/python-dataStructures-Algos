@@ -7,6 +7,7 @@ class Solution:
         for elem in nums:
             product_of_elems *= elem
 
-        for elem in nums
-        val = product_of_elems//elem
-        arr.append(val)
+        for elem in nums:
+            val = product_of_elems//elem
+            arr.append(val)
+        return arr
