@@ -6,24 +6,17 @@ from multiprocessing import dummy
 
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        dummy_link = ListNode()
-        tail = dummy_link
-        p, q = l1, l2
+        dummy = ListNode(0)
+        curr = dummy
         carry = 0
-        while p and q:
-            x = p.val
-            if p is None:
+        while l1 or l2:
+            if l1 is None:
                 x = 0
-            y = q.val
-            if q is None:
-                q = 0
-            sum_nodes = p + q+carry
-            carry = sum_nodes // 2
-            tail.next = LisNode(sum_nodes)
-
-            tail = tail.next
-            q = q.next
-            p = p.next
-        if carry > 0:
-            tail.next = ListNode(carry)
-        return dummy.next
+            else:
+                x = l1.val
+            if l2 is None:
+                y = 0
+            else:
+                y = l2.val
+            sum_nums = y + x + carry
+            carry = sum_nums/10
