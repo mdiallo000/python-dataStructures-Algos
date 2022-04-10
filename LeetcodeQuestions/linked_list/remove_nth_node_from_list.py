@@ -26,3 +26,5 @@ class Solution:
     #  dummy => 1 => 2 => 3=> 4 => 5 => None
     #                     L              R
     # Now we have l right before the nth node we want to remove
+        left.next = left.next.next
+        return dummy.next
