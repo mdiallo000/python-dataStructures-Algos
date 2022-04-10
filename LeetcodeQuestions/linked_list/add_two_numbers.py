@@ -20,3 +20,10 @@ class Solution:
                 y = l2.val
             sum_nums = y + x + carry
             carry = sum_nums/10
+            curr.next = LisNode(sum_nums % 10)
+            curr = curr.next
+            l1 = l1.next
+            l2 = l2.next
+        if carry > 0:
+            curr.next = ListNode(carry)
+        return dummy.next
