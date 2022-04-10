@@ -1,6 +1,10 @@
 class Solution:
     def isValid(self, s: str):
-        stack = {
+        hash_map = {
             ")": "(",
-            "]": '['
+            "]": '[',
+            '}': '{'
         }
+        stack = []
+
+        for char in s

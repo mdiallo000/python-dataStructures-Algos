@@ -13,3 +13,8 @@ class Solution:
             else:
                 l, r += 1
         return False
+
+    def with_HashMap(self, s1: str, s2: str) -> bool:
+        mymap = {}
+        for char in s2:
+            mymap[char] = 1

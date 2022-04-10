@@ -13,3 +13,7 @@ class MinStack:
         topval = 0
         topval = self.pop()
         return topval
+
+    def getMin(self):
+        minVal = 0
+        minVal = self.stack.pop(0)
