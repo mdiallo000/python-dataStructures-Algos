@@ -22,8 +22,8 @@ class Solution:
             carry = sum_nums/10
             curr.next = LisNode(sum_nums % 10)
             curr = curr.next
-            l1 = l1.next
-            l2 = l2.next
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
         if carry > 0:
             curr.next = ListNode(carry)
         return dummy.next
