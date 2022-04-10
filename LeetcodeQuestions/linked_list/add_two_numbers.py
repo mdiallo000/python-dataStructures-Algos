@@ -8,9 +8,22 @@ class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         dummy_link = ListNode()
         tail = dummy_link
+        p, q = l1, l2
+        carry = 0
+        while p and q:
+            x = p.val
+            if p is None:
+                x = 0
+            y = q.val
+            if q is None:
+                q = 0
+            sum_nodes = p + q+carry
+            carry = sum_nodes // 2
+            tail.next = LisNode(sum_nodes)
 
-        while l1 and l2:
-            tail.next = l1.val + l2.val
-            l1 = l1.next
-            l2 = l2.next
-        return dummy_link.next
+            tail = tail.next
+            q = q.next
+            p = p.next
+        if carry > 0:
+            tail.next = ListNode(carry)
+        return dummy.next
