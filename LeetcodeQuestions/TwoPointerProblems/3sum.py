@@ -5,4 +5,9 @@ class Solution:
         # Sort the array and now we can apply the same technique we used in 2sumTwo
         nums.sort()
 #
-        for index, curr in enummerate(nums):
+        for index, curr in enumerate(nums):
+            #       now we can make sure that we arent looking at duplicates since its sorted, a duplacte means if the curr elem is the same as its next
+            if index > 0 and curr == nums[index - 1]:
+                continue
+
+            # Now that we have skipped the duplicate we can began using our Two pointer method
