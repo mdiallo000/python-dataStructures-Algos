@@ -16,4 +16,5 @@ class Solution:
                 sum3 = curr + nums[l] + nums[r]
                 if sum3 < 0:
                     l += 1
-                elif sum3
+                elif sum3 > 0:
+                    r -= 1
