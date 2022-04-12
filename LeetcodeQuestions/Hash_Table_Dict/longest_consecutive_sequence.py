@@ -12,7 +12,7 @@ class Solution:
         for number in nums:
             if (number-1) not in myset:
                 longest = 0
-                while (number + 1) in myset:
+                while (number + longest) in myset:
                     longest += 1
                 sequence = (longest, longest)
         return sequence
