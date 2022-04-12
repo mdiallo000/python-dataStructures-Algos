@@ -18,3 +18,11 @@ class Solution:
                     l += 1
                 elif sum3 > 0:
                     r -= 1
+                else:
+                    resulting_arr.append([curr, nums[l], nums[r]])
+                    l += 1
+
+                    while nums[l] == nums[l-1] and l < r:
+                        l += 1
+
+        return resulting_arr
