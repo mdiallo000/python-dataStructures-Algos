@@ -6,8 +6,8 @@ import collections
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         result = []
-        queue = collections.deque(root)
-
+        queue = collections.deque()
+        queue.append(root)
         while queue is not None:
             #  measure the length of our queue currently, we will use this to loop through the elements at the current level only
             lenght_queue = len(queue)
@@ -17,6 +17,11 @@ class Solution:
                 #  now we store the node currently at the front of the queue by poping it out
                 curr_node = queue.popleft()
             # Once we pop it out we can store it into the levels array and then we will add its left and child node into the queue
-                levels.append(curr_node.val)
-                queue.append(curr.node.left)
-                queue.append(curr.node.right)
+                if curr_node is not None:
+                    levels.append(curr_node.val)
+                    queue.append(curr_node.left)
+                    queue.append(curr_node.right)
+            # now we can append the levels into our results array
+            if levels:
+                result.append(levels)
+        return result
