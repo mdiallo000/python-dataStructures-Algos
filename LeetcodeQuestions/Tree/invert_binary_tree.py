@@ -11,9 +11,8 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return None
-        curr = root
 
-        temp = curr.left
+        temp = root.left
         curr.left = curr.right
         curr.right = temp
         self.invertTree(root.left)
