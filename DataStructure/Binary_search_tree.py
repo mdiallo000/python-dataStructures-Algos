@@ -82,13 +82,17 @@ class BST:
                 current = current.right_child
 
     def remove(self, data):
+        # from our get node with parent function above we can get the node we are interested in removing as well as its parent
+
         parent, node = self.get_node_with_parent(data)
         if parent is None and node is None:
             return False
         # NOW check how many child Nodes are attached to this parent since the number of children determine the approach we will take to solve
         children_count = 0
+        # If it exist both a left and a right child then our count is two
         if node.left_child and node.right_child:
             children_count = 2
+        #  if no right and no left child exists than the count is zero
         elif (node.left_child is None) and (node.right_child is None):
             children_count = 0
         else:
@@ -124,6 +128,10 @@ class BST:
                 parent_of_leftmost_node = leftmost_node
                 leftmost_node = leftmost_node.left_child
             node.data = leftmost_node.data
+            if parent_of_leftmost_node.left_child == leftmost_node:
+                parent_of_leftmost_node.left_child = leftmost_node.rigth_child
+            else:
+                parent_of_leftmost_node.right_child = leftmost_node.rigth_child
 
 
 dummy = BST()
@@ -133,4 +141,5 @@ dummy.insert_Node(45)
 dummy.insert_Node(10)
 dummy.insert_Node(42)
 dummy.insert_Node(8)
-print(dummy.find_max_node())
+dummy.remove(42)
+print(dummy.find_Node(42))
