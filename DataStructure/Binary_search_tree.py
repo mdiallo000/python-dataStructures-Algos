@@ -1,6 +1,7 @@
 
 
 from turtle import left
+from collections import deque
 
 
 class Node:
@@ -133,18 +134,21 @@ class BST:
             else:
                 parent_of_leftmost_node.right_child = leftmost_node.rigth_child
 
-    def visit(self, node):
-        print(node.data)
+    # def visit(self, curr):
+    #     print(curr.data)
 
-    def pre_order(self, curr):
-        self.visit(curr)
+    def pre_order(self, root_node):
+        curr = root_node
+        if curr is None:
+            return
+        print(curr.data)
         self.pre_order(curr.left_child)
         self.pre_order(curr.right_child)
 
     def inorder(self, curr):
-        self.pre_order(curr.left_child)
+        self.inorder(curr.left_child)
         self.visit(curr)
-        self.pre_order(curr.right_child)
+        self.inorder(curr.right_child)
 
     def postorder(self, curr):
         self.postorder(curr.left_child)
