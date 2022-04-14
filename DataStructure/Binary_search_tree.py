@@ -146,6 +146,11 @@ class BST:
         self.visit(curr)
         self.pre_order(curr.right_child)
 
+    def postorder(self, curr):
+        self.postorder(curr.left_child)
+        self.postorder(curr.right_child)
+        self.visit(curr)
+
 
 #  Binary search Trees are higly efficient due to improved efficiency it provides.
 #  Average Insertion, deletion time complexity of O (log n)
@@ -161,4 +166,4 @@ dummy.insert_Node(10)
 dummy.insert_Node(42)
 dummy.insert_Node(8)
 dummy.remove(42)
-dummy.pre_order()
+dummy.pre_order(78)
