@@ -133,7 +133,21 @@ class BST:
             else:
                 parent_of_leftmost_node.right_child = leftmost_node.rigth_child
 
+    def visit(self, node):
+        print(node.data)
 
+    def pre_order(self, curr):
+        self.visit(curr)
+        self.pre_order(curr.left_child)
+        self.pre_order(curr.right_child)
+
+
+#  Binary search Trees are higly efficient due to improved efficiency it provides.
+#  Average Insertion, deletion time complexity of O (log n)
+#  Access is fast, but cant be slower if its unbalanced.
+#  worst-case complexity for searching is 0(n)
+#  worst-case complexity for insertion is 0(n)
+#  worst-case complexity for deletion is 0(n)
 dummy = BST()
 dummy.insert_Node(78)
 dummy.insert_Node(12)
@@ -142,4 +156,4 @@ dummy.insert_Node(10)
 dummy.insert_Node(42)
 dummy.insert_Node(8)
 dummy.remove(42)
-print(dummy.find_Node(42))
+dummy.pre_order()
