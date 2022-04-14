@@ -155,6 +155,9 @@ class BST:
         self.postorder(curr.right_child)
         self.visit(curr)
 
+    def breadth_first_search(self):
+        list_of_nodes = []
+
 
 #  Binary search Trees are higly efficient due to improved efficiency it provides.
 #  Average Insertion, deletion time complexity of O (log n)
