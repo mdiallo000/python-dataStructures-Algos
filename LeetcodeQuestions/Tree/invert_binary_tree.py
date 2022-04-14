@@ -20,3 +20,8 @@ class Solution:
                 node = queue.popleft()
                 if node:
                     levels.append(node.val)
+                    queue.append(node.right)
+                    queue.append(node.left)
+            if levels:
+                result.append(levels)
+        return result
