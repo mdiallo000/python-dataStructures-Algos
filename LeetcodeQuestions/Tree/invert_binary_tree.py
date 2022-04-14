@@ -9,19 +9,12 @@ import collections
 
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        result = []
-        queue = collections.deque()
-        queue.append(root)
+        if not root:
+            return None
+        curr = root
 
-        while queue:
-            levels = []
-            queue_lenght = len(queue)
-            for i in range(queue_lenght):
-                node = queue.popleft()
-                if node:
-                    levels.append(node.val)
-                    queue.append(node.right)
-                    queue.append(node.left)
-            if levels:
-                result.append(levels)
-        return result
+        temp = curr.left
+        curr.left = curr.right
+        curr.right = temp
+        self.invertTree(root.left)
+        self.invertTree(root.right)
