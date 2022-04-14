@@ -12,4 +12,11 @@ class Solution:
         result = []
         queue = collections.deque()
         queue.append(root)
+
         while queue:
+            levels = []
+            queue_lenght = len(queue)
+            for i in range(queue_lenght):
+                node = queue.popleft()
+                if node:
+                    levels.append(node.val)
