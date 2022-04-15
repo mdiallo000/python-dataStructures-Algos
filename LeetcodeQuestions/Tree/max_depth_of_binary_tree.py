@@ -19,8 +19,7 @@ class Solution:
         return 1 + max(left, right)
 
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if not root:
-            return []
+
         result = []
         queue = collections.deque()
         queue.append(root)
