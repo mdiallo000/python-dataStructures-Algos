@@ -9,11 +9,11 @@ import collections
 
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        # this our base case. it will stop the recursive calls when  we no longer have a root
         if not root:
             return None
-
         temp = root.left
-        curr.left = curr.right
-        curr.right = temp
+        root.left = root.right
+        root.right = temp
         self.invertTree(root.left)
         self.invertTree(root.right)
