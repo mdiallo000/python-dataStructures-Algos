@@ -137,13 +137,18 @@ class BST:
     # def visit(self, curr):
     #     print(curr.data)
 
-    def pre_order(self, root_node):
-        curr = root_node
-        if curr is None:
-            return
-        print(curr.data)
-        self.pre_order(curr.left_child)
-        self.pre_order(curr.right_child)
+    def pre_order(self, elem):
+        data = []
+
+        def traverse(self, node):
+            data.append(node.data)
+            if node.left:
+                self.traverse(node.left)
+            if node.right:
+                self.traverse(node.right)
+
+        traverse(elem)
+        return data
 
     def inorder(self, curr):
         self.inorder(curr.left_child)
@@ -155,16 +160,18 @@ class BST:
         self.postorder(curr.right_child)
         self.visit(curr)
 
-    def breadth_first_search(self):
-        list_of_nodes = []
+    # def breadth_first_search(self):
+    #     list_of_nodes = []
+    #     traversal_queue = deque([self.root])
+    #     while len(traversal_queue) > 0:
 
 
-#  Binary search Trees are higly efficient due to improved efficiency it provides.
-#  Average Insertion, deletion time complexity of O (log n)
-#  Access is fast, but cant be slower if its unbalanced.
-#  worst-case complexity for searching is 0(n)
-#  worst-case complexity for insertion is 0(n)
-#  worst-case complexity for deletion is 0(n)
+        #  Binary search Trees are higly efficient due to improved efficiency it provides.
+        #  Average Insertion, deletion time complexity of O (log n)
+        #  Access is fast, but cant be slower if its unbalanced.
+        #  worst-case complexity for searching is 0(n)
+        #  worst-case complexity for insertion is 0(n)
+        #  worst-case complexity for deletion is 0(n)
 dummy = BST()
 dummy.insert_Node(78)
 dummy.insert_Node(12)
@@ -173,4 +180,5 @@ dummy.insert_Node(10)
 dummy.insert_Node(42)
 dummy.insert_Node(8)
 dummy.remove(42)
-dummy.pre_order(78)
+data = dummy.pre_order(78)
+print(data)
