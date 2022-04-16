@@ -8,7 +8,7 @@ class Solution:
         result = []
         queue = collections.deque()
         queue.append(root)
-        while queue is not None:
+        while queue:
             #  measure the length of our queue currently, we will use this to loop through the elements at the current level only
             lenght_queue = len(queue)
             # at each level we will store the nodes into a list

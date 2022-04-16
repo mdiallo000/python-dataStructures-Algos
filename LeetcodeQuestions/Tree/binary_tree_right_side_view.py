@@ -11,7 +11,7 @@ import re
 
 
 class Solution:
-    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+    def rightSideView_bfs(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         queue = collections.deque()
         queue.append(root)
@@ -25,4 +25,12 @@ class Solution:
                     queue.append(node.right)
                     result.append(node.val)
 
+        return result
+
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return None
+        result = []
+        right = self.rightSideView(root.right)
+        result.append(right)
         return result
