@@ -12,18 +12,18 @@ import re
 
 class Solution:
     def rightSideView_bfs(self, root: Optional[TreeNode]) -> List[int]:
+        #    result array
         result = []
         queue = collections.deque()
         queue.append(root)
-
+    #  lets loop while there are still elements in our queue
         while queue:
-            lenght = len(queue)
-            node = 0
-            for i in range(lenght):
+            # lets get the length of the queue since we are only interested in looping at most each level
+            queue_length = len(queue)
+    #  lets keep track of the rightmost node in our queue, this is what we are interested in
+            right_side = None
+            for i in range(queue_length):
                 node = queue.popleft()
-                if node:
-                    queue.append(node.right)
-                    result.append(node.val)
 
         return result
 
