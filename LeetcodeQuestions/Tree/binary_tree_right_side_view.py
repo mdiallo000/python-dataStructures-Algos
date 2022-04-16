@@ -7,6 +7,7 @@
 #         self.left = left
 #         self.right = right
 import collections
+import re
 
 
 class Solution:
@@ -20,3 +21,8 @@ class Solution:
             node = 0
             for i in range(lenght):
                 node = queue.popleft()
+                if node:
+                    queue.append(node.right)
+                    result.append(node.val)
+
+        return result
