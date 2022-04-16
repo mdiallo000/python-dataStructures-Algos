@@ -13,3 +13,10 @@ class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         queue = collections.deque()
+        queue.append(root)
+
+        while queue:
+            lenght = len(queue)
+            node = 0
+            for i in range(lenght):
+                node = queue.popleft()
