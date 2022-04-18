@@ -2,12 +2,6 @@
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        arr = []
-        product_of_elems = 1
-        for elem in nums:
-            product_of_elems *= elem
+        result = [1] * len(nums)
 
-        for elem in nums:
-            val = product_of_elems//elem
-            arr.append(val)
-        return arr
+        prefix = 1
