@@ -19,7 +19,7 @@ class Solution:
             else:
                 myMap[elem] += 1
 
-        for freq, elem in myMap.items():
+        for elem, freq in myMap.items():
             if len(myHeap) < K:
                 heapq.heappush(myHeap, [freq, elem])
             else:
