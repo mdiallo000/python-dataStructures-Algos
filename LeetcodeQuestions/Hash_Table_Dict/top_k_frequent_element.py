@@ -13,4 +13,17 @@ class Solution:
         myMap = {}
         myHeap = []
 
-        for
+        for elem in nums:
+            if elem not in myMap:
+                myMap[elem] = 1
+            else:
+                myMap[elem] += 1
+
+        for freq, elem in myMap.items():
+            if len(myHeap) < K:
+                heapq.heappush(myHeap, [freq, elem])
+            else:
+                heapq.heappop(myHeap, [freq, elem])
+
+        #  [[3,1],[3,5]]
+        return [elem for value, key in myHeap]
