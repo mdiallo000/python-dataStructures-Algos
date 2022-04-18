@@ -13,3 +13,5 @@ class Solution:
         for i in range(len(nums)-1, -1, -1):
             result[i] *= postfix
             postfix *= nums[i]
+        return result
+# Time complexity is O(n) and space complexity is O(1) since we arent using any extra space because the output array isnt counted
