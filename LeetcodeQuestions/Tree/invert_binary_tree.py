@@ -17,3 +17,4 @@ class Solution:
         root.right = temp
         self.invertTree(root.left)
         self.invertTree(root.right)
+        return root
