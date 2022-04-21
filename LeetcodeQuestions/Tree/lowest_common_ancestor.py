@@ -6,3 +6,6 @@ class Solution:
         if root.val < p.val and root.val < q.val:
             return self.lowestCommonAncestor(root.left)
         elif root.val > p.val and root.val > q.val:
+            return self.lowestCommonAncestor(root.right)
+        else:
+            return root
