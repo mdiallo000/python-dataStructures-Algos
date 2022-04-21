@@ -19,13 +19,13 @@ class Solution:
             else:
                 myMap[elem] += 1
         #  Now that the array has been populated we can now use a short cut to return the largest frequencies determine by K
-        return heapq.nlargest(k, myMap.keys(), key=myMap.get())
+        # return heapq.nlargest(k, myMap.keys(), key=myMap.get())
 
-        # for elem, freq in myMap.items():
-        #     if len(myHeap) < K:
-        #         heapq.heappush(myHeap, [freq, elem])
-        #     else:
-        #         heapq.heappop(myHeap, [freq, elem])
+        for elem, freq in myMap.items():
+            if len(myHeap) < K:
+                heapq.heappush(myHeap, [freq, elem])
+            else:
+                heapq.heappop(myHeap, [freq, elem])
 
-        # #  [[3,1],[3,5]]
-        # return [elem for value, key in myHeap]
+        #  [[3,1],[3,5]]
+        return [elem for value, key in myHeap]

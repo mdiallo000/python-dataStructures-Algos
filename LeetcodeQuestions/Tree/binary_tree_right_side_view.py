@@ -24,7 +24,12 @@ class Solution:
             right_side = None
             for i in range(queue_length):
                 node = queue.popleft()
-
+                if node:
+                    right_side = node
+                    queue.append(node.left)
+                    queue.append(node.right)
+            if right_side:
+                result.append(right_side.val)
         return result
 
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
