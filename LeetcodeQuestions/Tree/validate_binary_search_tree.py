@@ -17,3 +17,4 @@ class Solution:
             if not (node.val > left_boundary and node.val < right_boundary):
                 return False
             return validate(node.left, left_boundary, node.val) and validate(node.right, node.val, right_boundary)
+        return validate(root, float("-inf"), float("inf"))
