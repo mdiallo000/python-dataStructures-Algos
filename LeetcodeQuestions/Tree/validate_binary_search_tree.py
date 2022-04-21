@@ -14,4 +14,6 @@ class Solution:
             if not node:
                 return True
 
-            if not (node.val > left_boundary and node.val < right_boundary)
+            if not (node.val > left_boundary and node.val < right_boundary):
+                return False
+            return validate(node.left, left_boundary, node.val) and validate(node.right, node.val, right_boundary)
