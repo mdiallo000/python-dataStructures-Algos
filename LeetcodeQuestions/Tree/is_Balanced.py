@@ -8,3 +8,8 @@
 #         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        if not root:
+            return 0
+
+        left = 1 + self.isBalanced(root.left)
+        right = 1 + self.isBalanced(root.right)
