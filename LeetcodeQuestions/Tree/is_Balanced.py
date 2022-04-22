@@ -10,13 +10,9 @@ class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
 
         def helper(node):
-
             if not root:
-                return (0, True)
-
-            l_height, l_balanced = helper(node.left)
-            r_height, r_balanced = helper(node.right)
-
-            return (max(l_height, r_height), l_balanced and r_balanced and abs(l_height-r_balanced) <= 1)
-
-        return helper(root)[-1]
+                return [True, 0]
+            left = helper(node.left)
+            right = helper(node.right)
+            balance = left[0] and right[0] and (abs(left[1] - right[1]) <= 1)
+            return [balance, 1+max(left[1], right[1])]
