@@ -13,3 +13,7 @@ class Solution:
 
         left = 1 + self.isBalanced(root.left)
         right = 1 + self.isBalanced(root.right)
+
+        if abs(left-right) > 1:
+            return False
+        return True
