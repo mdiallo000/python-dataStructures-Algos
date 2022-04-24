@@ -9,14 +9,14 @@ class Solution:
         charSet = set()
         l = 0
         sub_string_count = 0
-        # abcabc
-        # l  r
-        #   [a b c ]
+        # abceabecabc
+        #  l  r
+        #   [ b c e a]
         for r in range(len(s)):
 
             while s[r] in charSet:
                 charSet.remove(s[l])
                 l += 1
             charSet.add(s[r])
-            sub_string_count = max(sub_string_count, r-l + 1)
+            sub_string_count = max(sub_string_count, len(charSet))
         return sub_string_count
