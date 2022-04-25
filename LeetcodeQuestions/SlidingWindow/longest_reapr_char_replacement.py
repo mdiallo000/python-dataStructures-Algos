@@ -1,10 +1,13 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
 
-        r, l, count = 0
+        l = 0
+        count = 0
         charMap = {}
-
-        while r < len(s)-1:
+        # [A B B A B B A A]
+        #      L         R
+        maxf = 0
+        for r in range(len(s)):
             char = s[r]
             if char not in charMap:
                 charMap[char] = 1
