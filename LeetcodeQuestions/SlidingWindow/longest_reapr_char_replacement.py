@@ -10,3 +10,12 @@ class Solution:
                 charMap[char] = 1
             else:
                 charMap[char] += 1
+            window = r - l + 1
+
+            maxf = max(maxf, charMap[s[r]])
+
+            if window - maxf > k:
+                charMap[s[l]] -= 1
+                l += 1
+
+            count = max()
