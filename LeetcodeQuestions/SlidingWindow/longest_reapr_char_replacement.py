@@ -18,4 +18,5 @@ class Solution:
                 charMap[s[l]] -= 1
                 l += 1
 
-            count = max()
+            count = max(count, r - l + 1)
+        return count
