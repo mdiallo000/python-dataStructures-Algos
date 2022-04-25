@@ -15,4 +15,8 @@ class Solution:
         root = preorder[0]
         # Now lets find all the elments to the left of our root and to the right of it
 
-        mid =
+        mid = inorder.index(root)
+
+        #  now we can reconstruct the tree starting from the root, we will built left side first
+        root.left = self.buildTree(preorder[1:mid+1], inorder[:mid])
+        root.right = self.buildTree(preorder[mid+1:], inorder[mid+1:])
