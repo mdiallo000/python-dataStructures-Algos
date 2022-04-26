@@ -8,7 +8,10 @@ class Solution:
         if not root:
             return False
 
-        def isSame(p, t):
+        if self.isSame(root, subRoot):
+            return True
+
+        def isSame(self, p, t):
             if not p and t:
                 return True
 
