@@ -10,8 +10,8 @@ class Solution:
         l = 0
         sub_string_count = 0
         # abceabecabc
-        #  l  r
-        #   [ b c e a]
+        # l   r
+        #   [        a b c]
         for r in range(len(s)):
 
             while s[r] in charSet:
