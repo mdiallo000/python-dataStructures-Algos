@@ -10,6 +10,7 @@ class Solution:
 
         if self.isSame(root, subRoot):
             return True
+        return (self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot))
 
         def isSame(self, p, t):
             if not p and t:
