@@ -1,22 +1,11 @@
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-        res = []
 
-        def preorder(node):
+        def preorder(node, maxVal):
             if not node:
-                return
+                return 0
 
-            res.append(node.val)
-            preorder(node.left)
-            preorder(node.right)
-
-        preorder(root)
-
-        count_good_nodes = 0
-        my_root = res[0]
-
-        for node in res:
-            if node >= my_root:
-                count_good_nodes += 1
-
-        return count_good_nodes
+            count_nodes = 1 if node.val >= maxVal else 0
+            maxVal = max(maxVal, count_nodes)
+            count_nodes += preorder(node.left, maxVal)
+            count_nodes += preorder(node.right, maxVal)
