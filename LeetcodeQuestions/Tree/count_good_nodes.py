@@ -6,7 +6,7 @@ class Solution:
                 return 0
 
             count_good_nodes = 1 if node.val >= maxVal else 0
-            maxVal = max(maxVal, count_good_nodes)
+            maxVal = max(maxVal, node.val)
             count_good_nodes += preorder(node.left, maxVal)
             count_good_nodes += preorder(node.right, maxVal)
             return count_good_nodes
