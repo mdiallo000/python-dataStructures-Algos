@@ -7,7 +7,7 @@ class Solution:
 
         while l < r:
 
-            max_water = max(height[l] * height[r], max_water)
+            max_water = max(min(height[l] height[r]) * (r-l), max_water)
 
             if height[l] < height[r]:
                 l += 1
