@@ -12,4 +12,11 @@ class Solution:
 
         preorder(root)
 
-        count_good_nodes
+        count_good_nodes = 0
+        my_root = res[0]
+
+        for node in res:
+            if node >= my_root:
+                count_good_nodes += 1
+
+        return count_good_nodes
