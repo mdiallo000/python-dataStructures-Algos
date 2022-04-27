@@ -12,10 +12,10 @@ class Solution:
             return True
         return (self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot))
 
-        def isSame(self, p, t):
-            if not p and t:
+        def isSame(self, root, subRoot):
+            if not root and subRoot:
                 return True
 
-            if p and t and t.val == p.val:
-                return self.isSame(p.left, t.left) and self.isSame(p.right, t.right)
+            if root and subRoot and root.val == subRoot.val:
+                return self.isSame(root.left, subRoot.left) and self.isSame(root.right, subRoot.right)
             return False
