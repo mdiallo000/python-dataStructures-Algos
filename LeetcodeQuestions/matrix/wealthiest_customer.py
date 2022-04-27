@@ -10,8 +10,9 @@ class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         # so we need to take the sum of each customers bank balance. Each array inside of our 2d matrix represents a bank account
 
+        richest = 0
         for account in accounts:
 
             max_wealth = sum(account)
-            wealthiest = 0
-            wealthiest = max(max_wealth, )
+            richest = max(max_wealth, richest)
+        return richest
