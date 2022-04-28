@@ -1,15 +1,16 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
 
-        row_size = len(matrix[0]) - 1
-        col_size = 0
+        row_size = 0
+        col_size = len(matrix[0]) - 1
 
-        while(row_size > 0 and col_size < len(matrix)):
+        while(col_size >= 0 and row_size <= len(matrix)-1):
             if matrix[row_size][col_size] < target:
-                row_size -= 1
+                row_size += 1
 
             elif matrix[row_size][col_size] > target:
-                col_size += 1
+                col_size -= 1
+
             else:
                 return True
 
