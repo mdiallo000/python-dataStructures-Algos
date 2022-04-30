@@ -1,5 +1,9 @@
 
 
+from sqlite3 import Row
+from tkinter.tix import COLUMN
+
+
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         l, r = 0, len(height) - 1
@@ -7,7 +11,7 @@ class Solution:
 
         while l < r:
 
-            max_water = max(min(height[l] height[r]) * (r-l), max_water)
+            max_water = max(min(height[l], height[r]) * (r-l), max_water)
 
             if height[l] < height[r]:
                 l += 1
