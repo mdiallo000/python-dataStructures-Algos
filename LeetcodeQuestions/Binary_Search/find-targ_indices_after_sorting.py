@@ -6,11 +6,18 @@
 #  result : [1,3]
 class Solution:
     def targetIndices(self, nums: List[int], target: int) -> List[int]:
-        result = []
-        nums.sort()
-        for idx, value in enumerate(nums):
-            if value == target:
-                result.append(idx)
-        return result
+        # result = []
+        # nums.sort()
+        # for idx, value in enumerate(nums):
+        #     if value == target:
+        #         result.append(idx)
+        # return result
         # above is a working linear seach algorithm approach with a time complexity of O(n)
         # we can do better with  Binary search
+        res = []
+        nums.sort()
+        l, r = 0, len(nums)-1
+
+        while l < r:
+            mid = (r+l)//2
+            if nums[mid] == target:
