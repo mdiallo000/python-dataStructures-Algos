@@ -24,3 +24,5 @@ class Solution:
                     queue.append(node.left)
             res.append(sum_level/queue_length)
         return res
+# Time Complexity of O(n) since we visit every node to get its value.
+# Space Complexity of O(n) as well since it may grow proportional to the size of the input array.
