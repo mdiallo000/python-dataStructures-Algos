@@ -18,7 +18,9 @@ class Solution:
                 node = queue.popleft()
                 if node:
                     sum_level += node.val
-                    queue.append(node.left)
+                if node.right:
                     queue.append(node.right)
+                if node.left:
+                    queue.append(node.left)
             res.append(sum_level//queue_length)
         return res
