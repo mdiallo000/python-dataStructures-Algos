@@ -3,5 +3,8 @@
 # This Algo needs a helper function that will merge two arrays into one
 
 def mergesort(arr):
-
+    #  we only want to run this algo if there are more than one element
     if len(arr) > 1:
+        #  first we partion the array into two halves, a left and a right
+        left_side = arr[:len(arr)//2]
+        right_side = arr[len(arr)//2:]
