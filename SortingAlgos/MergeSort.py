@@ -20,3 +20,9 @@ def mergesort(arr):
         #  k will keep track of the left most position of our ending sorted array
 
         while i < len(left_side) and j < len(right_side):
+            if left_side[i] < right_side[j]:
+                arr[k] = left_side[i]
+                i += 1
+            else:
+                arr[k] = right_side[j]
+                j += 1
