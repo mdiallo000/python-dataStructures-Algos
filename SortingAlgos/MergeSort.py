@@ -13,3 +13,10 @@ def mergesort(arr):
         mergesort(left_side)
         mergesort(right_side)
         # once the partitioning is complete we can begin on merging into a sorted collection
+        #  i will keep track of the left most position of our left_side array
+        i = 0
+        #  j will keep track of the left most position of our right_side array
+        j = 0
+        #  k will keep track of the left most position of our ending sorted array
+
+        while i < len(left_side) and j < len(right_side):
