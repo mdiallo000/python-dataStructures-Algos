@@ -8,3 +8,8 @@ def mergesort(arr):
         #  first we partion the array into two halves, a left and a right
         left_side = arr[:len(arr)//2]
         right_side = arr[len(arr)//2:]
+        #  now we recursively run the function which will do the dividing for us
+
+        mergesort(left_side)
+        mergesort(right_side)
+        # once the partitioning is complete we can begin on merging into a sorted collection
