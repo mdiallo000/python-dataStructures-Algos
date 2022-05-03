@@ -18,7 +18,7 @@ def mergesort(arr):
         #  j will keep track of the left most position of our right_side array
         j = 0
         #  k will keep track of the left most position of our ending sorted array
-
+        k = 0
         while i < len(left_side) and j < len(right_side):
             if left_side[i] < right_side[j]:
                 arr[k] = left_side[i]
@@ -26,3 +26,21 @@ def mergesort(arr):
             else:
                 arr[k] = right_side[j]
                 j += 1
+            k += 1
+        # now we can insert any remaing elements into the sorted array
+
+        while i < len(left_side):
+            arr[k] = left_side[i]
+            i += 1
+            k += 1
+
+        while j < len(right_side):
+            arr[k] = right_side[j]
+            j += 1
+            k += 1
+
+    return arr
+
+
+test = [1, 4, 57, 12, 1, 8, 76, 45, 12, 86, 35, 21]
+print(mergesort(test))
