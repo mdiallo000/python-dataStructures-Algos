@@ -39,8 +39,11 @@ def mergesort(arr):
             j += 1
             k += 1
 
-    return arr
+    # return arr
+    print(arr)
 
 
 test = [1, 4, 57, 12, 1, 8, 76, 45, 12, 86, 35, 21]
-print(mergesort(test))
+# print(mergesort(test))
+
+mergesort(test)
