@@ -16,3 +16,4 @@ class Solution:
 
             else:
                 stack.append(int(char))
+        return stack[-1]
