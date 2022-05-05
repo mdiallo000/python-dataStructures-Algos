@@ -5,8 +5,12 @@ class Solution:
         for char in tokens:
             if char == '+':
                 stack.append(stack.pop() + stack.pop())
-            elif char == '*'
-            elif char == '-'
+            elif char == '*':
+                stack.append(stack.pop() * stack.pop())
+            elif char == '-':
+                a, b = stack.pop(), stack.pop()
+                stack.append(b-a)
             elif char == '/'
+
             else:
                 stack.append(int(char))
