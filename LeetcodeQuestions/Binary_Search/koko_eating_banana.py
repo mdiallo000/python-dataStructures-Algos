@@ -12,11 +12,11 @@ class Solution:
             mid = (l+r)//2
             total_time = 0
             for pile in piles:
-                total_time = (pile - 1 // 2) + 1
+                total_time += (pile - 1 // 2) + 1
 
-                if total_time <= h:
-                    k = mid
-                    r = mid - 1
-                else:
-                    l = mid + 1
+            if total_time <= h:
+                k = mid
+                r = mid - 1
+            else:
+                l = mid + 1
         return k
