@@ -4,17 +4,11 @@
 
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
+        s1Counter = {}
 
-        l, r = 0, 1
+        for char in s1:
+            s1Counter[char] = 1 + s1Counter.get(char, 0)
 
-        while r <= len(s2):
-            if s2[l] and s2[r] in s1:
-                return True
-            else:
-                l, r += 1
-        return False
-
-    def with_HashMap(self, s1: str, s2: str) -> bool:
-        mymap = {}
-        for char in s2:
-            mymap[char] = 1
+        l = 0
+        r = 1
+        while r < len(s2)-1:
