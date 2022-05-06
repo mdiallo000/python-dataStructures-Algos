@@ -21,4 +21,7 @@ class Solution:
             if first > second:
                 val = -abs(first - second)
                 heapq.heappush(stones, val)
+        # This last operation puts a zero in just in case our stones list was empty but we still need to return some value
+        stones.append(0)
+
         return abs(stones[0])
