@@ -13,4 +13,12 @@ class KthLargest:
         while len(self.minHeap) > k:
             heapq.heappop(self.minHeap)
     #  When it comes to adding new elements into the heap we need to consider several things
+    #  time complexity is nlogn
+
     def add(self, val: int) -> int:
+        heapq.heappush(self.minHeap, val)
+        if len(self.minHeap) > self.K:
+            heapq.heappop(self.minHeap)
+        return self.minHeap[0]
+
+#  we could've gone with an array and a sorted array but both would yield less efficient time complexities.
