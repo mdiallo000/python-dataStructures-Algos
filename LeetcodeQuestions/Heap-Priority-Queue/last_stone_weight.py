@@ -1,3 +1,7 @@
+import heapq
+from os import scandir
+
+
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         #  very simple solution if you understand the intuition
@@ -8,3 +12,12 @@ class Solution:
         stones = [-s for s in stones]
 
         #after = [-2,-7,-4,-1,-8,-1]
+        heapq.heapify(stones)
+
+        while len(stones) > 1:
+
+            first = abs(heapq.heappop(stones))
+            second = abs(heapq.heappop(stones))
+            if first > second:
+                val = -abs(first - second)
+                heapq.heappush
