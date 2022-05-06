@@ -20,4 +20,5 @@ class Solution:
             second = abs(heapq.heappop(stones))
             if first > second:
                 val = -abs(first - second)
-                heapq.heappush
+                heapq.heappush(stones, val)
+        return abs(stones[0])
