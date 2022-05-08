@@ -8,7 +8,7 @@ class Solution:
         pts = []
 
         for x, y in points:
-            distance = (abs(x)**2) + (abs(y) ** 2)
+            distance = ((x)**2) + ((y) ** 2)
             pts.append([distance, x, y])
         #  [[18,3,3],[26,5,-1],[20,-2,4]]
         heapq.heapify(pts)
@@ -16,3 +16,5 @@ class Solution:
         for i in range(k):
             dist, x, y = heapq.heappop(pts)
             res.append([x, y])
+
+        return res
