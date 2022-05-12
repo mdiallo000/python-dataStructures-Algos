@@ -20,3 +20,4 @@ class Solution:
 
             if new_slow == slow:
                 break
+        return new_slow
