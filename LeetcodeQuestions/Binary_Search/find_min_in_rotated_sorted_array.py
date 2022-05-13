@@ -10,3 +10,8 @@
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
+
+        for idx, val in enumerate(nums):
+            if val == target:
+                return idx
+        return -1
