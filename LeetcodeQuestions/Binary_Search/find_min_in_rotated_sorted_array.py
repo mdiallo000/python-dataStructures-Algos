@@ -12,4 +12,9 @@ class Solution:
     def findMin(self, nums: List[int]) -> int:
 
         minVal = nums[0]
-        l, r
+        l, r = 0, len(nums)-1
+
+        while l <= r:
+
+            if nums[l] < nums[r]:
+                minVal = min(minVal, nums[l])
