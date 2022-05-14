@@ -18,3 +18,12 @@ class Solution:
 
             if nums[l] < nums[r]:
                 minVal = min(minVal, nums[l])
+                break
+
+            mid = (l+r) // 2
+            minVal = min(minVal, nums[mid])
+            if nums[mid] >= nums[r]:
+                l = mid + 1
+            else:
+                r = mid - 1
+        return minVal
