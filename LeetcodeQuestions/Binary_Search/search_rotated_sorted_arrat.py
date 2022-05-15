@@ -13,16 +13,17 @@ class Solution:
             if nums[mid] == target:
                 return mid
 
-            # NOW WE chech whether or not does our target value falls bettwen the boundaris of l<= targ <= mid
-
-            if nums[l] < nums[mid]:
-                if target >= nums[l] and target <= nums[mid]:
+            # Determine which side of the array is sorted then move accordingly
+            if nums[l] <= nums[mid]:
+                # NOW WE chech whether or not does our target value falls bettwen the boundaris of l<= targ <= mid
+                if nums[l] <= target <= nums[mid]:
                     #  in other words our target falls into the left sorted portion
                     r = mid - 1
                 else:
                     l = mid + 1
             else:
-                if target <= nums[r] and target >= nums[mid]:
+                #  if targ is mid >= targ >= right
+                if nums[mid] <= target <= nums[r]:
                     l = mid + 1
                 else:
                     r = mid - 1
