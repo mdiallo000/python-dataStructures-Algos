@@ -12,16 +12,16 @@ class Solution:
             neighbors[n1].append(n2)
             neighbors[n2].append(n1)
 
-        def dfs(graph, start, end):
+        def dfs(start, end, seen):
             if start == end:
                 return True
             if start in seen:
                 return False
-
-            for vertex in graph[start]:
-                if dfs(graph, vertex, end):
+            seen.add(start)
+            for vertex in neighbors[start]:
+                if dfs(vertex, end, seen):
                     return True
 
             return False
 
-        return dfs(neighbors, source, destination)
+        return dfs(source, destination, seen)
