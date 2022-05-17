@@ -1,4 +1,5 @@
 from collections import defaultdict
+from sqlite3 import Timestamp
 
 
 class Twitter:
@@ -17,6 +18,11 @@ class Twitter:
     def getNewsFeed(self, userId: int) -> List[int]:
         news_feed = []
         min_heap = []
+
+        for follower in self.FollowerMap[userId]:
+            if follower in self.Tweets:
+                index = len(self.Tweets[follower])-1
+                Timestamp, tweets = self.Tweets[follower][index]
 
     def follow(self, followerId: int, followeeId: int) -> None:
         # how would we follow a user? Well we would create a connection between one user and the other users they want to follow.
