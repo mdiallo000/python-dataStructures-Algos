@@ -26,7 +26,9 @@ class Twitter:
                 Timestamp, tweets = self.Tweets[user][index]
                 min_heap.append([Timestamp, tweets, user, index-1])
 
-        heapq.heapify
+        heapq.heapify(min_heap)
+
+        while min_heap and len(res) <= 10:
 
     def follow(self, followerId: int, followeeId: int) -> None:
         # how would we follow a user? Well we would create a connection between one user and the other users they want to follow.
