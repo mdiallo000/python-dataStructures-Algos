@@ -26,7 +26,7 @@ class Twitter:
 
     def follow(self, followerId: int, followeeId: int) -> None:
         # how would we follow a user? Well we would create a connection between one user and the other users they want to follow.
-        self.FollowerMap[followeeId].add(followeeId)
+        self.FollowerMap[followerId].add(followeeId)
 
     def unfollow(self, followerId: int, followeeId: int) -> None:
         if followeeId in self.FollowerMap[followerId]:
