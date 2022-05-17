@@ -1,4 +1,5 @@
 from collections import defaultdict
+import heapq
 from sqlite3 import Timestamp
 
 
@@ -19,10 +20,13 @@ class Twitter:
         news_feed = []
         min_heap = []
 
-        for follower in self.FollowerMap[userId]:
-            if follower in self.Tweets:
-                index = len(self.Tweets[follower])-1
-                Timestamp, tweets = self.Tweets[follower][index]
+        for user in self.FollowerMap[userId]:
+            if user in self.Tweets:
+                index = len(self.Tweets[user])-1
+                Timestamp, tweets = self.Tweets[user][index]
+                min_heap.append([Timestamp, tweets, user, index-1])
+
+        heapq.heapify
 
     def follow(self, followerId: int, followeeId: int) -> None:
         # how would we follow a user? Well we would create a connection between one user and the other users they want to follow.
