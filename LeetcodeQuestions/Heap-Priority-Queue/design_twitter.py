@@ -1,6 +1,6 @@
 from collections import defaultdict
 import heapq
-from sqlite3 import Timestamp
+from sqlite3 import time_send
 
 
 class Twitter:
@@ -23,17 +23,17 @@ class Twitter:
         for user in self.FollowerMap[userId]:
             if user in self.Tweets:
                 index = len(self.Tweets[user])-1
-                Timestamp, tweets = self.Tweets[user][index]
-                min_heap.append([Timestamp, tweets, user, index-1])
+                time_send, tweets = self.Tweets[user][index]
+                min_heap.append([time_send, tweets, user, index-1])
 
         heapq.heapify(min_heap)
 
-        while min_heap and len(news_feed) <= 10:
-            Timestamp, tweets, user, index = heapq.heappop(min_heap)
+        while min_heap and len(news_feed) < 10:
+            time_send, tweets, user, index = heapq.heappop(min_heap)
             news_feed.append(tweets)
             if index >= 0:
-                Timestamp, tweets = self.Tweets[user][index]
-                heapq.heappush(min_heap, [Timestamp, tweets, user, index-1])
+                time_send, tweets = self.Tweets[user][index]
+                heapq.heappush(min_heap, [time_send, tweets, user, index-1])
         return news_feed
 
     def follow(self, followerId: int, followeeId: int) -> None:
