@@ -8,7 +8,21 @@ class Node:
 """
 
 
+from typing import List
+
+
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
 
-        Oldcopies = {None: None}
+        Printer = {None: None}
+        curr = head
+        while curr:
+            # make a new Node from the original
+            new_copied_node = ListNode(curr.val)
+            # Now we store this new copy as a value of the curr original node
+            Printer[curr] = new_copied_node
+            # We move the current Pointer up
+            curr = curr.next
+
+        while curr:
+            # lets get the copied node out of the Hashmap and start making some of these connections
