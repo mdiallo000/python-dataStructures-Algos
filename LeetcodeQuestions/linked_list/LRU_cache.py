@@ -19,11 +19,12 @@ class LRUCache:
         previous = self.right.prev
         node.prev = previous
         node.next = self.right
+        previous.next = node
         self.right.prev = node
 
     def remove(self, node):
-        prev, nextNode = node.prev, node.next
-        prev.next, nextNode.prev = nextNode, prev
+        previous, nextNode = node.prev, node.next
+        previous.next, nextNode.prev = nextNode, previous
 
     def get(self, key: int) -> int:
         #  if the key exists we not only return its value we also update it to be the most recently accessed
