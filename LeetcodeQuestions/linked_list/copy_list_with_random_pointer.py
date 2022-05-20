@@ -23,9 +23,13 @@ class Solution:
             Printer[curr] = new_copied_node
             # We move the current Pointer up
             curr = curr.next
-
+        curr = head
         while curr:
             # lets get the copied node out of the Hashmap and start making some of these connections
             copy = Printer[curr]
             #  Now lets get its dot next connection
             copy.next = Printer[curr.next]
+            copy.random = Printer[curr.random]
+            curr = curr.next
+
+        return Printer[head]
