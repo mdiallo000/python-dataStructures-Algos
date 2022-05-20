@@ -37,3 +37,26 @@ class Graph:
     def __int__(self):
         self.vertDictionary = {}
         self.numVertices = 0
+
+    def __iter__(self):
+        return iter(self.vertDictionary.values())
+
+    def add_vertex(self, value):
+        self.numVertices += 1
+        newVertex = Vertex(value)
+
+        self.vertDictionary[value] = newVertex
+        return newVertex
+
+    def get_vertex(self, n):
+        if n in self.vertDictionary:
+            return self.vertDictionary[n]
+        else:
+            return None
+
+    def add_edge(self, frm, to, cost=0):
+        if frm not in self.vertDictionary:
+            self.add_vertex(frm)
+        if to not in self.vertDictionary:
+            self.add_vertex(to)
+        self.vertDictionary[to].add_neighbor(self.vertDictionary[frm], cost)
