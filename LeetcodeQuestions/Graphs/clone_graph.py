@@ -13,14 +13,14 @@ class Solution:
             return None
         Printer = {}
 
-        def DFS(self, node):
+        def DFS(node):
             if node in Printer:
                 return Printer[node]
 
             copy = Node(node.val)
             Printer[node] = copy
 
-            for neighbor in neighbors:
+            for neighbor in node.neighbors:
                 copy.neighbors.append(DFS(neighbor))
 
             return copy
