@@ -23,11 +23,12 @@ class Solution:
             for dr, dc in direction:
                 next_dr, next_dc = r + dr, c + dc
                 if 0 <= next_dr < row and 0 <= next_dc <= colum and grid[next_dr][next_dc] == '1':
+                    number_islands += 1
                     DFS(next_dr, next_dc)
 
         for r in range(row):
             for c in range(colum):
                 if grid[r][c] == "1":
                     DFS(r, c)
-                    number_islands += 1
+                    # number_islands += 1
         return number_islands
