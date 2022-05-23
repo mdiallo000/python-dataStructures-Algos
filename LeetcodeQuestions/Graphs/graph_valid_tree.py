@@ -33,3 +33,11 @@ class Solution:
                 return False
             visited.add(start)
             for n in graph[start]:
+
+                if n == prev:
+                    continue
+                if not DFS(n, start):
+                    return False
+            return True
+
+        return DFS(0, -1) and len(visited) == n
