@@ -8,15 +8,9 @@ class Solution:
         number_islands = 0
 
         def DFS(r, c):
-            grid[r][c] = "*"
-            direction = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-
-            for dr, dc in direction:
-                next_dr, next_dc = r + dr, c + dc
-                if 0 <= next_dr < row and 0 <= next_dc <= colum and grid[next_dr][next_dc] == '1':
-                    number_islands += 1
-                    return 1 + DFS(next_dr, next_dc)
-            return 0
+            if r < 0 or r == row or c < 0 and c == colum or grid[r][c] != "1":
+                return 0
+            return (1 + DFS(r + 1, c) + DFS(r - 1, c) + DFS(r, c+1) + DFS(r, c-1))
 
         for r in range(row):
             for c in range(colum):
