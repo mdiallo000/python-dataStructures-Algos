@@ -9,14 +9,12 @@ class Solution:
         visited = set()
 
         def DFS(r, c):
-            if (r < 0 or r == row or c < 0 and c == colum or grid[r][c] != "1" or (r, c) in visited):
+            if (r < 0 or r == row or c < 0 or c == colum or grid[r][c] != 1 or (r, c) in visited):
                 return 0
             visited.add((r, c))
             return (1 + DFS(r + 1, c) + DFS(r - 1, c) + DFS(r, c+1) + DFS(r, c-1))
 
         for r in range(row):
             for c in range(colum):
-                if grid[r][c] == "1":
-
-                    number_islands = max(number_islands, DFS(r, c))
+                number_islands = max(number_islands, DFS(r, c))
         return number_islands
