@@ -15,4 +15,4 @@ class Solutions:
         for r in range(rows):
             for c in range(colums):
                 if grid[r][c] == 1:
-                    count_ones =
+                    count_ones += 1
