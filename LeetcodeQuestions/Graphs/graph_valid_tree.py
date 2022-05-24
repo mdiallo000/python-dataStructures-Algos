@@ -36,8 +36,8 @@ class Solution:
 
                 if n == prev:
                     continue
-                if not DFS(n, start):
-                    return False
-            return True
+                if DFS(n, start):
+                    return True
+            return False
 
         return DFS(0, -1) and len(visited) == n
