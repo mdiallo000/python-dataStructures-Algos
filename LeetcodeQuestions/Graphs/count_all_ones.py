@@ -11,7 +11,7 @@ class Solutions:
         rows = len(grid)
         colums = len(grid[0])
         count_ones = 0
-
+        def dfs
         for r in range(rows):
             for c in range(colums):
                 if grid[r][c] == 1:
