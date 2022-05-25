@@ -30,5 +30,5 @@ class Solution:
             for c in range(colum):
                 if grid[r][c] == "1":
                     DFS(r, c)
-                    # number_islands += 1
+                    number_islands += 1
         return number_islands
