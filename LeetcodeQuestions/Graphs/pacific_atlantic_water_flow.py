@@ -1,4 +1,5 @@
 import collections
+from msilib.schema import Complus
 
 
 class Solution:
@@ -22,9 +23,13 @@ class Solution:
 
         for c in range(colums):
             # for top of the top(pacific) and bottom(atlantic)
-            DFS(v_pacific, c, colums, heights[0][colums])
-            DFS(v_atlantic, c, colums, heights[rows-1][colums])
+            DFS(v_pacific, 0, colums, heights[0][colums])
+            DFS(v_atlantic, rows-1, colums, heights[rows-1][colums])
 
         for r in range(rows):
             # left(pacific) and right (atlantic)
-            DFS()
+            DFS(v_pacific, rows, 0, heights[rows][0])
+            DFS(v_atlantic, rows, colums-1, heights[rows][colums-1])
+        res = v_atlantic.intersection(v_pacific)
+
+        return res
