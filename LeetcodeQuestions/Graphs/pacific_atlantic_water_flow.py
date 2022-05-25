@@ -13,3 +13,9 @@ class Solution:
             if r < 0 or r >= rows or c < 0 or c >= colums or (r, c) in visited or prev_values > grid[r][c]:
                 return
             #  If these conditions are not met than we can add them to our visited set
+            visited.add((r, c))
+            # now we run our traversal function on every direction from north, east, west, south for the current position we are on
+            DFS(visited, r + 1, c, prev_values)
+            DFS(visited, r - 1, c, prev_values)
+            DFS(visited, r, c+1, prev_values)
+            DFS(visited, r, c-1, prev_values)
