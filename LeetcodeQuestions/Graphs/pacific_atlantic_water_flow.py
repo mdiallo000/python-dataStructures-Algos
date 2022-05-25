@@ -19,3 +19,8 @@ class Solution:
             DFS(visited, r - 1, c, prev_values)
             DFS(visited, r, c+1, prev_values)
             DFS(visited, r, c-1, prev_values)
+
+        for c in range(colums):
+            # for top of the top(pacific) and bottom(atlantic)
+            DFS(v_pacific, c, colums, heights[0][colums])
+            DFS(v_atlantic, c, colums, heights[rows-1][colums])
