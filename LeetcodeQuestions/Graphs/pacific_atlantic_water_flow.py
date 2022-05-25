@@ -24,3 +24,7 @@ class Solution:
             # for top of the top(pacific) and bottom(atlantic)
             DFS(v_pacific, c, colums, heights[0][colums])
             DFS(v_atlantic, c, colums, heights[rows-1][colums])
+
+        for r in range(rows):
+            # left(pacific) and right (atlantic)
+            DFS()
