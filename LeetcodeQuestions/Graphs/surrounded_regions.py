@@ -28,4 +28,13 @@ class Solution:
                 #  NOW ALL OF THE O NEXT TO THE BORDER OF THE BOARD WILL CHANGE INTO ANOTHER CHAR
 
     #  The Next step is change the surronded O's in to X's
-        for r in range(ROWS)
+        for r in range(ROWS):
+            for c in range(COLUMS):
+                if board[r][c] == "O":
+                    board[r][c] = "x"
+
+    #  Finally we change the T's back to X's
+        for r in range(ROWS):
+            for c in range(COLUMS):
+                if board[r][c] == "T":
+                    board[r][r] = "O"
