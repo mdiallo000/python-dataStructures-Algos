@@ -12,7 +12,7 @@ class Solution:
     #  Now we will write the Traversal algorithm that will
         def Traverse(r, c):
             #  this base case will return once we no longer me the conditions
-            if 0 < r >= ROWS or 0 < c >= COLUMS or board[r][c] != "O":
+            if r < 0 or c < 0 or r == ROWS or c == COLUMS or board[r][c] != "O":
                 return
             board[r][c] = "T"
             Traverse(r+1, c)
@@ -22,7 +22,7 @@ class Solution:
     #  Now we run this traversal algo on the edges of our board to change the unsorrounded O into another char
         for r in range(ROWS):
             for c in range(COLUMS):
-                if board[r][c] == "O" and (r in [0, ROWS - 1]) and (c in [0, COLUMS - 1]):
+                if board[r][c] == "O" and (r in [0, ROWS - 1]) or (c in [0, COLUMS - 1]):
                     Traverse(r, c)
 
                 #  NOW ALL OF THE O NEXT TO THE BORDER OF THE BOARD WILL CHANGE INTO ANOTHER CHAR
@@ -31,10 +31,12 @@ class Solution:
         for r in range(ROWS):
             for c in range(COLUMS):
                 if board[r][c] == "O":
-                    board[r][c] = "x"
+                    board[r][c] = "X"
 
     #  Finally we change the T's back to X's
         for r in range(ROWS):
             for c in range(COLUMS):
                 if board[r][c] == "T":
-                    board[r][r] = "O"
+                    board[r][c] = "O"
+
+    #  We are now finished, no need to return anything
