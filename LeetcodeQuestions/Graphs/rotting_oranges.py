@@ -1,7 +1,6 @@
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
-        # [
-        #  [2,1,1],
-        #  [1,1,0],
-        #  [0,1,1]
-        # ]
+
+        ROWS, COLUMS = len(ROWS), len(COLUMS)
+        time_count, fresh = 0, 0
+        # def traverse(r,c):
