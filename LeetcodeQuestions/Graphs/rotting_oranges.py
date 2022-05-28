@@ -19,3 +19,8 @@ class Solution:
                     fresh_orange += 1
 
         # now that we know how many fresh oranges we have we can tell wheter or not we managed to rotten all the oranges
+        directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+        while queue and fresh == 0:
+
+            for i in range(len(queue)):
+                #  we need to apply this algo in the 4 directions of the grid
