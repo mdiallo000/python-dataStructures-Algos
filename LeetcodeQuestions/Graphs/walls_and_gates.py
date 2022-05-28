@@ -40,7 +40,7 @@ class Solution:
         def addRoom(r, c):
             if r < 0 or c < 0 or r == ROWS or c == COLUMS or (r, c) in visit or rooms[r][c] == -1:
                 return
-            visit.add(r, c)
+            visit.add((r, c))
             queue.append([r, c])
 
         distance = 0
