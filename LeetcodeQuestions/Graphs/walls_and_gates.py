@@ -37,3 +37,23 @@ class Solution:
                     visit.add((r, c))
 
         #  Now that we know exactly where the gates are we need to traverse the board and make sure we examine the exact grid that fits our criteria
+        def addRoom(r, c):
+            if r < 0 or c < 0 or r == ROWS or c == COLUMS or (r, c) in visit or rooms[r][c] == -1:
+                return
+            visit.add(r, c)
+            queue.append([r, c])
+
+        distance = 0
+
+        while queue:
+            length = len(queue)
+
+            for i in range(length):
+                r, c = queue.popleft()
+
+                rooms[r][c] = distance
+                addRoom(r+1, c)
+                addRoom(r-1, c)
+                addRoom(r, c+1)
+                addRoom(r, c-1)
+            distance += 1
