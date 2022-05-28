@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class Solution:
     """
     @param rooms: m x n 2D grid
@@ -22,4 +25,10 @@ class Solution:
         # 0  -1   3   4
 
         #  startting from the gates we can go and mark any subsquent open spot with the distance that is away from the gate
-        ROWS, COLUMS = len(rooms)
+        ROWS, COLUMS = len(rooms), len(rooms[0])
+        visit = set()
+        queue = deque()
+
+        #  we willl now go through the entire board and get the coordinates of our gates, so that we know where we need to start fro,
+        for r in range(ROWS):
+            for c in range(COLUMS):
