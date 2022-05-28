@@ -32,3 +32,8 @@ class Solution:
         #  we willl now go through the entire board and get the coordinates of our gates, so that we know where we need to start fro,
         for r in range(ROWS):
             for c in range(COLUMS):
+                if rooms[r][c] == 0:
+                    queue.append([r, c])
+                    visit.add((r, c))
+
+        #  Now that we know exactly where the gates are we need to traverse the board and make sure we examine the exact grid that fits our criteria
