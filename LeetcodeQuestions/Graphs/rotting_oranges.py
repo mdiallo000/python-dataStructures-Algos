@@ -23,4 +23,9 @@ class Solution:
         while queue and fresh == 0:
 
             for i in range(len(queue)):
+                #  we pop out the coordinates of the current rotten oranges in the queue
+                r, c = queue.popleft()
                 #  we need to apply this algo in the 4 directions of the grid
+
+                for dr, dc in directions:
+                    row, colum = dr + r, dc + c
