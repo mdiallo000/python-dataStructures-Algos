@@ -44,16 +44,22 @@ class Solution:
             queue.append([r, c])
 
         distance = 0
-
+        directions = [[1, 0], [-1, 0], [0, 1], [0, -1]]
         while queue:
             length = len(queue)
 
             for i in range(length):
                 r, c = queue.popleft()
 
-                rooms[r][c] = distance
-                addRoom(r+1, c)
-                addRoom(r-1, c)
-                addRoom(r, c+1)
-                addRoom(r, c-1)
+                for dr, dc in directions:
+                    row, colum = dr + r, dc + c
+                    if row < 0 or colum < 0 or row == ROWS or colum == COLUMS or (row, colum) in visit or rooms[row][colum] == -1:
+                        continue
+                rooms[row][colum] = distance
+                visit.add((row, colum))
+                queue.append([row, colum])
+                # addRoom(r+1, c)
+                # addRoom(r-1, c)
+                # addRoom(r, c+1)
+                # addRoom(r, c-1)
             distance += 1
