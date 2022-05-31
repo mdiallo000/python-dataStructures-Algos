@@ -27,4 +27,16 @@ class Solution:
         for Class1, Class2 in prerequisites:
             graph[Class1].append(Class2)
 
+        #
+        # {
+        #     0:[1,6]
+        #     1:[2,3]
+        #     2:[5]
+        #     3:[]
+        #     5:[]
+        # }
         visited = set()
+
+        def DFS(course):
+            if course in visited:
+                return False
