@@ -40,3 +40,18 @@ class Solution:
         def DFS(course):
             if course in visited:
                 return False
+            if graph[course] == []:
+                return True
+            visited.add(course)
+
+            for prereq in graph[course]:
+                if not DFS(prereq):
+                    return False
+            visited.remove(course)
+            graph[course] = []
+            return True
+
+        for course in graph:
+            if not DFS(course):
+                return False
+        return True
