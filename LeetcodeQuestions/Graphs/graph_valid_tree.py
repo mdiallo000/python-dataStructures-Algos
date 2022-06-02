@@ -19,7 +19,7 @@ class Solution:
         for n1, n2 in edges:
             graph[n1].append(n2)
             graph[n2].append(n1)
-        #  we construct a graph
+        #  we construct an adjency list
         # {
         #     0:[1,2,3]
         #     1:[0,4]
@@ -31,7 +31,9 @@ class Solution:
         def DFS(start, prev):
             if start in visited:
                 return False
+
             visited.add(start)
+
             for n in graph[start]:
 
                 if n == prev:

@@ -30,7 +30,7 @@ class Solution:
             adjcency_List[n1].append(n2)
             adjcency_List[n2].append(n1)
         # ex:
-        return res[-1]
+        return res
         # {
         #     1:[2,3]
         #     2:[1,3]

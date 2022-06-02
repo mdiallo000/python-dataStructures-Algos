@@ -1,5 +1,4 @@
 from collections import defaultdict
-from email.policy import default
 
 
 class Solution:
@@ -18,6 +17,7 @@ class Solution:
             if start in seen:
                 return False
             seen.add(start)
+
             for vertex in neighbors[start]:
                 if dfs(vertex, end, seen):
                     return True
