@@ -28,3 +28,14 @@ class Solution:
                     return False
             cycle.remove(course)
             visit.add(course)
+            result.append(course)
+            #  if everything goes well than we just need to return True
+            return True
+
+        # Now we run the algo for all of the course
+
+        for course in range(numCourses):
+            # if its imposible to take a course due to a cycle existing than we need to return an empty list
+            if not top_sort(course):
+                return []
+        return result
