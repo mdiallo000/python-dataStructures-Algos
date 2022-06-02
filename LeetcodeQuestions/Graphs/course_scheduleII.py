@@ -11,7 +11,7 @@ class Solution:
         #  now we need both a visited set that will keep track of the courses that have been taken and a cycle set that will make sure no cycles exits within the graph
         visit = set()
         cycle = set()
-
+        result = []
         #  now we will create the DFS function that will determine if a course can be taken
 
         def top_sort(course):
@@ -27,3 +27,4 @@ class Solution:
                 if not top_sort(preq):
                     return False
             cycle.remove(course)
+            visit.add(course)
