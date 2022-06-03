@@ -19,6 +19,14 @@ class UndergroundSystem:
         #  we take the out info on where the passanger intially gone on their journey and at what time the started this journey
 
         self.journeyTracker[(start_station, end_station)
-                            ][0] = (end_time - start_time)
+                            ][0] += (end_time - start_time)
+        #  we will store information about the length of time it took to get from one station to the other
+        self.journeyTracker[(start_station, end_station)][1] += 1
+        #  we also keep track of how many trips have been taking between these two stations, this will come in handy when calculation the average time
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
+        total_time, all_trips = self.journeyTracker[(
+            startStation, endStation)].pop()
+
+        average_time = total_time / all_trips
+        return average_time
