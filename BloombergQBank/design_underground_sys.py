@@ -1,17 +1,17 @@
 from collections import defaultdict
+from tabnanny import check
 
 
 class UndergroundSystem:
 
     def __init__(self):
         checkInReg = defaultdict(list)
-        checkOutReg = defaultdict(list)
+        journeyTracker = defaultdict(list)
 
     def checkIn(self, id: int, stationName: str, t: int) -> None:
-        self.person = id
-        if self.checkInReg[self.person][0] != stationName:
-            self.checkInReg[self.person].append(stationName, t)
+        checkInReg[id].append(stationName, t)
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
+        if self.person
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
