@@ -9,9 +9,10 @@ class UndergroundSystem:
         journeyTracker = defaultdict(list)
 
     def checkIn(self, id: int, stationName: str, t: int) -> None:
-        checkInReg[id].append(stationName, t)
+        self.checkInReg[id].append(stationName, t)
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
-        if self.person
+        # If someone leaves the station than we should erase them from the database to conserve money
+        start_station, start_time = self.checkInReg[id].pop()
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
