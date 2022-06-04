@@ -5,15 +5,15 @@ from tabnanny import check
 class UndergroundSystem:
 
     def __init__(self):
-        checkInReg = defaultdict(list)
-        journeyTracker = defaultdict(list)
+        self.checkInReg = defaultdict()
+        self.journeyTracker = defaultdict(lambda: [0, 0])
 
     def checkIn(self, id: int, stationName: str, t: int) -> None:
-        self.checkInReg[id].append(stationName, t)
+        self.checkInReg[id] = [stationName, t]
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
         # If someone leaves the station than we should erase them from the database to conserve money
-        start_station, start_time = self.checkInReg[id].pop()
+        start_station, start_time = self.checkInReg[id]
         end_station = stationName
         end_time = t
         #  we take the out info on where the passanger intially gone on their journey and at what time the started this journey
@@ -26,7 +26,7 @@ class UndergroundSystem:
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
         total_time, all_trips = self.journeyTracker[(
-            startStation, endStation)].pop()
+            startStation, endStation)]
 
         average_time = total_time / all_trips
         return average_time
