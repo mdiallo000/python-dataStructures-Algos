@@ -13,4 +13,5 @@ class Solution:
             if stairs == 2:
                 return stairs
 
-            return climb(1-stairs) + climb(2-stairs)
+            return climb(stairs - 1) + climb(stairs - 2)
+        climb(n)
