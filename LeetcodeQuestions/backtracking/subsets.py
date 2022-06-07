@@ -13,5 +13,14 @@ class Solution:
             if idx >= len(nums):
                 result.append(sub_sequence.copy())
                 return
-
+            #  we add the current elem in our nums array into this sequence
             sub_sequence.append(nums[idx])
+            #  now we call our function again, and this task will be repeated for our subsquent indices
+            sub(idx+1)
+            #  we will now pop()
+            sub_sequence.pop()
+            #  Now call for the other side of the sequences
+            sub(idx+1)
+            #  for almost each initial call, a pair of calls will be made leading to a time complexity of 2^N
+        sub(0)
+        return result
