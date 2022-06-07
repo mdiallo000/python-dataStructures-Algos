@@ -12,3 +12,6 @@ class Solution:
                 return
 
             seqs.append(candidates[idx])
+            findSum(idx+1, seqs, total + candidates[idx])
+            seqs.pop()
+            findSum(idx+1, seqs, total + candidates[idx])
