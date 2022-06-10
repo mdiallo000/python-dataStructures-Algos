@@ -2,25 +2,33 @@ from itertools import permutations
 
 
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permute1(self, nums: List[int]) -> List[List[int]]:
 
         res = []
-        permutation = []
-        freq = [False] * len(nums)
+        if len(nums) == 1:
+            return [nums[:]]
 
-        def generate(permutation, freq):
+        for i in range(len(nums)):
+            n = nums.pop(0)
+            perm = self.permute(nums)
+            for p in perm:
+                p.append(n)
+            res.extend(perm)
+            nums.append(n)
+        return res
 
-            if len(permutation) >= len(nums):
-                res.append(permutation.copy())
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        def swap(i, idx, arr):
+            arr[i], arr[idx] = arr[idx], arr[i]
+
+        res = []
+        ans = []
+
+        def generate(index):
+            if index == len(nums):
+                for i in range(len(nums)):
+                    ans.append(nums[i])
+                res.append[ans[:]]
                 return
 
-            for i in range(nums):
-                if i not in freq:
-                    permutation.append(nums[i])
-                    freq[i] = True
-                    generate(permutation, freq)
-                    permutation.pop(len(permutation)-1)
-                    freq[i] = False
-
-        generate(permutation, freq)
-        return res
+            for i in range(len(nums)):
