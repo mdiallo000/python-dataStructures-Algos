@@ -11,3 +11,8 @@ class Solution:
             #  if our total somehow goes pass zero that means we have overshot the target and need to cease pursing this path
             if total <= 0:
                 return
+            prev = -1
+            for i in range(len(candidates)):
+                #  here we make sure we arent process a duplicate, if it is a duplicate than we move pass this value
+                if candidates[i] == prev:
+                    continue
