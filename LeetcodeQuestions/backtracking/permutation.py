@@ -32,3 +32,9 @@ class Solution:
                 return
 
             for i in range(len(nums)):
+                swap(i, index, nums)
+                generate(index + 1)
+                swap(i, index, nums)
+
+        generate(0)
+        return res
