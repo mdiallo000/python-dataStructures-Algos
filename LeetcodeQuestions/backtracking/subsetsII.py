@@ -20,7 +20,7 @@ class Solution:
 
             # Now here comes the real difference maker between this problem and its first version
             # We will need some type a loop that will move the idx whenever we encounter an element that was already chosen previously, this will help us avoid generating duplicate subests
-            while idx < len(nums) and nums[idx] == nums[idx+1]:
+            while idx < len(nums) - 1 and nums[idx] == nums[idx+1]:
                 idx += 1
             # Now we can call the function again and continue on in our decision tree
             generate(subsets, idx+1)
