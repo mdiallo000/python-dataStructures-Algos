@@ -23,5 +23,6 @@ class Solution:
             while idx < len(nums) and nums[idx] == nums[idx+1]:
                 idx += 1
             # Now we can call the function again and continue on in our decision tree
+            generate(subsets, idx+1)
         generate([], 0)
         return res
