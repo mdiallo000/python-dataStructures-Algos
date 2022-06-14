@@ -18,7 +18,7 @@ class Solution:
             for j in range(idx, len):
                 if isPalindrome(s, idx, j):
                     partition.append(s[idx:j+1])
-                    generate(j, partition)
+                    generate(j+1, partition)
                     partition.pop()
 
         generate(0, [])
