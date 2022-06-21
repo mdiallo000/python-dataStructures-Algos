@@ -3,14 +3,14 @@ class Solution:
 
         difference = []
         for c1, c2 in costs:
-            difference.append(c2-c1, c1, c2)
+            difference.append([c2-c1, c1, c2])
         difference.sort()
         total = 0
 
         for i in range(len(difference)):
 
-            if len(difference) // 2:
+            if i < len(difference) // 2:
                 total += difference[i][2]
             else:
-                total += difference[i][2]
+                total += difference[i][1]
         return total
