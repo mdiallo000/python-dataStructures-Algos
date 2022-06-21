@@ -12,12 +12,12 @@ class Solution:
             if target <= 0:
                 return
             prev = -1
-            for i in range(len(candidates)):
+            for i in range(idx, len(candidates)):
                 #  here we make sure we arent process a duplicate, if it is a duplicate than we move pass this value
                 if candidates[i] == prev:
                     continue
                 combination.append(candidates[i])
-                generate(combination, idx + 1, target - candidates[i])
+                generate(combination, i + 1, target - candidates[i])
                 combination.pop()
                 prev = candidates[i]
                 

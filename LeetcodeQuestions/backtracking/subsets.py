@@ -11,6 +11,7 @@ class Solution:
         def sub(idx):
             #  our base case makes sure that we do not add more elements than we are allowed
             if idx >= len(nums):
+                
                 result.append(sub_sequence.copy())
                 return
             #  we add the current elem in our nums array into this sequence
