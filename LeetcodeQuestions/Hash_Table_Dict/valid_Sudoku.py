@@ -18,3 +18,7 @@ class Solution:
                 if (board[r][c] in row[r] or board[r][c] in colum[c] or board[r][c] in square[(r//3, c//3)]):
                     #  we will return false since this is not a valid sudoku anymore
                     return False
+                row[r].add(board[r][c])
+                colum[c].add(board[r][c])
+                square[(r//3, c//3)].add(board[r][c])
+        return True
