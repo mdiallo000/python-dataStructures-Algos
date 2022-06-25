@@ -11,4 +11,10 @@ class Solution:
                 substr = ''
 
                 while stack[-1] != "[":
-                    substr = stack.popleft() + substr
+                    substr = stack.pop() + substr
+                stack.pop()
+
+                k = ""
+
+                while stack and stack[-1].isdigit():
+                    k = stack.pop() + k
