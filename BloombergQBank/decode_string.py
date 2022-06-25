@@ -18,3 +18,7 @@ class Solution:
 
                 while stack and stack[-1].isdigit():
                     k = stack.pop() + k
+
+                stack.append(int(k) * substr)
+
+        return ''.join(stack)
