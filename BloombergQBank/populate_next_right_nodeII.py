@@ -8,3 +8,9 @@ class Solution:
 
         q = deque()
         q.append(root)
+
+        while q:
+            size = len(q)
+
+            for i in range(size):
+                node = q.popleft()
