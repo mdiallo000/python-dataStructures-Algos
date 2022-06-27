@@ -6,3 +6,4 @@ class Solution:
             return head
         dummy = Node(0)
         curr = dummy
+        stack = [head]
