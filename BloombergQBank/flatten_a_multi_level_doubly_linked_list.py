@@ -7,3 +7,7 @@ class Solution:
         dummy = Node(0)
         curr = dummy
         stack = [head]
+
+        while stack:
+
+            temp = stack.pop()
