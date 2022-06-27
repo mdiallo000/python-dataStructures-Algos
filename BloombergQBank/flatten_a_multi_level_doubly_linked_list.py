@@ -7,7 +7,9 @@ class Solution:
         dummy = Node(0)
         curr = dummy
         stack = [head]
-
         while stack:
-
             temp = stack.pop()
+            if temp.next:
+                stack.append(temp.next)
+            if temp.child:
+                stack.append(temp.child)
