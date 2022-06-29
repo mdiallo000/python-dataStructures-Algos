@@ -12,23 +12,23 @@ class Solution:
         # Output: 1
         # Intuitively we want to identify the number of
 
-        row = len(grid)
-        colum = len(grid[0])
-        number_islands = 0
+        ROWS = len(grid)
+        COLUMS = len(grid[0])
 
-        def DFS(r, c):
-            grid[r][c] = "*"
-            direction = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+        def sink(r, c):
 
-            for dr, dc in direction:
-                next_dr, next_dc = r + dr, c + dc
-                if 0 <= next_dr < row and 0 <= next_dc <= colum and grid[next_dr][next_dc] == '1':
-                    number_islands += 1
-                    DFS(next_dr, next_dc)
+            if r < 0 or r == ROWS or c < 0 or c == COLUMS or grid[r][c] == '0':
+                return
+            grid[r][c] = '0'
+            sink(r+1, c)
+            sink(r-1, c)
+            sink(r, c+1)
+            sink(r, c-1)
 
-        for r in range(row):
-            for c in range(colum):
+        islands = 0
+        for r in range(ROWS):
+            for c in range(COLUMS):
                 if grid[r][c] == "1":
-                    DFS(r, c)
-                    number_islands += 1
-        return number_islands
+                    sink(r, c)
+                    islands += 1
+        return islands
