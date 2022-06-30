@@ -21,3 +21,8 @@ class Solution:
                 result.append(t)
             else:
                 for minutes in userInfo[name]:
+                    if -60 <= int(time) - int(minutes) <= 60 and len(userInfo[name][minutes]) > 1 or city not in userInfo[name][minutes]:
+                        result.append(t)
+                    break
+
+        return result
