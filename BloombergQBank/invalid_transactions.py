@@ -19,3 +19,5 @@ class Solution:
             name, time, amount, city = t.split(',')
             if int(amount) > 1000:
                 result.append(t)
+            else:
+                for minutes in userInfo[name]:
