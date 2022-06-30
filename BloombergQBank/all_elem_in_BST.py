@@ -8,3 +8,7 @@ class Solution:
             inorder(node.left)
             res.append(node.val)
             inorder(node.right)
+        inorder(root1)
+        inorder(root2)
+
+        return res.sort()
