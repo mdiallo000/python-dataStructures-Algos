@@ -14,3 +14,8 @@ class Solution:
         for t in transactions:
             name, time, amount, city = t.split(",")
             userInfo[name][time].add(time)
+
+        for t in transactions:
+            name, time, amount, city = t.split(',')
+            if int(amount) > 1000:
+                result.append(t)
