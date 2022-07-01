@@ -1,3 +1,6 @@
+from heapq import heapify
+
+
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
 
@@ -9,3 +12,6 @@ class Solution:
         #     After processing all the meetings, the size of the heap will tell us the number of rooms allocated. This will be the minimum number of rooms needed to accommodate all the meetings.
 
         # Let us not look at the implementation for this algorithm.
+
+        start_time = sorted([s.start for s in intervals])
+        end_time = sorted([s.end for s in intervals])
