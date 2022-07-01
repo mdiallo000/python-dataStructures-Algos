@@ -19,3 +19,5 @@ class Solution:
                 result[-1][1] = max(end, previous_end)
             else:
                 result.append([start, end])
+
+        result
