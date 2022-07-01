@@ -13,6 +13,7 @@ class Solution:
         #  now we iterate through our list and determin where there may be intervals
         #  we want to start looking after the first elmen since we are comparing the incoming with the previous
         for start, end in intervals[1:]:
+            #  here we take the last elemen from the last entered elem and see wheter
             previous_end = result[-1][1]
 
             if start <= previous_end:
