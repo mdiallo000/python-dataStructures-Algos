@@ -14,7 +14,7 @@ class LRUCache:
         self.left.next = self.right
         self.right.prev = self.left
     # create Helper function that will delete and add new nodes into cache
-    #  we always insert at the right most position to maintaing our most recently used 
+    # we always insert at the right most position to maintaing our most recently used 
     def insert(self, node):
         previous = self.right.prev
         node.prev = previous

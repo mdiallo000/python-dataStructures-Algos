@@ -8,13 +8,11 @@ class Solution:
         curr = dummy
         stack = [head]
         while stack:
-            []
             temp = stack.pop()
             if temp.next:
                 stack.append(temp.next)
             if temp.child:
                 stack.append(temp.child)
-
             curr.next = temp
             temp.prev = curr
             temp.child = None
