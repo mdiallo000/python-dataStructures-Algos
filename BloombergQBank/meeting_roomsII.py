@@ -1,4 +1,5 @@
 from heapq import heapify
+import heapq
 
 
 class Solution:
@@ -24,3 +25,18 @@ class Solution:
         #         count -= 1
         #     nums_rooms = max(nums_rooms, count)
         # return nums_rooms
+
+        intervals.sort(key=lambda i: i[0])
+
+        rooms = []
+
+        heapq.heappush(rooms, intervals[0][1])
+
+        for start, end in intervals[1:]:
+
+            if rooms[0] <= start:
+                heapq.heappop(rooms)
+
+            heapq.heappush(rooms, end)
+
+        return len(rooms)
