@@ -20,4 +20,4 @@ class Solution:
             else:
                 result.append([start, end])
 
-        result
+        return result
