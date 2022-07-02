@@ -8,12 +8,9 @@ class Solution:
         columTable = default(list)
         q = deque()
         q.append([(root, 0)])
-        result = []
 
         while q:
-
             node, columPos = q.popleft()
-
             if node:
                 columTable[columPos].append(node.val)
                 q.append([(node.left, columPos - 1)])
