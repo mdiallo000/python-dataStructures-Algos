@@ -11,12 +11,11 @@ class Solution:
         result = []
 
         while q:
-            size = len(q)
-            for i in range(size):
-                node, columPos = q.popleft()
 
-                if node:
-                    columTable[columPos].append(node.val)
-                    q.append([(node.left, columPos - 1)])
-                    q.append([(node.right, columPos + 1)])
+            node, columPos = q.popleft()
+
+            if node:
+                columTable[columPos].append(node.val)
+                q.append([(node.left, columPos - 1)])
+                q.append([(node.right, columPos + 1)])
         return [columTable[x] for x in sorted(key=columTable.keys())]
