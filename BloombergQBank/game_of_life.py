@@ -14,12 +14,10 @@ class Solution:
                 for dr, dc in directions:
                     r, c = row + dr, dc + col
 
-                    if r >= 0 or r < ROWS or c >= 0 or c < COLUMS or board[r][c] == 1:
+                    if r >= 0 and r < ROWS and c >= 0 and c < COLUMS and board[r][c] == 1:
                         alive += 1
 
                 if copyboard[row][col] == 1 and (alive < 2 or alive > 3):
                     board[row][col] = 0
                 if copyboard[row][col] == 0 and (alive >= 3):
                     board[row][col] = 0
-
-        return board
