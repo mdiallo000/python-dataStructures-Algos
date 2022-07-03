@@ -3,3 +3,5 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
+        ROWS = len(board)
+        COLUMS = len(board[0])
