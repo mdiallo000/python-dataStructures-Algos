@@ -5,3 +5,8 @@ class Solution:
         """
         ROWS = len(board)
         COLUMS = len(board[0])
+        directions = [[1, 0], [-1, 0], [0, 1], [0, -1],
+                      [1, 1], [-1, 1], [1, -1], [-1, -1]]
+
+        for r in range(ROWS)
+        for c in range(COLUMS)
