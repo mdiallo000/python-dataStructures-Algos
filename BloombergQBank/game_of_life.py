@@ -21,3 +21,5 @@ class Solution:
                     board[row][col] = 0
                 if copyboard[row][col] == 0 and (alive >= 3):
                     board[row][col] = 0
+
+        return board
