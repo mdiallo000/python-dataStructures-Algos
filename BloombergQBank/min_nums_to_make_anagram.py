@@ -8,8 +8,9 @@ class Solution:
                 DictS[char] = 1
             else:
                 DictS[char] += 1
+
         for char in s:
-            if char not in DictS:
-                DictS[char] = 1
+            if char not in DictT:
+                DictT[char] = 1
             else:
-                DictS[char] += 1
+                DictT[char] += 1
