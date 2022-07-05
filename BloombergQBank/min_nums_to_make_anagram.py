@@ -14,3 +14,9 @@ class Solution:
                 DictT[char] = 1
             else:
                 DictT[char] += 1
+
+        Num_changes = 0
+
+        for c in DictS:
+            Num_changes = (Num_changes, DictS[c] - DictT[c])
+        return Num_changes
