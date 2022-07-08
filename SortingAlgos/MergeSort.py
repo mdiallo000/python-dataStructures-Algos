@@ -39,7 +39,7 @@ def mergesort(arr):
             j += 1
             k += 1
 
-    # return arr
+    return arr
     print(arr)
 
 
