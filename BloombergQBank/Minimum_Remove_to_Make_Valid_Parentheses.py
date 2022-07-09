@@ -13,3 +13,11 @@ class Solution:
                 index_removal = set()
             else:
                 stack.pop()
+
+        index_removal = index_removal.intersection(stack)
+
+        string_builder = []
+
+        for idx, char in enumerate(s):
+            if idx not in index_removal:
+                string_builder.append(char)
