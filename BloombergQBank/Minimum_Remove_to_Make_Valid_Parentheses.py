@@ -7,3 +7,9 @@ class Solution:
 
             if s[i] not in "()":
                 continue
+            if s[i] == "(":
+                stack.append(i)
+            elif not stack:
+                index_removal = set()
+            else:
+                stack.pop()
