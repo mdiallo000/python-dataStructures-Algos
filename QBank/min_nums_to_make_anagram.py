@@ -1,7 +1,7 @@
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
 
-        DictT, DictS = {}, {}
+        DictS = {}, {}
 
         for char in s:
             if char not in DictS:

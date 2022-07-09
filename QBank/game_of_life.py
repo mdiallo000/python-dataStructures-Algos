@@ -8,6 +8,7 @@ class Solution:
         directions = [[1, 0], [-1, 0], [0, 1], [0, -1],
                       [1, 1], [-1, 1], [1, -1], [-1, -1]]
         copyboard = [[board[r][c] for c in range(ROWS)] for r in range(COLUMS)]
+
         for row in range(ROWS):
             for col in range(COLUMS):
                 alive = 0

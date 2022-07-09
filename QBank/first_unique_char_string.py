@@ -1,5 +1,5 @@
 class Solution:
-    def firstUnique(self, string: word):
+    def firstUnique(self, str: word):
         char_dict = {}
 
         for char in word:

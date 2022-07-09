@@ -10,14 +10,16 @@ class Solution:
             if s[i] == "(":
                 stack.append(i)
             elif not stack:
-                index_removal = set()
+                index_removal.add(i)
             else:
                 stack.pop()
 
-        index_removal = index_removal.intersection(stack)
+        index_removal = index_removal.union(set(stack))
 
         string_builder = []
 
         for idx, char in enumerate(s):
             if idx not in index_removal:
                 string_builder.append(char)
+
+        return ''.join(string_builder)
