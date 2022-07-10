@@ -1,6 +1,5 @@
 class Solution:
-
-    def next_greater(self, nums1, nums2):
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 
         dataMap = {}
         stack = []
