@@ -38,5 +38,6 @@ class Solution:
                 heapq.heappop(rooms)
 
             heapq.heappush(rooms, end)
+            
 
         return len(rooms)
