@@ -1,16 +1,10 @@
 class Solution:
     def maximumPopulation(self, logs: List[List[int]]) -> int:
 
-        logs.sort(key=lambda i: i[0])
+        Map = {}
 
-        popCount = 0
+        for start, end in logs:
 
-        res = [logs[0]]
-        store_year = []
-        for start, end in logs[1:]:
+            for year in range(start, end):
 
-            prevEnd = res[-1][1]
-
-            if start - 1 < prevEnd:
-                popCount += 1
-                store_year.append([prevEnd, popCount])
+                Map[year] = Map.get(year, 0)+1
