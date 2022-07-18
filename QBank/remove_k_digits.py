@@ -7,3 +7,6 @@ class Solution:
         stack = []
 
         for n in num:
+
+            while k and stack and stack[-1] > n:
+                stack.pop()
