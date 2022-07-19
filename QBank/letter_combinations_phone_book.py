@@ -12,3 +12,5 @@ class Solution:
             "8": "tuv",
             "9": "wxyz"
         }
+
+        def generate(idx, currStr):
