@@ -14,3 +14,15 @@ class Solution:
         }
 
         def generate(idx, currStr):
+
+            if len(currStr) == len(digits):
+                res.append(currStr)
+                return
+
+            for char in charMap[digits[idx]]:
+                generate(idx+1, currStr + char)
+
+        #  last chech makes sure we are not
+        if digits:
+            generate(0, '')
+            return res
