@@ -20,5 +20,12 @@ class Trie:
         curr.endWord = True
 
     def search(self, word: str) -> bool:
+        curr = self.root
+
+        for c in word:
+            if c not in curr.children[c]:
+                return False
+            curr = curr.children[c]
+        return curr.endWord
 
     def startsWith(self, prefix: str) -> bool:
