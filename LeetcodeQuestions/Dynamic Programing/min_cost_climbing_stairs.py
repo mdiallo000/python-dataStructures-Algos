@@ -5,3 +5,5 @@ class Solution:
         #  test case [10,15,20]
         cost.append(0)
         #  test case [10,15,20, 0]
+
+        for i in range(len(cost)-3, -1, -1):
