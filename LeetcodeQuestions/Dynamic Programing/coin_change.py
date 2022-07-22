@@ -8,8 +8,9 @@ class Solution:
 
         for i in range(1, len(tab)-1):
             for coin in coins:
-                if tab[i] - coin >= 0:
+                if i - coin >= 0:
                     tab[i] = min(tab[i], tab[i - coin])
+
         if tab[amount] == amount + 1:
             return -1
         else:
