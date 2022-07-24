@@ -5,3 +5,5 @@ class Solution:
         dp[len(s) + 1] = True
 
         for i in range(len(s)-1, -1, -1):
+
+            for word in wordDict
