@@ -4,3 +4,7 @@ class Solution:
         lis = [1] * len(nums)
 
         for i in range(len(s)-1, -1, -1):
+            for j in range(i + 1, i):
+                if nums[i] < nums[j]:
+                    lis[i] = max(lis[i], lis[j:])
+        return max(lis)
