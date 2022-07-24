@@ -20,3 +20,4 @@ class Solution:
 
             if closedB < openB:
                 stack.append(")")
+                generate(openB, closedB+1)
