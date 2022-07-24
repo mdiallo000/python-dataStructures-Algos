@@ -10,3 +10,4 @@ class Solution:
             temp = curMax * n
             curMax = max(curMax * n, curMin*n, n)
             curMin = min(temp, curMin * n, n)
+            res = (curMax, res)
