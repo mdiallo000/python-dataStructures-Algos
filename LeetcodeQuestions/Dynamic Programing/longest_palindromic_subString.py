@@ -1,6 +1,6 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        res = ''
+        res = ""
         resLen = 0
 
         for i in range(len(s)):
