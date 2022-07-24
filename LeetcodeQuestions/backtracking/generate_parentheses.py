@@ -17,3 +17,6 @@ class Solution:
                 stack.append("(")
                 generate(openB + 1, closedB)
                 stack.pop()
+
+            if closedB < openB:
+                stack.append(")")
