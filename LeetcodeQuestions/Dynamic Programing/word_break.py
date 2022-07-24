@@ -3,3 +3,5 @@ class Solution:
 
         dp = [False] * (len(s) + 1)
         dp[len(s) + 1] = True
+
+        for i in range(len(s)-1, -1, -1):
