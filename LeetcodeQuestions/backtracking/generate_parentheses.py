@@ -7,6 +7,13 @@ class Solution:
         stack = []
         res = []
 
-        def generate(openB, closedB)
+        def generate(openB, closedB):
 
-        if openB == closedB == N:
+            if openB == closedB == n:
+                res.append(''.join(stack))
+                return
+
+            if openB < n:
+                stack.append("(")
+                generate(openB + 1, closedB)
+                stack.pop()
