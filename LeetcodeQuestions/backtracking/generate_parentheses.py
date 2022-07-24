@@ -21,3 +21,7 @@ class Solution:
             if closedB < openB:
                 stack.append(")")
                 generate(openB, closedB+1)
+                stack.pop()
+
+        generate(0, 0)
+        return res
