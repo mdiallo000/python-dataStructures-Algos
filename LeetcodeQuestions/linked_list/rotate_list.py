@@ -9,7 +9,7 @@ class Solution:
             return head
         #  Now lets identify our current tail which will become the old tail since the Node at n -k will become the tail
         #  We also keep a count of the amount of nodes in our linked list in order to know where the new tail will be
-        num_nodes = 0
+        num_nodes = 1
         old_tail = head
         while old_tail.next:
             old_tail = old_tail.next
@@ -20,4 +20,10 @@ class Solution:
         #  now its time to find the new tail:
         new_tail = head
 
-        while ()
+        for i in range(num_nodes - k % num_nodes - 1):
+            new_tail = new_tail.next
+        new_head = new_tail.next
+
+        new_tail.next = None
+
+        return new_head.next
