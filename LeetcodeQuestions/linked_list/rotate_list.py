@@ -9,3 +9,6 @@ class Solution:
             return head
         #  Now lets identify our current tail which will become the old tail since the Node at n -k will become the tail
         old_tail = head
+        while old_tail.next:
+            old_tail = old_tail.next
+        old_tail.next = head
