@@ -20,10 +20,10 @@ class Solution:
         #  now its time to find the new tail:
         new_tail = head
 
-        for i in range(num_nodes - k % num_nodes - 1):
+        for _ in range(num_nodes - k % num_nodes - 1):
             new_tail = new_tail.next
         new_head = new_tail.next
 
         new_tail.next = None
 
-        return new_head.next
+        return new_head 
