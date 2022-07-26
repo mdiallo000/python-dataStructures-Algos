@@ -13,6 +13,7 @@ class Solution:
         old_tail = head
         while old_tail.next:
             old_tail = old_tail.next
+            num_nodes += 1
         #  when we find the old tail now lets connect it to the head of the linked list
         old_tail.next = head
 
