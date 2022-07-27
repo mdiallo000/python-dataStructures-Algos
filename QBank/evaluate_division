@@ -6,7 +6,10 @@ class Solution:
 
         #  build graph
         graph = defaultdict(dict)
-
+        visited = set()
         for i, (num, den) in enumerate(equations):
             graph[num][den] = values[i]
             graph[den][num] = 1/values[i]
+
+        def DFS(start, destination, product, visited):
+            visited.add(start)
