@@ -21,3 +21,5 @@ class Solution:
                 for neigbor, value in neighbors.items():
                     if neigbor in visited:
                         continue
+
+                    ret = (DFS(neighbor, destination, product * value, visited))
