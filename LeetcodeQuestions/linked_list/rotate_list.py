@@ -26,4 +26,4 @@ class Solution:
 
         new_tail.next = None
 
-        return new_head 
+        return new_head
