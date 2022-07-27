@@ -8,3 +8,7 @@ class Solution:
             curr = nums[i]
             start = 0
             end = i - 1
+
+            while start < end:
+
+                nums[start] + nums[end] > curr:
