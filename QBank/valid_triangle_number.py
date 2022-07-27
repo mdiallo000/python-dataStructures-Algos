@@ -11,4 +11,4 @@ class Solution:
 
             while start < end:
 
-                nums[start] + nums[end] > curr:
+                if nums[start] + nums[end] > curr:
