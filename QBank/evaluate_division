@@ -13,3 +13,7 @@ class Solution:
 
         def DFS(start, destination, product, visited):
             visited.add(start)
+            ret = -1.0
+            neighbors = graph[start]
+            if destination in neighbors:
+                ret = product * graph[destination]
