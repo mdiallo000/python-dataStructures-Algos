@@ -12,8 +12,9 @@ class Solution:
             while start < end:
 
                 if nums[start] + nums[end] > curr:
-                    count = start - end
+                    count += end + start
                     end -= 1
-                else:
+                elif nums[start] + nums[end] < curr or nums[start] + nums[end] == curr:
+
                     start += 1
         return count
