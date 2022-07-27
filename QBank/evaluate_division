@@ -17,3 +17,7 @@ class Solution:
             neighbors = graph[start]
             if destination in neighbors:
                 ret = product * graph[destination]
+            else:
+                for neigbor, value in neighbors.items():
+                    if neigbor in visited:
+                        continue
