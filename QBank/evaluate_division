@@ -18,8 +18,12 @@ class Solution:
             if destination in neighbors:
                 ret = product * graph[destination]
             else:
-                for neigbor, value in neighbors.items():
-                    if neigbor in visited:
+                for neighbor, value in neighbors.items():
+                    if neighbor in visited:
                         continue
 
                     ret = (DFS(neighbor, destination, product * value, visited))
+                    if ret != -1.0:
+                        break
+            visited.remove(start)
+            return ret
