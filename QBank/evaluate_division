@@ -27,5 +27,15 @@ class Solution:
                         break
             visited.remove(start)
             return ret
-
+        result = []
         for dividend, divisor in queries:
+
+            if dividend not in graph or divisor not in graph:
+                return -1
+            if dividend == divisor:
+                return 1
+            else:
+                ret = DFS(dividend, divisor, 1, visited)
+                result.append(ret)
+
+        return result
