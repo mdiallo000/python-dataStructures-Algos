@@ -27,3 +27,5 @@ class Solution:
                         break
             visited.remove(start)
             return ret
+
+        for dividend, divisor in queries:
