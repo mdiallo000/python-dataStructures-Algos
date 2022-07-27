@@ -12,3 +12,8 @@ class Solution:
             while start < end:
 
                 if nums[start] + nums[end] > curr:
+                    count = start - end
+                    end -= 1
+                else:
+                    start += 1
+        return count
