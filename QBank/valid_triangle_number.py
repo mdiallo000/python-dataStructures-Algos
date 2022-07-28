@@ -14,7 +14,7 @@ class Solution:
                 if nums[start] + nums[end] > curr:
                     count += end + start
                     end -= 1
-                elif nums[start] + nums[end] < curr or nums[start] + nums[end] == curr:
+                elif nums[start] + nums[end] <= curr: 
 
                     start += 1
         return count

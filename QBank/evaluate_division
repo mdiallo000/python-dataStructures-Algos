@@ -13,7 +13,7 @@ class Solution:
 
         def DFS(start, destination, product, visited):
             visited.add(start)
-            ret = -1.0
+            ret = float(-1.0)
             neighbors = graph[start]
             if destination in neighbors:
                 ret = product * graph[destination]
@@ -23,9 +23,8 @@ class Solution:
                         continue
 
                     ret = (DFS(neighbor, destination, product * value, visited))
-                    if ret != -1.0:
+                    if ret != float(-1.0):
                         break
-            visited.remove(start)
             return ret
         result = []
         for dividend, divisor in queries:
