@@ -19,7 +19,7 @@ class Solution:
                 path.append(curr)
                 DFS(node, path)
                 path.pop()
-            path = deque[0]
+            path = deque([0])
 
             DFS(0, path)
             return result
