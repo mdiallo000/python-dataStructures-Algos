@@ -6,7 +6,7 @@ class Solution:
     def isPossible(self, nums: List[int]) -> bool:
 
         Frequency = Counter(nums)
-        end = defaultdict()
+        end = defaultdict(int)
 
         for n in nums:
             # first check is to establish if we still have this number left in our frequency maping
