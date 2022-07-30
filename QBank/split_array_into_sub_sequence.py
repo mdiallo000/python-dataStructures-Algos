@@ -20,4 +20,9 @@ class Solution:
                     end[n - 1] -= 1
 
                 elif Frequency[n+1] and Frequency[n+2]:
-                    Frequency[n+1]
+                    Frequency[n+1] -= 1
+                    Frequency[n+2] -= 1
+                    end[n+2] += 1
+                else:
+                    return False
+        return True
