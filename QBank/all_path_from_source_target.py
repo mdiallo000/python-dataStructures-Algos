@@ -1,4 +1,5 @@
 from collections import deque
+import heapq
 
 
 class Solution:
@@ -8,6 +9,7 @@ class Solution:
         target = len(graph) - 1
 
         result = []
+        heapq
 
         def DFS(curr, path):
 
@@ -16,10 +18,10 @@ class Solution:
                 result.append(path[:])
                 return
             for node in graph[curr]:
-                path.append(curr)
+                path.append(node)
                 DFS(node, path)
                 path.pop()
-            path = deque([0])
+        path = deque([0])
 
-            DFS(0, path)
-            return result
+        DFS(0, path)
+        return result
