@@ -9,4 +9,5 @@ class Solution:
             return TreeNode(nums[0])
 
         curr_max = max(nums)
-        index = nums.index(curr_max)
+        pos = nums.index(curr_max)
+        node = TreeNode(curr_max)
