@@ -1,3 +1,13 @@
+from idna import valid_contextj
+
+
+class TreeNode:
+    def __init__(self, val) -> None:
+        self.val = val
+        self.left = None
+        self.right = None
+
+
 class Solution:
     def constructMaximumBinaryTree(self, nums: List[int]) -> Optional[TreeNode]:
         return self.makeTree(nums)
