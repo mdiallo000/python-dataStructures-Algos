@@ -21,3 +21,8 @@ class Solution:
         curr_max = max(nums)
         pos = nums.index(curr_max)
         node = TreeNode(curr_max)
+
+        node.left = self.makeTree(nums[:pos])
+        node.right = self.makeTree(nums[pos+1:])
+
+        return node
