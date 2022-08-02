@@ -11,5 +11,6 @@ class Solution:
 
         def DFS(node):
 
-            if edge in graph[node]:
+            for edge in graph[node]:
                 if edge not in seen:
+                    seen[edge] = True
