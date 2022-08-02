@@ -14,7 +14,7 @@ class Solution:
             left_max = max(left_max, 0)
             right_max = max(right_max, 0)
 
-            res[0] = max(res[0], left_max, right)
+            res[0] = max(res[0], node.val + left_max, right_max)
 
             return node.val + max(left_max, right_max)
 
