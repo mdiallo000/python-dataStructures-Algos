@@ -7,3 +7,9 @@ class Solution:
         for n, e in edges:
             graph[n].append(e)
             graph[e].append(n)
+        seen = [False] * n
+
+        def DFS(node):
+
+            if edge in graph[node]:
+                if edge not in seen:
