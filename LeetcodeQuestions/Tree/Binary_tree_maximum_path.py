@@ -3,7 +3,7 @@ from turtle import right
 
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
-        res = [root]
+        res = [root.val]
 
         def dfs(node):
             if not node:
@@ -14,7 +14,7 @@ class Solution:
             left_max = max(left_max, 0)
             right_max = max(right_max, 0)
 
-            res[0] = max(res[0], node.val + left_max, right_max)
+            res[0] = max(res[0], node.val + left_max + right_max)
 
             return node.val + max(left_max, right_max)
 
