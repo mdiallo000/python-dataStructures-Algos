@@ -1,3 +1,6 @@
+from turtle import right
+
+
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         res = [root]
@@ -10,3 +13,7 @@ class Solution:
             #  check to make sure its not negative
             left_max = max(left_max, 0)
             right_max = max(right_max, 0)
+
+            res[0] = max(res[0], left_max, right)
+
+            return node.val + max(node.left, node.right)
