@@ -14,3 +14,4 @@ class Solution:
             for edge in graph[node]:
                 if edge not in seen:
                     seen[edge] = True
+                    DFS(edge)
