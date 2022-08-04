@@ -15,3 +15,11 @@ class Solution:
                 if edge not in seen:
                     seen[edge] = True
                     DFS(edge)
+        count = 0
+        for i in range(n):
+            if i not in seen:
+                seen[i] = True
+                count += 1
+                DFS(i)
+
+        return count
