@@ -2,7 +2,7 @@ from logging import root
 
 
 class Solution:
-    def mergeTwoBinaryTree(root1, root2):
+    def mergeTwoBinaryTree(self, root1, root2):
 
         if not root1:
             return root2
