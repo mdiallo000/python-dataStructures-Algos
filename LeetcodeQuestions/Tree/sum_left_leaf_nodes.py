@@ -9,9 +9,9 @@ class Solution:
             if not node:
                 return 0
 
-            if node.left and not node.left.left and not node.right.right:
+            if node.left and not node.left.left and not node.left.right:
                 return node.left.val + findMax(node.right)
             else:
                 return findMax(node.left) + findMax(node.right)
 
-        findMax(root)
+        return findMax(root)
