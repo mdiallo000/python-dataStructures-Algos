@@ -14,3 +14,5 @@ class Solution:
                 countA += 1
             else:
                 countB += 1
+            balance = abs(countA - countB)
+        return balance
