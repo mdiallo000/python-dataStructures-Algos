@@ -8,3 +8,9 @@ class Solution:
     def minimumDeletions(self, s: str) -> int:
         countA = 0
         countB = 0
+        balance = 0
+        for char in s:
+            if char == 'a':
+                countA += 1
+            else:
+                countB += 1
