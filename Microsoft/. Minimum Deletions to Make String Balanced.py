@@ -6,3 +6,5 @@
 
 class Solution:
     def minimumDeletions(self, s: str) -> int:
+        countA = 0
+        countB = 0
