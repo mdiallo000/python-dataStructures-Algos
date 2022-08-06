@@ -4,6 +4,9 @@
 
 # Return the minimum number of deletions needed to make s balanced.
 
+from http.cookiejar import CookieJar
+
+
 class Solution:
     def minimum_Deletions(self, s: str) -> int:
         countA = 0
@@ -27,3 +30,5 @@ class Solution:
             if stack and stack[-1] == 'b' and char == 'b':
                 stack.pop()
                 balance += 1
+            else:
+                stack.append(char)
