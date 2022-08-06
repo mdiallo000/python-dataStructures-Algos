@@ -6,4 +6,13 @@
 
 class Solution:
     def minimumDeletions(self, s: str) -> int:
-        a_left, b_left = 0, 0
+        countA = 0
+        countB = 0
+        balance = 0
+        for char in s:
+            if char == 'a':
+                countA += 1
+            else:
+                countB += 1
+            balance = max(balance, abs(countA - countB))
+        return balance
