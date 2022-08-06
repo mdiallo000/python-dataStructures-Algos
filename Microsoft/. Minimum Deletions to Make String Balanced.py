@@ -5,7 +5,7 @@
 # Return the minimum number of deletions needed to make s balanced.
 
 class Solution:
-    def minimumDeletions(self, s: str) -> int:
+    def minimum_Deletions(self, s: str) -> int:
         countA = 0
         countB = 0
         balance = 0
@@ -16,3 +16,14 @@ class Solution:
                 countB += 1
             balance = max(balance, abs(countA - countB))
         return balance
+    # above attempt only passed initial test case failed others
+
+    def minimumDeletions(self, s: str) -> int:
+
+        stack = []
+        balance = 0
+
+        for char in s:
+            if stack and stack[-1] == 'b' and char == 'b':
+                stack.pop()
+                balance += 1
