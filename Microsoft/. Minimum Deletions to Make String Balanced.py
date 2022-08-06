@@ -21,7 +21,7 @@ class Solution:
         return balance
     # above attempt only passed initial test case failed others
 
-    def minimumDeletions(self, s: str) -> int:
+    def minimumDeletions(s):
 
         stack = []
         balance = 0
