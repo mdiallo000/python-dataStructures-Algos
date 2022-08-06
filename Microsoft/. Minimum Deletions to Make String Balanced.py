@@ -27,8 +27,10 @@ class Solution:
         balance = 0
 
         for char in s:
-            if stack and stack[-1] == 'b' and char == 'b':
+            if stack and stack[-1] == 'b' and char != 'b':
                 stack.pop()
                 balance += 1
             else:
                 stack.append(char)
+
+        return balance
