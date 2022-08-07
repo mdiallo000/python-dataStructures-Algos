@@ -14,3 +14,4 @@ class Solution:
                 count[i] -= 1
 
             frequency_count.add(count[i])
+        return deletions
