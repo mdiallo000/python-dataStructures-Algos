@@ -1,5 +1,5 @@
 class Solution:
-    #     This approach is based on the observation that if multiple characters have the same frequency, then only one character can keep all of its instances. All other characters must have one or more of their instances deleted.
+    # This approach is based on the observation that if multiple characters have the same frequency, then only one character can keep all of its instances. All other characters must have one or more of their instances deleted.
 
     # In this approach, we will push the frequency of each number into a max heap. Then, at each step, we will compare the top two elements in the heap. If they are the same, we will decrement one of them and push it back into the heap. Every time we detect that the two top elements are equal, we will increment the variable deleteCount.
 
