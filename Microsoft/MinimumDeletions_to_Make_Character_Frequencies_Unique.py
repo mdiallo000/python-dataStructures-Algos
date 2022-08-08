@@ -6,7 +6,7 @@ class Solution:
     # An important point here is that when we compare the top two elements, we do so by popping the top element and comparing it to the new top element in the heap. Then, if the top two elements are equal, we will decrement the popped element by 111 so that the two elements are no longer equal, and then we can push the popped element back into the heap. Only when the top two elements are not equal can we say that the top element is unique and can be removed from the heap.
 
     def minDeletions(self, s: str) -> int:
-        count = [] * 26
+        count = [0] * 26
 
         for char in s:
             count[ord(char) - ord('a')] += 1
