@@ -24,3 +24,4 @@ class Solution:
                 curr -= 1
                 deletions += 1
                 heapq.heappush(heap, curr)
+        return deletions
