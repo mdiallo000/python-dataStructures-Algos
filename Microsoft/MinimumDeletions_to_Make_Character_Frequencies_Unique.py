@@ -16,5 +16,11 @@ class Solution:
         heapq.heapify(heap)
         deletions = 0
 
-        while heap:
+        while len(heap) > 1:
             #  now we pop the topmost element and compare it with the new top element, if they happen to be the same then we can decremnt it, incremnet our deletions variable and then we will push it back into heap
+            curr = heapq.heappop(heap)
+
+            if curr == heap[0]:
+                curr -= 1
+                deletions += 1
+                heapq.heappush(heap, curr)
