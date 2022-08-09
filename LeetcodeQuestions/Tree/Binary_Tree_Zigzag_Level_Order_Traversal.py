@@ -13,4 +13,5 @@ class Solution:
         while q:
             size = len(q)
             level = []
-            for _
+            for _ in range(size):
+                node = q.popleft()
