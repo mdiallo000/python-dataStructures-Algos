@@ -10,18 +10,23 @@ class Solution:
 
         for char in s:
             count[ord(char) - ord('a')] += 1
-        #  now that we have the the frequencies of all the char, now lets create a max-heap
-        heap = [-freq for freq in count]
+        #  now that we have the the frequencies of all the char, now lets create a max-heap, dont forget to filter the zeros's
+        heap = [-freq for freq in count if freq != 0]
         print(heap)
         heapq.heapify(heap)
         deletions = 0
 
         while len(heap) > 1:
             #  now we pop the topmost element and compare it with the new top element, if they happen to be the same then we can decremnt it, incremnet our deletions variable and then we will push it back into heap
-            curr = heapq.heappop(heap)
+            curr = -heapq.heappop(heap)
 
-            if curr == heap[0]:
-                curr -= 1
+            if curr == -heap[0]:
+                if curr - 1 > 0:
+                    curr -= 1
+                    heapq.heappush(heap, -curr)
                 deletions += 1
-                heapq.heappush(heap, curr)
         return deletions
+
+    #  lessons learned:
+
+        # When you see frequency & minimum, definitely consider Dictionary & Priority queue
