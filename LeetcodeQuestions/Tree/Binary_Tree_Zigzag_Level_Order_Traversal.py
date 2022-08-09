@@ -7,11 +7,15 @@ class Solution:
 
         res = []
 
-        q = deque()
-        q.append(root)
+        level = deque()
+
         left_right = True
-        while q:
-            size = len(q)
-            level = []
-            for _ in range(size):
-                node = q.popleft()
+        node_queue = deque([root, None])
+        while node_queue:
+            curr = node_queue.popleft()
+            if curr:
+                if left_right:
+                    level.append(curr.val)
+                else:
+                    level.appendleft(curr.val)
+            else:
