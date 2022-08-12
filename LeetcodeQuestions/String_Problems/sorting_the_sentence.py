@@ -9,4 +9,7 @@ class Solution:
         for wrd in words:
             Map[int(wrd[-1])] = wrd[:-1]
         n = len(words) + 1
+        #  since the keys are 1 indexed we need to make the list one element larger so that we dont over indexed
         store = [None] * n
+        for key, val in Map.items():
+            store[key] = val
