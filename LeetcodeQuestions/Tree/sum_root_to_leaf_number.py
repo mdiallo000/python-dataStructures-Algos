@@ -9,3 +9,4 @@ class Solution:
                 curr_number = curr_number * 10 + node.val
 
                 if not node.left or node.right:
+                    total += curr_number
