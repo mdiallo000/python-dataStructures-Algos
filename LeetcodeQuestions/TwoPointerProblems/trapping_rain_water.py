@@ -6,3 +6,5 @@ class Solution:
 
         l, r = 0, len(height) - 1
         leftMax, rightMax = height[l], height[r]
+
+        while l < r:
