@@ -6,3 +6,6 @@ class Solution:
 
         words = s.split(' ')
         Map = {}
+
+        for wrd in words:
+            Map[int(wrd[-1])] = wrd[:-1]
