@@ -13,3 +13,5 @@ class Solution:
         store = [None] * n
         for key, val in Map.items():
             store[key] = val
+
+        return ' '.join(store[1:])
