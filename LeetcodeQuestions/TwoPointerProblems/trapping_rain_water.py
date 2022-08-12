@@ -17,3 +17,4 @@ class Solution:
                 r -= 1
                 rightMax = max(rightMax, height[r])
                 res += leftMax - height[r]
+        return res
