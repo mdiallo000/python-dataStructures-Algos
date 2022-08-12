@@ -5,3 +5,4 @@ class Solution:
             return 0
 
         l, r = 0, len(height) - 1
+        leftMax, rightMax = height[l], height[r]
