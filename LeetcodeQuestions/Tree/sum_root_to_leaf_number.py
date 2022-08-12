@@ -10,3 +10,9 @@ class Solution:
 
                 if not node.left or node.right:
                     total += curr_number
+
+                preorder(node.left, curr_number)
+                preorder(node.right, curr_number)
+
+        preorder(root, 0)
+        return total
