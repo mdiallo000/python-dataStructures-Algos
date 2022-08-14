@@ -12,3 +12,6 @@ class Solution:
                 r += 1
             else:
                 res = min(res, r - l + 1)
+                total = total - nums[l] - nums[r]
+                l += 1
+        return res
