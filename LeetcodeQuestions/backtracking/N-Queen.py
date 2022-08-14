@@ -5,11 +5,11 @@ class Solution:
         posDiag = set()
         negDiag = set()
         res = []
-        board = [[""] * n for i in range(n)]
+        board = [["."] * n for i in range(n)]
 
         def Backtrack(r):
             if r == n:
-                copy = ["".join(row) for row in range(r)]
+                copy = ["".join(row) for row in board]
                 res.append(copy)
                 return
 
@@ -20,7 +20,11 @@ class Solution:
                 colum.add(c)
                 posDiag.add(r + c)
                 negDiag.add(r-c)
+                board[r][c] = "Q"
                 Backtrack(c + 1)
                 colum.remove(c)
                 posDiag.remove(r + c)
                 negDiag.remove(r-c)
+                board[r][c] = "."
+        Backtrack(0)
+        return res
