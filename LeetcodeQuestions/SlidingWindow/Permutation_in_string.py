@@ -7,3 +7,5 @@ class Solution:
 
         s1Count = Counter(s1)
         window = len(s1)
+
+        for i in range(len(s2)):
