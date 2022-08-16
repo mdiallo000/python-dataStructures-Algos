@@ -4,11 +4,6 @@
 
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        s1Counter = {}
 
-        for char in s1:
-            s1Counter[char] = 1 + s1Counter.get(char, 0)
-
-        l = 0
-        r = 1
-        while r < len(s2)-1:
+        if len(s1) > len(s2):
+            return False

@@ -21,7 +21,7 @@ class Solution:
                 posDiag.add(r + c)
                 negDiag.add(r-c)
                 board[r][c] = "Q"
-                Backtrack(c + 1)
+                Backtrack(r + 1)
                 colum.remove(c)
                 posDiag.remove(r + c)
                 negDiag.remove(r-c)
