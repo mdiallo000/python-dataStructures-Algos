@@ -17,7 +17,7 @@ class Solution:
         matches = 0
         for i in range(26):
             matches += (1 if s1Count[i] == s2Count[2] else 0)
-
+        l = 0
         for r in range(len(s1), len(s2)):
 
             if matches == 26:
@@ -29,3 +29,10 @@ class Solution:
                 matches += 1
             elif s1Count[position] + 1 == s2Count[position]:
                 matches += 1
+
+            position = ord(s2[l]) - ord('a')
+            s2Count[position] -= 1
+            if s1Count[position] == s2Count[position]:
+                matches += 1
+            elif s1Count[position] - 1 == s2Count[position]:
+                matches -= 1
