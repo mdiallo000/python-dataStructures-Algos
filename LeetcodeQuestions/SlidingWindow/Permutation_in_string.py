@@ -10,3 +10,7 @@ class Solution:
 
         s1Count = [0] * 26
         s2Count = [0] * 26
+
+        for i in range(len(s1)):
+            s1Count[ord(s1[i]) - ord('a')] += 1
+            s2Count[ord(s1[i]) - ord('a')] += 1
