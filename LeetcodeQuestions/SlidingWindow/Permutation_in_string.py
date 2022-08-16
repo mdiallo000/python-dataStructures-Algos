@@ -9,3 +9,12 @@ class Solution:
         window = len(s1)
 
         for i in range(len(s2)):
+            if s2[i] in s1Count:
+                s1Count[s2[i]] -= 1
+
+            if i >= window and s2[i-window] in s1Count:
+                s1Count[s2[i-window]] += 1
+
+            if all(s1Count[i] == 0 for i in s1Count):
+                return True
+        return False
