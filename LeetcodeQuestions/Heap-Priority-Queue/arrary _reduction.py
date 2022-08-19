@@ -1,3 +1,6 @@
+import heapq
+
+
 class Solution:
 
     def reduceArray(self, nums):
@@ -7,6 +10,7 @@ class Solution:
 
         total = 0
 
-        while len(heap) > 1
+        while len(heap) > 1:
 
-        one = heapq.heappop(heap)
+            one = heapq.heappop(heap)
+            two = heapq.heappop(heap)
