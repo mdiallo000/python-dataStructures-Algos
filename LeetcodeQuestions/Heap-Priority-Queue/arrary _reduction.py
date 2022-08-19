@@ -14,3 +14,5 @@ class Solution:
 
             one = heapq.heappop(heap)
             two = heapq.heappop(heap)
+            total += one + two
+            heapq.heappush(heap, one + two)
