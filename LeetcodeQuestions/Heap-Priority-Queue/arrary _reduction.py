@@ -16,3 +16,4 @@ class Solution:
             two = heapq.heappop(heap)
             total += one + two
             heapq.heappush(heap, one + two)
+        return total
