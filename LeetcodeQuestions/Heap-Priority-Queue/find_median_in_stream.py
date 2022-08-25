@@ -1,8 +1,11 @@
 class MedianFinder:
 
     def __init__(self):
+        self.heap = []
+        heapq.heapify(self.heap)
 
     def addNum(self, num: int) -> None:
+        heapq.heappush
 
     def findMedian(self) -> float:
 
