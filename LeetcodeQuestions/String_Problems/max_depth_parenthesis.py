@@ -10,3 +10,5 @@ class Solution:
                 count += 1
             if char == ')':
                 count -= 1
+            res = max(res, count)
+        return res
