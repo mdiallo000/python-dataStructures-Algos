@@ -8,3 +8,5 @@ class Solution:
 
             if char == '(':
                 count += 1
+            if char == ')':
+                count -= 1
