@@ -21,3 +21,7 @@ class Solution:
                 heapq.heappush(heap, q.popleft())
             if top[0] + 1 != 0:
                 q.append((top[0] + 1, top[1]))
+
+            if not heap and not q:
+                return ''
+        return res
