@@ -23,6 +23,6 @@ class Solution:
             if top[0] + 1 != 0:
                 q.append((top[0] + 1, top[1]))
 
-            if not heap and not q:
+            if not heap and q:
                 return ''
         return res
