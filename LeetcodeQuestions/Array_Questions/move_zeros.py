@@ -5,3 +5,5 @@ class Solution:
         for i in range(len(nums)):
 
             if nums[i] != 0:
+                nums[target], nums[i] = nums[i], nums[target]
+                target += 1
