@@ -15,3 +15,7 @@ class Solution:
         while heap:
 
             top = heapq.heappop(heap)
+            res += top[1]
+
+            if q:
+                heapq.heappush(heap, q.popleft())
