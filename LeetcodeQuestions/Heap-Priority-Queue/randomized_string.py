@@ -10,3 +10,8 @@ class Solution:
         heapq.heapify(heap)
 
         q = deque()
+        res = ''
+
+        while heap:
+
+            top = heapq.heappop(heap)
