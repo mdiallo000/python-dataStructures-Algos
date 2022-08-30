@@ -19,3 +19,5 @@ class Solution:
 
             if q:
                 heapq.heappush(heap, q.popleft())
+            if top[0] + 1 != 0:
+                q.append((top[0] + 1, top[1]))
