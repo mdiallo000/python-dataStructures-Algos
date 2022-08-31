@@ -2,7 +2,6 @@ import heapq
 
 
 class Solution:
-
     def reduceArray(self, nums):
 
         heap = nums

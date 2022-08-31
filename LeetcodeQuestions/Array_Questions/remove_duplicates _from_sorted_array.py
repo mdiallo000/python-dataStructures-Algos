@@ -10,3 +10,8 @@ class Solution:
                 nums[i] = nums[j]
 
         return i + 1
+
+    # Lessons Learned
+        #  The naive solution generatd lots of extra complexity in terms of time and space
+        #  This clever approach of using two pointer yields a time complexity O(n) and constant space
+        #  When dealing with a sorted list with duplicates and the tasks requires us to deal with those duplicates then two pointer is the way to go
