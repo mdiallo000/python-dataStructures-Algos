@@ -5,13 +5,13 @@ class Solution:
         total = 0
         maxLength = 0
         while start < n:
-            while end + 1 < n and total + arr[end + 1] <= k:
-                total += arr[end += 1]
+            while end + 1 < n and total + nums[end + 1] <= k:
+                total += nums[end+1]
 
             if total == k:
                 maxLength = max(maxLength, (end - start + 1))
 
-            total -= arr[start]
-            start++
+            total -= nums[start]
+            start += 1
 
         return maxLength
