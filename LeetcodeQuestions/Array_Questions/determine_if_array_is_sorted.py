@@ -11,6 +11,7 @@ class Solution:
                 count += 1
 
         return False if count > 1 else True
+    # The trick was to use check wheter the current element and check if its next element is smaller than it.
 
     def check(self, nums):
 
