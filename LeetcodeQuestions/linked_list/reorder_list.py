@@ -2,7 +2,7 @@
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
 
-        # phase one: find middle
+        # phase one: find second
         slow, fast = head, head.next
 
         while fast and fast.next:
@@ -10,11 +10,12 @@ class Solution:
             fast = fast.next.next
 
         # phase two: reverse the second half
-        middle = slow.next
+        second = slow.next
         prev = slow.next = None
 
-        while middle:
-            tmp = middle.next
-            middle.next = prev
-            prev = middle
-            middle = tmp
+        while second:
+            tmp = second.next
+            second.next = prev
+            prev = second
+            second = tmp
+        # last phase: reorder list
