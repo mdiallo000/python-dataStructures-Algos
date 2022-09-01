@@ -19,3 +19,11 @@ class Solution:
             prev = second
             second = tmp
         # last phase: reorder list
+
+        first, second = head, prev
+        while second:
+            # since the second half might be shorter than the first if the list has odd number of nodes
+            tmp1, tmp2 = first.next, second.next
+            first.next = second
+            second.next = tmp1
+            first, second = tmp1, tmp2
