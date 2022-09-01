@@ -11,3 +11,9 @@ class Solution:
         heapq.heapify(maxheap)
         time = 0
         q = deque()
+
+        while heap or q:
+            time += 1
+
+            if maxHeap:
+                cnt = 1 + heapq.heappop(maxHeap)
