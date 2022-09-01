@@ -7,7 +7,22 @@ class Solution:
         size = len(nums)
         for i in range(size):
 
-            if nums[i] > nums[i+1 % size-1]:
+            if nums[i] > nums[(i+1) % size]:
                 count += 1
 
         return False if count > 1 else True
+
+    def check(self, nums):
+
+        b = sorted(nums)
+        if b == nums:
+            return True
+
+        for i in range(len(nums)):
+
+            a = nums.pop(0)
+            nums.append(a)
+            if nums == b:
+                return True
+
+        return False
