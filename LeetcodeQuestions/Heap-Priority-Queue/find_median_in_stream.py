@@ -13,7 +13,10 @@ class MedianFinder:
         if (self.small and self.large and -1 * (self.small[0]) > self.large[0]):
             val = -1 * heapq.heappop(self.small)
             heapq.heappush(self.large, val)
-        # now we need to make sure
+        # now we need to make sure that the amount of values in the small heap are not greater than 2 compared to the large heap, in other words we need to make sure it is balance
+        if len(self.small) > len(self.large) + 1:
+            val = -1 * heapq.heappop(self.small)
+            heapq.heappush(self.large, val)
 
     def findMedian(self) -> float:
         if self.heap
