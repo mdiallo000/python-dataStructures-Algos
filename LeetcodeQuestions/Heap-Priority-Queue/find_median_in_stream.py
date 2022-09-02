@@ -23,7 +23,10 @@ class MedianFinder:
             heapq.heappush(self.small, -1 * val)
 
     def findMedian(self) -> float:
-        if self.heap
+        if len(self.small) > len(self.large):
+            return self.small[0]
+        if len(self.large) > len(self.small):
+            return self.large[0]
         # Your MedianFinder object will be instantiated and called as such:
         # obj = MedianFinder()
         # obj.addNum(num)
