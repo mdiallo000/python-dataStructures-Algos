@@ -1,8 +1,7 @@
 class MedianFinder:
 
     def __init__(self):
-        self.heap = []
-        heapq.heapify(self.heap)
+        self.small, self.large = [], []
 
     def addNum(self, num: int) -> None:
         heapq.heappush(self.heap, num)
