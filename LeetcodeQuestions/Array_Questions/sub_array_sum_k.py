@@ -12,8 +12,5 @@ class Solution:
 
             if preSum - k in cache:
                 res += cache[preSum - k]
-            if preSum not in cache:
-                cache[preSum] = 1
-            else:
-                cache[preSum] = cache[preSum]+1
+            cache[preSum] = cache.get(preSum, 0) + 1
         return res
