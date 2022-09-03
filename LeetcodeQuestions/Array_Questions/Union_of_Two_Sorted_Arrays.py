@@ -6,5 +6,7 @@ class Solution:
         arr = []
 
         for n in set1:
-            if n in set2:
-                arr.append(n)
+            arr.append(n)
+        for n in set2:
+            arr.append(n)
+        return arr
