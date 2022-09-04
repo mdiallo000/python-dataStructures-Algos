@@ -18,3 +18,4 @@ class Solution:
             for c in range(column):
                 if r in RowSet or c in ColumnSet:
                     matrix[r][c] = 0
+        #  this was my initial appraoch and intuition, but i am certain that their are more efficient ways of doing it with better time complexity
