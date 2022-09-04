@@ -39,3 +39,5 @@ class Solution:
 
         # [N,N,N,N,N,N]
         #  0 1 2 3 4 5
+        for key, val in count.items():
+            bucket[val].append(key)
