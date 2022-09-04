@@ -29,3 +29,10 @@ class Solution:
 
         #  [[3,1],[3,5]]
         return [elem for value, key in myHeap]
+    # Another approach this time using bucket sort
+
+    def TopKElement(nums, k):
+
+        count = Counter(nums)
+
+        bucket = [None] * len(nums)

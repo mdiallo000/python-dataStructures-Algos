@@ -4,7 +4,7 @@ class Solution:
 
         #  You have several options:
         #  You can use primitive n^2 sorting techniques or implement merge or quick sort
-        #  you can also coun the frequencies of all three numbers in on pass than rewrite the list using the counts, this would N + N time complexity
+        #  you can also count the frequencies of all three numbers in on pass than rewrite the list using the counts, this would N + N time complexity
         zero = 0
         one = 0
         two = 0
