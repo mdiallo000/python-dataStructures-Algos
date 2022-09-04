@@ -34,5 +34,8 @@ class Solution:
     def TopKElement(nums, k):
 
         count = Counter(nums)
+        # [1,1,1,3,3,2,5]
+        bucket = [[] for i in range(len(nums) + 1)]
 
-        bucket = [None] * len(nums)
+        # [N,N,N,N,N,N]
+        #  0 1 2 3 4 5
