@@ -18,3 +18,4 @@ class Codec:
         # the decode method is meant to accept the string that was encoded and its goal is to return the original list of words that was used to create the string
         res, i = [], 0
         while i < len(s):
+            j = 0
