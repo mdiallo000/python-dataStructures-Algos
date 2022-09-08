@@ -7,3 +7,16 @@ class Solution:
         count = Counter(nums)
 
         while count:
+            minNum = min(count.keys())
+
+            for i in range(k):
+
+                if (minNum + i) in count:
+                    if count[minNum + i] == 1:
+                        del count[minNum + i]
+                    else:
+                        count[minNum + i] -= 1
+
+                else:
+                    return False
+        return True
