@@ -12,3 +12,7 @@ def findMaxLength(nums):
         if count == 0:
             window_len = i + 1
         if count in hash_table:
+            window_len = max(window_len, i - hash_table[count])
+        else:
+            hash_table[count] = i
+    return window_len
