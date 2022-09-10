@@ -13,4 +13,5 @@ def findMaxLength(nums):
         if nums[r] == 1:
             one_count += 1
         if one_count > 1 and zero_count > 1 and zero_count == one_count:
-            window = max(window, )
+            window = max(window, r + 1)
+    return window
