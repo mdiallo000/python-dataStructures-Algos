@@ -1,2 +1,4 @@
-class Solution:
-    def findMaxLength(self, nums: List[int]) -> int:
+
+def findMaxLength(nums):
+    r = l = 0
+    one_count = zero_count = 0

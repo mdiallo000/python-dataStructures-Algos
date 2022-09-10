@@ -27,3 +27,8 @@ class Solution:
                 return True
 
         return False
+
+
+arr = [45, 12, 165, 45, 20, 47, 62, 5, 63, 14, 20, 72]
+solution = Solution()
+solution.check(arr)
