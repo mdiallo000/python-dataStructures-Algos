@@ -14,3 +14,7 @@ class Solution:
                 res += cache[preSum - k]
             cache[preSum] = cache.get(preSum, 0) + 1
         return res
+#  lesson learned
+    #  my initial approach was to use a sum-variable, and a count, increment it with the values in the dictionary, whenever the the variable equal k than we coun increment the count. It was a sliding window technique
+
+    #  The working solution involved a prefixSum

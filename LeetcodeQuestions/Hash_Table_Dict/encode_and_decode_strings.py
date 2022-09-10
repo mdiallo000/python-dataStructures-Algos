@@ -18,10 +18,16 @@ class Codec:
         # the decode method is meant to accept the string that was encoded and its goal is to return the original list of words that was used to create the string.
         res, i = [], 0
         while i < len(s):
+            #  j will always start where i is. j will be our guide, it will move up to when it sees the first "#" character, thats how we know where to begin remaking the original word
             j = i
             while s[j] != '#':
                 j += 1
+
+            # "4#neet4#code"
+            #  i
+            #   j
             lenght = int(s[i:j])
+            #  we get the lenght by looking at where
             res.append(s[j+1: j+1 + lenght])
             i = j + 1 + lenght
         return res
