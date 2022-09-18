@@ -26,3 +26,5 @@ class Solution:
                 hashmap[key].append(elem)
         # Finally we put all the values of our hashmap into an array giving us the desired outcome [["bat"],["nat","tan"],["ate","eat","tea"]]
         return list(hashmap.values())
+
+    def groupAnagramsOptimized(self, strs):
