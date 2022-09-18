@@ -38,3 +38,5 @@ class Solution:
             count = [0] * 26
             for char in wrd:
                 count[ord(char) - ord('a')] += 1
+            Map[tuple(count)].append(wrd)
+        return list(Map.values())
