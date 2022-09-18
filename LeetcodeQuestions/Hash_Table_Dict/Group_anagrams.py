@@ -40,3 +40,4 @@ class Solution:
                 count[ord(char) - ord('a')] += 1
             Map[tuple(count)].append(wrd)
         return list(Map.values())
+        # This is a much optimized approach with a time complexity of N*K rather than N*Klogk from the more naive approach above which also required us to sort every word in the list
