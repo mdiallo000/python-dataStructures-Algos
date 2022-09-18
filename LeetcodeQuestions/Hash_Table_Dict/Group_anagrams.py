@@ -33,3 +33,8 @@ class Solution:
     def groupAnagramsOptimized(self, strs):
 
         Map = defaultdict(list)
+
+        for wrd in strs:
+            count = [0] * 26
+            for char in wrd:
+                count[ord(char) - ord('a')] += 1
