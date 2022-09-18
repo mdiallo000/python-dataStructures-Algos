@@ -9,6 +9,9 @@
 # Input: strs = ["a"]
 # Output: [["a"]]
 
+from collections import defaultdict
+
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         #  Initiate a HashMap
@@ -28,3 +31,5 @@ class Solution:
         return list(hashmap.values())
 
     def groupAnagramsOptimized(self, strs):
+
+        Map = defaultdict(list)
