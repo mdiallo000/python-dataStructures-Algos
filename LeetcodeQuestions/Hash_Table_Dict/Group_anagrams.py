@@ -30,14 +30,21 @@ class Solution:
         # Finally we put all the values of our hashmap into an array giving us the desired outcome [["bat"],["nat","tan"],["ate","eat","tea"]]
         return list(hashmap.values())
 
+        # Time Complexity: O(NK \log K), where NN is the length of strs, and KK is the maximum length of a string in strs. The outer loop has complexity O(N)as we iterate through each string. Then, we sort each string in O(K \log K)O time.
+        # Space Complexity: O(NK)O(NK), the total information content stored in ans.
+
     def groupAnagramsOptimized(self, strs):
 
         Map = defaultdict(list)
 
         for wrd in strs:
+            #  after we loop over a word we create an array of len 26 and for each char in the wrd we will find its unicode. We do this because each overall word will have a unique count and anagrams will have similar counts. By doing this we by pass the expensive sorting routine in the naive approach
             count = [0] * 26
             for char in wrd:
                 count[ord(char) - ord('a')] += 1
             Map[tuple(count)].append(wrd)
         return list(Map.values())
         # This is a much optimized approach with a time complexity of N*K rather than N*Klogk from the more naive approach above which also required us to sort every word in the list
+# Time Complexity: O(NK), where NN is the length of strs, and KK is the maximum    length of a string in strs. Counting each string is linear in the size of the string, and we count every string.
+
+# Space Complexity: O(NK), the total information content stored in ans.
