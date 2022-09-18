@@ -1,5 +1,11 @@
 from collections import defaultdict
 
+#  This problem is not very difficult to do
+#  Intution: The entire goal is to determine if their are any duplicates in any row, column or in a 3*3 square
+
+#  Strategy:
+#  we can use a hash table. The key will be a particular row, or column or 3 by 3 square. The values will be a set that will help us determine whether or not we have encountered any duplicates
+
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
