@@ -1,2 +1,4 @@
-class Solution:
-    def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
+
+def kSmallestPairs(nums1, nums2, k):
+    lastMax = 0
+    k, i, j = 0, 0, 0
