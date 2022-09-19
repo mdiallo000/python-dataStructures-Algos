@@ -1,6 +1,11 @@
 
-def kSmallestPairs(nums1, nums2, k):
-    lastMax = 0
-    k, i, j = 0, 0, 0
+import heapq
 
-    while i <= len(nums)-1
+
+def kSmallestPairs(nums1, nums2, k):
+    #  maybe two use heaps simoultanously
+
+    heapq.heapify(nums1)
+    heapq.heapify(nums2)
+
+    while nums1 or nums2
