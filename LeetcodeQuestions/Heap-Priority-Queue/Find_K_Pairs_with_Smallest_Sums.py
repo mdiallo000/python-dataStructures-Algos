@@ -15,6 +15,7 @@ def kSmallestPairs(nums1, nums2, k):
             one = heapq.heappop(nums1)
             second = heapq.heappop(nums2)
             maxSum = one + second
+            minNUm = min(one, second)
             res.append([one, second])
     return res
 
