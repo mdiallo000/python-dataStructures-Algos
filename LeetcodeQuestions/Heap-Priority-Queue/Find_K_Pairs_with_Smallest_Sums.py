@@ -9,4 +9,7 @@ def kSmallestPairs(nums1, nums2, k):
     heapq.heapify(nums2)
     res = []
     while nums1 or nums2:
-        one
+
+        for _ in range(k):
+            one = heapq.heappop(nums1)
+            second = heapq.heappop(nums2)
