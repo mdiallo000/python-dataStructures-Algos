@@ -21,3 +21,17 @@ class Solution:
         # this would solve the problem but its really not a log(n) time complexity since some edge cases will lead us to linearly scan even after we have found the midpoint
 
         # The best approach would be to use to binary searches. One to find the lower bound occurance and the other to find the upper bound.
+
+    def findLowerBound(self, nums, target):
+        l, r = 0, len(nums)-1
+
+        while l <= r:
+            mid = r+l//2
+
+            if target <= nums[mid]:
+                r = mid - 1
+            else:
+                l = mid + 1
+        return l
+
+    def findUpperBound(self, nums, target):
