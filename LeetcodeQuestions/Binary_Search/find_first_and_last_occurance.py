@@ -35,3 +35,9 @@ class Solution:
         return l
 
     def findUpperBound(self, nums, target):
+
+        l, r = 0, len(nums)-1
+
+        while l <= r:
+
+            mid = r + l//2
