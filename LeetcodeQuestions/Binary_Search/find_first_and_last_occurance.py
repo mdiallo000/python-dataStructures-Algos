@@ -22,22 +22,39 @@ class Solution:
 
         # The best approach would be to use to binary searches. One to find the lower bound occurance and the other to find the upper bound.
 
-    def findLowerBound(self, nums, target):
-        l, r = 0, len(nums)-1
 
-        while l <= r:
-            mid = r+l//2
+class OptimalSolution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
 
-            if target <= nums[mid]:
-                r = mid - 1
-            else:
-                l = mid + 1
-        return l
+        def findLowerBound(self, nums, target):
+            l, r = 0, len(nums)-1
 
-    def findUpperBound(self, nums, target):
+            while l <= r:
+                mid = r+l//2
 
-        l, r = 0, len(nums)-1
+                if target <= nums[mid]:
+                    r = mid - 1
+                else:
+                    l = mid + 1
+            return l
 
-        while l <= r:
+        def findUpperBound(self, nums, target):
 
-            mid = r + l//2
+            l, r = 0, len(nums)-1
+
+            while l <= r:
+
+                mid = r + l//2
+
+                if target < nums[mid]:
+                    r = mid-1
+                else:
+                    l = mid + 1
+                return r
+        start = findLowerBound(nums, target)
+        end = findLowerBound(nums, target)
+
+        if 0 <= start < len(nums) and start <= end and nums[start] == target:
+            return [start, end]
+        else:
+            return [-1, -1]
