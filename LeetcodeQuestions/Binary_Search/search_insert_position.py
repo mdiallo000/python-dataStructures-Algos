@@ -16,3 +16,5 @@ class Solution:
             else:
                 l = mid + 1
         return l
+    # Time complexity log(n)
+    # Space complexity O(1)

@@ -1,23 +1,26 @@
 
-import heapq
+import heapq as hq
 
 
 def kSmallestPairs(nums1, nums2, k):
 
-    heapq.heapify(nums1)
-    heapq.heapify(nums2)
-    res = []
-    maxSum = 0
+    heap = []
+    result = []
 
-    while nums1 or nums2:
+    for i in range(min(k, len(nums1))):
+        hq.heappush(heap, (nums1[i] + nums2[0], i, 0))
+    print(heap)
+    for _ in range(k):
+        if not heap:
+            break
 
-        for _ in range(k):
-            one = heapq.heappop(nums1)
-            second = heapq.heappop(nums2)
-            maxSum = one + second
-            minNUm = min(one, second)
-            res.append([one, second])
-    return res
+        s, idx1, idx2 = hq.heappop(heap)
+        result.append([nums1[idx1], nums2[idx2]])
+
+        if idx2 < len(nums2) - 1:
+            hq.heappush(heap, (nums1[idx1] + nums2[idx2 + 1], idx1, idx2 + 1))
+
+    return result
 
 
 nums1 = [1, 7, 11]
