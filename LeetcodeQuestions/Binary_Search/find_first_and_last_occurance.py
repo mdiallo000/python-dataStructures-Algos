@@ -10,3 +10,11 @@ class Solution:
             if target == nums[mid]:
                 while nums[l] != target:
                     l += 1
+                while nums[r] != target:
+                    r -= 1
+                return [l, r]
+            elif target < nums[mid]:
+                r = mid - 1
+            else:
+                l = mid + 1
+        return [-1, -1]
