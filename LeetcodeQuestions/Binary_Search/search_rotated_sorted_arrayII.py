@@ -16,3 +16,7 @@ class Solution:
             #  first case the leftmost elem is less than our mid
             if nums[l] <= nums[mid]:
                 #  determine if target falls between a range
+                if nums[l] <= target <= nums[mid]:
+                    r = mid - 1
+                else:
+                    l = mid + 1
