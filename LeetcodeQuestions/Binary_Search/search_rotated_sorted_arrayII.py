@@ -11,3 +11,8 @@ class Solution:
 
             if nums[mid] == target:
                 return True
+            # [4,5,6,7,0,1,2]
+            #  l     m      r
+            #  first case the leftmost elem is less than our mid
+            if nums[l] <= nums[mid]:
+                #  determine if target falls between a range
