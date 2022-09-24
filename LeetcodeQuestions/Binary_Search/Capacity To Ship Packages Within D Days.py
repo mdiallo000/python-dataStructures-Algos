@@ -28,4 +28,4 @@ class Solution:
             if cur_weight > candidate:
                 days_taken += 1
                 cur_weight = w
-        return
+        return days_taken <= days
