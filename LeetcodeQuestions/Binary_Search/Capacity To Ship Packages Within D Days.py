@@ -19,3 +19,13 @@ class Solution:
         return r
 
     def isValid(self, candidate, weights, days):
+        cur_weight = 0
+        days_taken = 1
+
+        for w in weights:
+            cur_weight += w
+
+            if cur_weight > candidate:
+                days_taken += 1
+                cur_weight = w
+        return
