@@ -4,4 +4,5 @@ class Solution:
 
             s = s[1:] + s[:1]
             if s == goal:
-                return
+                return True
+        return False
