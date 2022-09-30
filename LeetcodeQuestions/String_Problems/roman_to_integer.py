@@ -9,3 +9,7 @@ class Solution:
             "D": 500,
             "M": 1000,
         }
+        res = 0
+
+        for i in range(len(s)):
+            curr = values[s[i]]
