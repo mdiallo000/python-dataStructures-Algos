@@ -5,3 +5,6 @@ class Solution:
 
         for i in range(len(words) - 1):
             wrd1, wrd2 = words[i], words[i+1]
+            for j in len(wrd1):
+                if j == len(wrd2):
+                    return False
