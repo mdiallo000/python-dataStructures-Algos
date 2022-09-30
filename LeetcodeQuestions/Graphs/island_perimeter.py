@@ -12,3 +12,14 @@ class Solution:
 
             if (r, c) in visited:
                 return 0
+            visited.add((r, c))
+
+            res += dfs(r, c+1)
+            res += dfs(r+1, c)
+            res += dfs(r, c-1)
+            res += dfs(r-1, c)
+
+        for r in range(Rows):
+            for c in range(Columns):
+                if grid[r][c] == 1:
+                    return dfs(r, c)
