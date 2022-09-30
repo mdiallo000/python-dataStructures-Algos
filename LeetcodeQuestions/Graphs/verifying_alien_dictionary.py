@@ -1,5 +1,5 @@
 class Solution:
-    def isAlienSorted(self, words: List[str], order: str) -> bool:
+    def isAlienSorted(self, words, order: str) -> bool:
 
         ordDict = {c: i for i, c in enumerate(order)}
 
