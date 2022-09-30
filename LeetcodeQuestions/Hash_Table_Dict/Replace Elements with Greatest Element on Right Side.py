@@ -8,6 +8,10 @@ class Solution:
         #     arr[i] = curr_max
         # arr[-1] = -1
         # return arr
-
+        #  My initial approach worked on small inputs but yielded a time limit exception on larger inputs since it was an O(n^2) solution. Its because during each iteration we are looking at the entire remain array excluding our current position.
         rightMax = -1
         for i in range(len(arr) - 1, -1, -1):
+            newMax = max(arr[i], rightMax)
+            arr[i] = rightMax
+            rightMax = newMax
+        return arr
