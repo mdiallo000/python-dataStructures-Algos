@@ -8,3 +8,8 @@ class Solution:
             for j in len(wrd1):
                 if j == len(wrd2):
                     return False
+                if wrd1[j] != wrd2[j]:
+                    if ordDict[wrd2[j]] < ordDict[wrd1[j]]:
+                        return False
+                    break
+        return True
