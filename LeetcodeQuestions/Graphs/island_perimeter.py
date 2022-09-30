@@ -22,3 +22,4 @@ class Solution:
             for c in range(Columns):
                 if grid[r][c] == 1:
                     return dfs(r, c)
+# Intuition is to treat the borders and the empty cells (water) as a way of determining whether the border exists or not...So if a cell is adjacent to water or the board return 1 else if we already seen this cell return o
