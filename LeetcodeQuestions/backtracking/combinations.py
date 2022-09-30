@@ -18,3 +18,4 @@ class Solution:
 
         dfs(1, [])
         return res
+        # time complexity will be K* n^k
