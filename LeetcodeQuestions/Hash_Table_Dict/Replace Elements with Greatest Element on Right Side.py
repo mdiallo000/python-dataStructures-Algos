@@ -9,4 +9,6 @@ class Solution:
             Map[i] = curr_max
         arr[-1] = -1
 
-        for key, val in
+        for key, val in Map.items():
+            arr[key] = val
+        return arr
