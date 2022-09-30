@@ -1,5 +1,5 @@
 class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def islandPerimeter(self, grid) -> int:
 
         Rows = len(grid)
         Columns = len(grid[0])
