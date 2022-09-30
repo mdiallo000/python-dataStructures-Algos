@@ -13,7 +13,7 @@ class Solution:
                 return 0
             visited.add((r, c))
 
-            res += dfs(r, c+1)
+            res = dfs(r, c+1)
             res += dfs(r+1, c)
             res += dfs(r, c-1)
             res += dfs(r-1, c)
