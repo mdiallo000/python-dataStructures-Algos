@@ -15,3 +15,4 @@ class Solution:
             arr[i] = rightMax
             rightMax = newMax
         return arr
+        #  this approach was more acceptable since its linear in nature, rather than looking at the same elements over and over again we just keep track of the biggest number we have seen thus far on the right side of the list, reducing our overhead by a ton
