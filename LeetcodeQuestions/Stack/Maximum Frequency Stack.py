@@ -1,3 +1,7 @@
+from collections import defaultdict
+from typing import Counter
+
+
 class FreqStack:
     # Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 
@@ -9,6 +13,8 @@ class FreqStack:
     # If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
 
     def __init__(self):
+        self.freq = Counter()
+        self.track = defaultdict(list)
 
     def push(self, val: int) -> None:
 
