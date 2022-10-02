@@ -8,3 +8,10 @@ class Solution:
             else:
                 stack.append([char, 1])
             if stack[-1][1] == k:
+                stack.pop()
+        res = ""
+        while stack:
+            char, val = stack.pop()
+            ans = char * val
+            res = ans + res
+        return res
