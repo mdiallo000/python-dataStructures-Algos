@@ -15,6 +15,7 @@ class FreqStack:
     def __init__(self):
         self.freq = Counter()
         self.track = defaultdict(list)
+        self.maxF = 0
 
     def push(self, val: int) -> None:
 
