@@ -22,5 +22,8 @@ class FreqStack:
         self.freq = freq
         if freq > self.maxF:
             self.maxF = freq
+        self.track[freq].append(val)
 
     def pop(self) -> int:
+        ans = self.track[self.maxf].pop()
+        self.freq[ans] -= 1
