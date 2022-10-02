@@ -20,5 +20,7 @@ class FreqStack:
     def push(self, val: int) -> None:
         freq = self.freq[val]
         self.freq = freq
+        if freq > self.maxF:
+            self.maxF = freq
 
     def pop(self) -> int:
