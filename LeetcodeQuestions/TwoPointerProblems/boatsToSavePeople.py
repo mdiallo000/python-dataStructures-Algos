@@ -9,11 +9,11 @@ class Solution:
         r = len(people)-1
         people.sort()
         while l <= r:
-            curr = limit - people[r]
-            r -= 1
+
             boats += 1
-            if l <= r and curr >= people[l]:
+            if people[l] + people[r] <= limit:
                 l += 1
+            r -= 1
 
         print(boats)
         return boats
