@@ -6,12 +6,14 @@ class Solution:
         l = 0
         curr = 0
         boats = 1
-        r = 1
+        r = len(people)-1
+        people.sort()
         while r < len(people)-1:
-            curr += people[l]
-            if curr + people[r] > limit:
-                curr = 0
-                boats += 1
+            curr = limit - people[r]
+            r -= 1
+            boats += 1
+            if l <= r and curr >= people[l]:
                 l += 1
-            r += 1
+
         print(boats)
+        return boats
