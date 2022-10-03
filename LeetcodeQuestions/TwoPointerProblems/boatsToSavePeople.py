@@ -5,10 +5,10 @@ class Solution:
         # Return the minimum number of boats to carry every given person.
         l = 0
         curr = 0
-        boats = 1
+        boats = 0
         r = len(people)-1
         people.sort()
-        while r < len(people)-1:
+        while l <= r:
             curr = limit - people[r]
             r -= 1
             boats += 1
