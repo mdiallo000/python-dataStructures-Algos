@@ -8,10 +8,10 @@ class Solution:
         while r <= len(nums)-1:
             total += nums[r]
 
-            while nums[r] * (l+r) > total + k:
+            while nums[r] * (r - l + 1) > total + k:
                 total -= nums[l]
                 l += 1
-            currMax = max(currMax, (l+r))
+            currMax = max(currMax, (r - l + 1))
             r += 1
         print(currMax)
         return currMax
