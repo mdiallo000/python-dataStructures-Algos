@@ -4,7 +4,6 @@ class Solution:
 
         # Return the minimum number of boats to carry every given person.
         l = 0
-        curr = 0
         boats = 0
         r = len(people)-1
         people.sort()
