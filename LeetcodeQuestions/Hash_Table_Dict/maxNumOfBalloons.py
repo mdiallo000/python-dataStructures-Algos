@@ -20,3 +20,5 @@ class Solution:
                     count[char] -= 1
                 if count[char] == 0:
                     del count[char]
+            if s == "balloon":
+                count += 1
