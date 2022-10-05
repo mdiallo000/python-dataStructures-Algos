@@ -7,11 +7,11 @@ class Solution:
 
         # You can use each character in text at most once. Return the maximum number of instances that can be formed.
 
-        count = defaultdict(0)
+        count = defaultdict(int)
         for char in text:
             if char in "balloon":
                 count[char] += 1
-        count = 0
+        res = 0
         while count:
             s = ""
             for char in "balloon":
@@ -21,6 +21,7 @@ class Solution:
                 if count[char] == 0:
                     del count[char]
             if s == "balloon":
-                count += 1
+                res += 1
             if (sum(count.values())) < len('balloon'):
                 break
+        return res
