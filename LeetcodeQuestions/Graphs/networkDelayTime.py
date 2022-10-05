@@ -3,7 +3,7 @@ import heapq
 
 
 class Solution:
-    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+    def networkDelayTime(self, times, n: int, k: int) -> int:
         graph = defaultdict(list)
         for u, v, w in times:
             graph[u].append((v, w))
