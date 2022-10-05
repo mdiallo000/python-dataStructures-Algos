@@ -15,3 +15,8 @@ class Solution:
         while count:
             s = ""
             for char in "balloon":
+                if char in count:
+                    s += char
+                    count[char] -= 1
+                if count[char] == 0:
+                    del count[char]
