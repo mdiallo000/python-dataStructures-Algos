@@ -21,3 +21,6 @@ class Solution:
                 if n2 not in visited:
                     heapq.heappush(minHeap, (w1 + w2, n2))
         return t if len(visited) == n else -1
+
+        # time complexity is O(e * logv)
+        #  we used dikjstra shortest path algorithm since we want to find the shortest amount of time a signal can reach all points in the graph
