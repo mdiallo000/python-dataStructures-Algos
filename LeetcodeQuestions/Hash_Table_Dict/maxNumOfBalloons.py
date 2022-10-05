@@ -22,3 +22,5 @@ class Solution:
                     del count[char]
             if s == "balloon":
                 count += 1
+            if (sum(count.values())) < len('balloon'):
+                break
