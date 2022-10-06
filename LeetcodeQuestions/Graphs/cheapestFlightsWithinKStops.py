@@ -3,3 +3,6 @@ class Solution:
 
         prices = [float(inf)] * n
         prices[src] = 0
+
+        for _ in range(k + 1):
+            tmp = prices[::]
