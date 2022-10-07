@@ -14,3 +14,5 @@ class Solution:
             currPass += numPass
             if currPass > capacity:
                 return False
+            heapq.heappush(minHeap, [end, numPass])
+        return True
