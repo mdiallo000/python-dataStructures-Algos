@@ -17,14 +17,17 @@ class Solution:
 
             if len(res) > 1 and res[-1] == res[-2] == char1:
                 #  if this condition is true it means that we have 2 consecutive chars that are the same, so we need to ignore this one and instead use the second most frequent character
+                if not maxHeap:
+                    break
                 c2, char2 = heapq.heappop(maxHeap)
 
+                res += char2
+                c2 += 1
                 if c2:
-                    res += char2
-                    c2 += 1
                     heapq.heappush(maxHeap, (c2, char2))
             else:
                 res += char
                 c1 += 1
             if c1:
                 heapq.heappush(maxHeap, (c1, char1))
+        return res
