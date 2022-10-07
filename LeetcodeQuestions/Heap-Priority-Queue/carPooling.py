@@ -9,6 +9,8 @@ class Solution:
 
         for numPass, start, end in trips:
             while minHeap and minHeap[0][0] <= start:
-                currPass -=
+                currPass -= minHeap[0][1]
                 heapq.heappop(minHeap)
             currPass += numPass
+            if currPass > capacity:
+                return False
