@@ -26,8 +26,8 @@ class Codec:
             # "4#neet4#code"
             #  i
             #   j
-            lenght = int(s[i:j])
-            #  we get the lenght by looking at where
-            res.append(s[j+1: j+1 + lenght])
-            i = j + 1 + lenght
+            length = int(s[i:j])
+            #  we get the length by looking at where
+            res.append(s[j+1: j+1 + length])
+            i = j + 1 + length
         return res
