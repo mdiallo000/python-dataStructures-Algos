@@ -1,7 +1,7 @@
 class Codec:
     def __init__(self):
-        self.encode = {}
-        self.decode = {}
+        self.encodeUrl = {}
+        self.decodeUrl = {}
         self.template = 'http://tinyurl.com'
 
     def encode(self, longUrl: str) -> str:
