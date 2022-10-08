@@ -10,6 +10,7 @@ class Codec:
         if longUrl not in self.encodeUrl:
             tinyUrl = self.template + str(len(self.encodeUrl) + 1)
             self.encodeUrl[longUrl] = tinyUrl
+        return self.encodeUrl[longUrl]
 
     def decode(self, shortUrl: str) -> str:
         """Decodes a shortened URL to its original URL.
