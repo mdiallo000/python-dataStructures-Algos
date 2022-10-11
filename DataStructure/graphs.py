@@ -26,6 +26,8 @@ class Graph:
                 node = queue.popleft()
                 if node == target:
                     return length
+                for edge in self.graph[node]:
+                    if edge not in visit
 
 
 g = Graph()
