@@ -23,6 +23,9 @@ class Graph:
         while queue:
             size = len(queue)
             for _ in range(size):
+                node = queue.popleft()
+                if node == target:
+                    return length
 
 
 g = Graph()
