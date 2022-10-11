@@ -36,6 +36,38 @@ def breath_first_search(start, target, visit):
     return length
 
 
+def countNumberPaths(edges, start, target):
+    graph = defaultdict(list)
+
+    for u, v in edges:
+        graph[u].append(v)
+    visit = set()
+
+    def breath_first_search(start, target):
+        # visit = set()
+        length = 0
+        visit.add(start)
+        queue = deque()
+        queue.append(start)
+
+        while queue:
+            size = len(queue)
+            for _ in range(size):
+                node = queue.popleft()
+                if node == target:
+                    return length
+                for edge in graph[node]:
+                    if edge not in visit:
+                        visit.add(edge)
+                        queue.append(edge)
+            length += 1
+        return length
+    return breath_first_search(start, target)
+
+
+edges = [['a', 'b'], ['b', 'c'], ['b', 'e'], ['c', 'e'], ['e', 'd']]
+res = countNumberPaths(edges, 'a', 'e')
+print(res)
 # g = Graph()
 # g.add_edge(0, 1)
 # g.add_edge(0, 2)
