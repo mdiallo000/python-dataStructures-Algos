@@ -12,37 +12,40 @@ class Graph:
     def add_edge(self, S, D):
 
         self.graph[S].append(D)
-
-    def breath_first_search(self, start, target, visit):
-        visit = set()
-        length = 0
-        visit.add(start)
-        queue = deque()
-        queue.append(start)
-
-        while queue:
-            size = len(queue)
-            for _ in range(size):
-                node = queue.popleft()
-                if node == target:
-                    return length
-                for edge in self.graph[node]:
-                    if edge not in visit:
-                        visit.add(edge)
-                        queue.append(edge)
-            length += 1
+    #  a general bfs template for counting the different paths from one node to a target
 
 
-g = Graph()
-g.add_edge(0, 1)
-g.add_edge(0, 2)
-g.add_edge(1, 2)
-g.add_edge(2, 0)
-g.add_edge(2, 3)
-g.add_edge(3, 3)
+def breath_first_search(start, target, visit):
+    visit = set()
+    length = 0
+    visit.add(start)
+    queue = deque()
+    queue.append(start)
 
-# g.add_edge("new york", "Boston")
-# g.add_edge("new york", "Philly")
-# g.add_edge("Philly", "D.C")
-# g.add_edge("Boston", "Newark")
-g.breath_first_search(2)
+    while queue:
+        size = len(queue)
+        for _ in range(size):
+            node = queue.popleft()
+            if node == target:
+                return length
+            for edge in graph[node]:
+                if edge not in visit:
+                    visit.add(edge)
+                    queue.append(edge)
+        length += 1
+    return length
+
+
+# g = Graph()
+# g.add_edge(0, 1)
+# g.add_edge(0, 2)
+# g.add_edge(1, 2)
+# g.add_edge(2, 0)
+# g.add_edge(2, 3)
+# g.add_edge(3, 3)
+
+# # g.add_edge("new york", "Boston")
+# # g.add_edge("new york", "Philly")
+# # g.add_edge("Philly", "D.C")
+# # g.add_edge("Boston", "Newark")
+# g.breath_first_search(2)
