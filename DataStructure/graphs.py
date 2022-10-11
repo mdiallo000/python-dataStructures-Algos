@@ -27,7 +27,10 @@ class Graph:
                 if node == target:
                     return length
                 for edge in self.graph[node]:
-                    if edge not in visit
+                    if edge not in visit:
+                        visit.add(edge)
+                        queue.append(edge)
+            length += 1
 
 
 g = Graph()
