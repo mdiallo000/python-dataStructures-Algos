@@ -11,6 +11,7 @@ class Codec:
             tinyUrl = self.template + str(len(self.encodeUrl) + 1)
             self.encodeUrl[longUrl] = tinyUrl
             self.decodeUrl[tinyUrl] = longUrl
+
         return self.encodeUrl[longUrl]
 
     def decode(self, shortUrl: str) -> str:

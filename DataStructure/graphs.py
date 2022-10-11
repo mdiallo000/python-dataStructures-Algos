@@ -13,20 +13,12 @@ class Graph:
 
         self.graph[S].append(D)
 
-    def breath_first_search(self, start):
-
-        queue = []
-        visited = [False] * len(self.graph)
+    def breath_first_search(self, start, target, visit):
+        visit = set()
+        length = 0
+        visit.add(start)
+        queue = deque()
         queue.append(start)
-        visited[start] = True
-
-        while queue:
-            curr = queue.pop(0)
-            print(curr, end=" => ")
-            for node in self.graph[curr]:
-                if visited[node] == False:
-                    queue.append(node)
-                    visited[node] = True
 
 
 g = Graph()
