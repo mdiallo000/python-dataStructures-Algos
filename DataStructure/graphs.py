@@ -20,6 +20,10 @@ class Graph:
         queue = deque()
         queue.append(start)
 
+        while queue:
+            size = len(queue)
+            for _ in range(size):
+
 
 g = Graph()
 g.add_edge(0, 1)
