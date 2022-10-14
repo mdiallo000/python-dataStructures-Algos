@@ -8,3 +8,4 @@ def quick_sort(arr, s, e):
     left = s
 
     for i in range(s, e):
+        if arr[i] < pivot:
