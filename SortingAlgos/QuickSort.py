@@ -1,3 +1,3 @@
 
 
-def quick_sort(arr):
+def quick_sort(arr, s, e):
