@@ -24,5 +24,4 @@ class Solution:
                 copy.neighbors.append(DFS(neighbor))
 
             return copy
-
         return DFS(node)
