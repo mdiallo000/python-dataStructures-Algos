@@ -1,6 +1,6 @@
 
 
-def quick_sort(arr, s, e):
+def quickSort(arr, s, e):
     if e - s + 1 <= 1:
         return arr
 
@@ -9,6 +9,7 @@ def quick_sort(arr, s, e):
 
     for i in range(s, e):
         if arr[i] < pivot:
+            tmp = arr[left]
             arr[left] = arr[i]
             arr[i] = tmp
             left += 1
