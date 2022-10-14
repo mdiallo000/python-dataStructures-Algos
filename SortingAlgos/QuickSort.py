@@ -6,3 +6,5 @@ def quick_sort(arr, s, e):
 
     pivot = arr[e]
     left = s
+
+    for i in range(s, e):
