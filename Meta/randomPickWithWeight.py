@@ -1,3 +1,6 @@
+from secrets import randbelow
+
+
 class Solution:
 
     def __init__(self, w: List[int]):
@@ -10,3 +13,6 @@ class Solution:
         self.total = prefix
 
     def pickIndex(self) -> int:
+        target = self.total * random.random()
+
+        l, r = 0, len(self.lst) - 1
