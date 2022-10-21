@@ -44,3 +44,8 @@ class Codec:
             if data[self.pos] == "N":
                 self.i += 1
                 return None
+            node = TreeNode(int(data[self.pos]))
+            self.pos += 1
+            node.left = dfs()
+            node.right = dfs()
+            return node
