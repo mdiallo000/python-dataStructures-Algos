@@ -42,10 +42,11 @@ class Codec:
 
         def dfs():
             if data[self.pos] == "N":
-                self.i += 1
+                self.pos += 1
                 return None
             node = TreeNode(int(data[self.pos]))
             self.pos += 1
             node.left = dfs()
             node.right = dfs()
             return node
+        return dfs()
