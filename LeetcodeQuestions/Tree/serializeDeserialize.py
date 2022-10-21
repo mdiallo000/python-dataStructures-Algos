@@ -37,3 +37,10 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
+        data = data.split(',')
+        self.pos = 0
+
+        def dfs():
+            if data[self.pos] == "N":
+                self.i += 1
+                return None
