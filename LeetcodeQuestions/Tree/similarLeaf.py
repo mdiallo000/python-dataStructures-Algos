@@ -21,5 +21,6 @@ class Solution:
             similarTree(root.left, s)
             similarTree(root.right, s)
             return s
-        similarTree(roo1, sum1)
+        similarTree(root1, sum1)
         similarTree(root2, sum2)
+        return sum1 == sum2 and determine(root1, root2)
