@@ -9,3 +9,8 @@ class Solution:
                 return True
             elif root2 and root1:
                 return (root1.val == root2.val and determine(root1.left, root2.right) and determine(root1.right, root2.right))
+            else:
+                return False
+        sum1 = [0]
+        sum2 = [0]
+        def similarTree(root):
