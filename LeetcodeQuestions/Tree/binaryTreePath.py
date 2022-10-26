@@ -1,17 +1,22 @@
 class Solution:
     def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
 
-        res = []
+        if not root:
+            return []
+        output = []
 
-        def dfs(node, curr):
-            if not node.left and not node.right:
-                curr.append(str(node.val))
-                res.append(curr)
+        def helper(root, curr):
+
+            if not root:
                 return
-            curr.append(str(node.val) + "=>")
-            dfs(node.left, curr)
-            curr.pop()
-            dfs(node.right)
-            return
-        dfs(root, [])
-        return res
+
+            if not root.left and not root.right:
+
+                output.append('->'.join(curr + [str(root.val)]))
+                return
+
+            helper(root.left, curr + [str(root.val)])
+            helper(root.right, curr + [str(root.val)])
+
+        helper(root, [])
+        return output
