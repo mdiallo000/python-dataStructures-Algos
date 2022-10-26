@@ -9,3 +9,9 @@ class Solution:
                 res.append(curr)
                 return
             curr.append(str(node.val) + "=>")
+            dfs(node.left, curr)
+            curr.pop()
+            dfs(node.right)
+            return
+        dfs(root, [])
+        return res
