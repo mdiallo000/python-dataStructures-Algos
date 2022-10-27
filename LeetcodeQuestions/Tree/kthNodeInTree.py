@@ -1,6 +1,7 @@
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-
+        if not root:
+            return None
         self.pos = 0
         self.res = None
 
