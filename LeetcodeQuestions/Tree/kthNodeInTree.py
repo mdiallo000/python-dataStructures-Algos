@@ -13,3 +13,5 @@ class Solution:
                 self.res = node.val
                 return
             dfs(node.right)
+        dfs(root)
+        return self.res
