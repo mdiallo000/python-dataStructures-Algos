@@ -11,4 +11,5 @@ class Solution:
             self.pos += 1
             if self.pos == k:
                 self.res = node.val
+                return
             dfs(node.right)
