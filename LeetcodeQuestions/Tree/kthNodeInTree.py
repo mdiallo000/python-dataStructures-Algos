@@ -3,3 +3,5 @@ class Solution:
 
         self.pos = 0
         self.res = None
+
+        def dfs(node):
