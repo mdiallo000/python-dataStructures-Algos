@@ -9,7 +9,7 @@ class Solution:
 
         for nodes in range(2, n+1):
             total = 0
-            for root in range(root, n + 1):
+            for root in range(1, root + 1):
                 left = root - 1
                 right = nodes - root
                 total += numTree[left] * numTree[right]
