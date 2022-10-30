@@ -12,6 +12,6 @@ class Solution:
             for root in range(root, n + 1):
                 left = root - 1
                 right = nodes - root
-                total = numTree[left] * numTree[right]
+                total += numTree[left] * numTree[right]
             numTree[nodes] = total
         return numTree[n]
