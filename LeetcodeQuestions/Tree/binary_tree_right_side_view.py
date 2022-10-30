@@ -7,6 +7,7 @@
 #         self.left = left
 #         self.right = right
 import collections
+from email.policy import default
 import re
 
 
@@ -39,3 +40,8 @@ class Solution:
         right = self.rightSideView(root.right)
         result.append(right)
         return result
+
+    def getFrequency(lst):
+        freq = collections.defaultdict(int)
+        for wrd in lst:
+            freq[wrd[0]] += 1
