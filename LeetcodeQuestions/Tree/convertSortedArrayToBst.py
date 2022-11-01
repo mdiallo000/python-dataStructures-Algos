@@ -12,3 +12,5 @@ class Solution:
 
             if l > r:
                 return None
+
+            root = TreeNode(root.val)
