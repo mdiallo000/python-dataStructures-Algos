@@ -13,4 +13,7 @@ class Solution:
             if l > r:
                 return None
 
-            root = TreeNode(root.val)
+            mid = (l+r) // 2
+
+            root = TreeNode(nums[mid])
+            root.left = dfs(l, )
