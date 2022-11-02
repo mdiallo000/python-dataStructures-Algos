@@ -6,17 +6,16 @@ class Solution:
 
         q = deque()
         q.append(root)
-        res = None
+        res = [0]
         while q:
             size = len(q)
-            leftmost = None
+            levels = []
             for _ in range(size):
                 node = q.popleft()
-
                 if node:
                     q.append(node.right)
                     q.append(node.left)
-                    leftmost = node.val
-            if leftmost:
-                res = leftmost
-        return res
+                    levels.append(node.val)
+            if levels:
+                res[0] = levels
+        return res[0][-1]
