@@ -1,5 +1,7 @@
 class Solution:
     def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
         self.currSum = 0
 
         def dfs(node):
