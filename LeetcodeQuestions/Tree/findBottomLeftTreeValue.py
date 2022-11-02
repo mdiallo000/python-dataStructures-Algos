@@ -22,6 +22,16 @@ class Solution:
 
     def findBottomLeftValue(self, root):
 
-        sef.maxHeigh = 0
+        self.maxHeigh = 0
+        self.res = root.val
 
-        def dfs(node):
+        def dfs(node, currHeight):
+            if not node:
+                return
+            dfs(node.left, currHeight + 1)
+            self.maxHeight = max(self.maxHeight, currHeight)
+            if self.maxHeigh > currHeight:
+                self.res = Node.val
+            dfs(node.right, currHeight + 1)
+        dfs(root, 0)
+        return self.res
