@@ -19,3 +19,9 @@ class Solution:
             if levels:
                 res[0] = levels
         return res[0][-1]
+
+    def findBottomLeftValue(self, root):
+
+        sef.maxHeigh = 0
+
+        def dfs(node):
