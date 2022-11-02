@@ -2,6 +2,7 @@ class BSTIterator:
 
     def __init__(self, root: Optional[TreeNode]):
         self.res = []
+        self.pos = 0
 
         def dfs(node):
             if not node:
@@ -13,7 +14,9 @@ class BSTIterator:
 
     def next(self) -> int:
 
-        return self.res.pop(0)
+        res = self.res[self.pos]
+        self.pos += 1
+        return res
 
     def hasNext(self) -> bool:
         if self.res:
