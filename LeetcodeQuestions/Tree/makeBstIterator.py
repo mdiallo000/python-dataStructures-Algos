@@ -19,6 +19,6 @@ class BSTIterator:
         return res
 
     def hasNext(self) -> bool:
-        if self.res:
+        if self.pos <= len(self.res):
             return True
         return False
