@@ -3,3 +3,4 @@ class Solution:
 
         if len(t) > len(s):
             return ''
+        index1, index2 = 0, 0
