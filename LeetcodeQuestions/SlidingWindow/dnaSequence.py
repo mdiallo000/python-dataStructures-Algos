@@ -1,6 +1,6 @@
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
-        res = []
+        res = set()
         tmp = set()
 
         for r in range((len(s) + 9)):
@@ -9,5 +9,6 @@ class Solution:
             if len(curr) < 10:
                 break
             if curr in tmp:
-                res.append(curr)
+                res.add(curr)
             tmp.add(curr)
+        return res
