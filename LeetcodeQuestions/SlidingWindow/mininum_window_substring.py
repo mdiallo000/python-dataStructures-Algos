@@ -7,7 +7,7 @@ class Solution:
 
         window = {}
         countT = Counter(t)
-        res, resLen = [-1, -1], float(-inf)
+        res, resLen = [-1, -1], float(inf)
         have, need, l = 0, len(countT), 0
         for r in range(len(s)):
             char = s[r]
@@ -28,5 +28,5 @@ class Solution:
                 if s[l] in countT and window[s[l]] < countT[s[l]]:
                     have -= 1
                 l += 1
-
-        return res[l:r+1] if resLen != float(-inf) else ""
+        l, r = res
+        return res[l:r+1] if resLen != float(inf) else ""
