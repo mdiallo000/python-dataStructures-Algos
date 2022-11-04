@@ -16,3 +16,7 @@ class Solution:
             #  after we have added the character we now look to see if we can update our have
             if char in countT and window[char] == countT[char]:
                 have += 1
+
+            while have == need:
+
+                if (r + l - 1) < resLen:
