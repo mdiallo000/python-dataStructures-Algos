@@ -8,7 +8,7 @@ class Solution:
         window = {}
         countT = Counter(t)
         res, resLen = [-1, -1], float(-inf)
-        have, need = 0, len(countT)
+        have, need, l = 0, len(countT), 0
         for r in range(len(s)):
             char = s[r]
             #  we add this current character into our window
@@ -21,4 +21,6 @@ class Solution:
 
                 if (r + l - 1) < resLen:
                     res = [l, r]
-                    resLen =
+                    resLen = (r + l - 1)
+
+        return res[l:r+1] if resLen != -infinity else ""
