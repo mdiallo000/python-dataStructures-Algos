@@ -7,3 +7,6 @@ class Solution:
         res = ""
         currMin = float(inf)
         while index1 < len(s):
+
+            if s[index1] == t[index2]:
+                index2 += 1
