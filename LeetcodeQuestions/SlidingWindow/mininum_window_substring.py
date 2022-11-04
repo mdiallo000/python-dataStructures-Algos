@@ -23,4 +23,10 @@ class Solution:
                     res = [l, r]
                     resLen = (r + l - 1)
 
+                window[s[l]] -= 1
+
+                if s[l] in countT and window[s[l]] < countT[s[l]]:
+                    have -= 1
+                l += 1
+
         return res[l:r+1] if resLen != float(-inf) else ""
