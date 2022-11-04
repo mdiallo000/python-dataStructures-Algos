@@ -4,4 +4,7 @@ class Solution:
         tmp = set()
 
         for r in range((len(s) + 9)):
-            curr = [r:r+10]
+            curr = s[r:r+10]
+
+            if len(curr) < 10:
+                break
