@@ -1,3 +1,6 @@
+from operator import index
+
+
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
 
@@ -10,3 +13,6 @@ class Solution:
 
             if s[index1] == t[index2]:
                 index2 += 1
+
+                if index2 == len(t):
+                    start, end = index1, index1 + 1
