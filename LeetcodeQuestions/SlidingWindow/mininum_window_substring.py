@@ -20,3 +20,5 @@ class Solution:
             while have == need:
 
                 if (r + l - 1) < resLen:
+                    res = [l, r]
+                    resLen =
