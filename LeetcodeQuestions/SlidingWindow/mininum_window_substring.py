@@ -23,4 +23,4 @@ class Solution:
                     res = [l, r]
                     resLen = (r + l - 1)
 
-        return res[l:r+1] if resLen != -infinity else ""
+        return res[l:r+1] if resLen != float(-inf) else ""
