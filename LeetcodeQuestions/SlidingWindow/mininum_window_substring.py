@@ -19,9 +19,9 @@ class Solution:
 
             while have == need:
 
-                if (r + l - 1) < resLen:
+                if (r - l + 1) < resLen:
                     res = [l, r]
-                    resLen = (r + l - 1)
+                    resLen = (r - l + 1)
 
                 window[s[l]] -= 1
 
@@ -29,4 +29,4 @@ class Solution:
                     have -= 1
                 l += 1
         l, r = res
-        return res[l:r+1] if resLen != float(inf) else ""
+        return s[l:r+1] if resLen != float(inf) else ""
