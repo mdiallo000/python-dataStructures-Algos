@@ -8,3 +8,4 @@ class Solution:
         window = {}
         countT = Counter(t)
         res, resLen = [-1, -1], float(-inf)
+        have, need = 0, len(countT)
