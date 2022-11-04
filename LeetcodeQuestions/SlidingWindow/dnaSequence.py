@@ -8,3 +8,6 @@ class Solution:
 
             if len(curr) < 10:
                 break
+            if curr in tmp:
+                res.append(curr)
+            tmp.add(curr)
