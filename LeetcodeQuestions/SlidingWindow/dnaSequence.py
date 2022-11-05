@@ -12,3 +12,4 @@ class Solution:
                 res.add(curr)
             tmp.add(curr)
         return res
+        #  i had a hard time coming up with the string slicing portion but generally my thought to  use the two sets to filter out the strings i am interested in worked out well.
