@@ -7,7 +7,7 @@ class Solution:
             m = (l+r - 1) // 2
 
             if x - arr[m] > arr[m + k] - x:
-                l = mid + 1
+                l = m + 1
             else:
                 r = m
         return arr[l: l + k]
