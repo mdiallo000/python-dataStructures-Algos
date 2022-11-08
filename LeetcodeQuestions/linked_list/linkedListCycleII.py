@@ -32,4 +32,4 @@ class Solution:
         p1 = head
         p2 = intersect
 
-        while res !=
+        while p1 != p2:
