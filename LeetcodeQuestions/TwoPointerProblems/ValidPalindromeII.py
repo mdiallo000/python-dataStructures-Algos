@@ -3,6 +3,9 @@ class Solution:
 
         def palindrome(wrd, l, r):
 
-            if wrd[l] != wrd[r]:
-                return False
+            while l < r:
+                if wrd[l] != wrd[r]:
+                    return False
+                l += 1
+                r -= 1
             return True
