@@ -9,5 +9,14 @@ class Solution:
                 return curr
             visited.add(curr)
             curr = curr.next
+        return None
 
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        def findIntersect():
+            fast, slow = head
+
+            while fast and fast.next:
+
+                fast = fast.next.next
+                slow = slow.next
