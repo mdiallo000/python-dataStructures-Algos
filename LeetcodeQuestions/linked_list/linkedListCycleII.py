@@ -33,3 +33,6 @@ class Solution:
         p2 = intersect
 
         while p1 != p2:
+            p1 = p1.next
+            p2 = p2.next
+        return p1
