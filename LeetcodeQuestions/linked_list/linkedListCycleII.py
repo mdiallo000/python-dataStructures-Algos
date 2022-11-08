@@ -23,3 +23,13 @@ class Solution:
                 if slow == fast:
                     return slow
             return None
+
+        if not head:
+            return None
+
+        intersect = findIntersect()
+
+        p1 = head
+        p2 = intersect
+
+        while res !=
