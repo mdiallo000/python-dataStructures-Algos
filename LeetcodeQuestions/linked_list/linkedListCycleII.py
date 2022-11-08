@@ -28,7 +28,8 @@ class Solution:
             return None
 
         intersect = findIntersect()
-
+        if not intersect:
+            return None
         p1 = head
         p2 = intersect
 
