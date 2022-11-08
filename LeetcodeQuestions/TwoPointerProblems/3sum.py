@@ -29,6 +29,6 @@ class Solution:
         return resulting_arr
 
 
-#  Time Complexity is (n logn) + (n^2) which just gives us (n^2)
+#  Time Complexity is (nlogn) + (n^2) which just gives us (n^2)
 
 # Space complexity can big O(1) or O(n) depending on how the sorting algo is designed
