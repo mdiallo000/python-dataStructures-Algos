@@ -1,5 +1,5 @@
 class Solution:
-    def detectCycleNaive(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def detectCycleNaive(self, head):
 
         visited = set()
         curr = head
@@ -11,7 +11,7 @@ class Solution:
             curr = curr.next
         return None
 
-    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def detectCycle(self, head):
 
         def findIntersect():
             fast, slow = head
