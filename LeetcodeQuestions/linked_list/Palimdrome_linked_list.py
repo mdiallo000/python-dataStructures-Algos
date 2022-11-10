@@ -7,6 +7,7 @@ class Solution:
     def isPalindrome(self, head):
 
     def findMiddle(self, head):
+        slow = fast = head
 
     def reverseLinkedlist(self, head):
 
