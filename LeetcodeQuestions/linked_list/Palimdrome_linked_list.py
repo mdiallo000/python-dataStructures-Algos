@@ -3,8 +3,12 @@
 # Output: true
 
 
+from mailcap import findmatch
+
+
 class Solution:
     def isPalindrome(self, head):
+        middle = self.findMiddle(head)
 
     def findMiddle(self, head):
         slow = fast = head
@@ -22,7 +26,7 @@ class Solution:
             head.next = prev
             prev = head
             head = nxt
-
+        return prev
         # The first solution gets it done but it is has a bIG O(n) time complexity and a Space complexity O(n) since we are using extra memory for our Stack and its size may increase as our list Updates.
 
         #  Second method is very efficient its O(n) Time complexity and O(1) constant space due to our use of Pointers
