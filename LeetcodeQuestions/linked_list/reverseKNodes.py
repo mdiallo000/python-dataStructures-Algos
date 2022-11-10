@@ -3,7 +3,11 @@ class Solution:
 
         def reverseList(head, k):
             prev, curr = None, head
-
-            while curr:
+            count = 0
+            while curr and count < k:
                 nxt = curr.next
                 curr.next = prev
+                prev = curr
+                curr = nxt
+                count += 1
+            return
