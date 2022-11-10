@@ -8,7 +8,17 @@ from mailcap import findmatch
 
 class Solution:
     def isPalindrome(self, head):
+        if not head:
+            return True
         middle = self.findMiddle(head)
+        right = self.reverseLinkedlist(middle)
+        left = head
+        while right:
+            if right.val != left.val:
+                return False
+            left = left.next
+            right = right.next
+        return True
 
     def findMiddle(self, head):
         slow = fast = head
