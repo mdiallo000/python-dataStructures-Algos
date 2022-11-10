@@ -12,6 +12,8 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
             if slow == fast:
+                return slow
+        return None
 
     def reverseLinkedlist(self, head):
 
