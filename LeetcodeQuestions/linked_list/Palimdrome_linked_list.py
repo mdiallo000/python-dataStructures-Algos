@@ -16,6 +16,12 @@ class Solution:
         return None
 
     def reverseLinkedlist(self, head):
+        prev = None
+        while head:
+            nxt = head.next
+            head.next = prev
+            prev = head
+            head = nxt
 
         # The first solution gets it done but it is has a bIG O(n) time complexity and a Space complexity O(n) since we are using extra memory for our Stack and its size may increase as our list Updates.
 
