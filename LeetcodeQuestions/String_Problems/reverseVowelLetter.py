@@ -12,6 +12,6 @@ class Solution:
                 r -= 1
             if s[l] not in vowels:
                 l += 1
-            if s[r] not in vowels:
+            while s[r] not in vowels:
                 r -= 1
         return "".join(s)
