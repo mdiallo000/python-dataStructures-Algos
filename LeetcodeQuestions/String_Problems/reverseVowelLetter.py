@@ -13,3 +13,5 @@ class Solution:
             while s[l] not in vowels:
                 l += 1
             while s[r] not in vowels:
+                r -= 1
+        return "".join(s)
