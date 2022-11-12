@@ -10,8 +10,8 @@ class Solution:
                 s[l], s[r] = s[r], s[l]
                 l += 1
                 r -= 1
-            while s[l] not in vowels l < r:
+            while s[l] not in vowels and l < r:
                 l += 1
-            while s[r] not in vowels:
+            while s[r] not in vowels and r > l:
                 r -= 1
         return "".join(s)
