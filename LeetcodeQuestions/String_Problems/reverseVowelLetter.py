@@ -10,7 +10,7 @@ class Solution:
                 s[l], s[r] = s[r], s[l]
                 l += 1
                 r -= 1
-            while s[l] not in vowels:
+            while s[l] not in vowels l < r:
                 l += 1
             while s[r] not in vowels:
                 r -= 1
