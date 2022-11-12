@@ -12,6 +12,9 @@ class Solution:
         if count == 1:
 
             reversedHead = self.reverseList(head, k)
+            head.next = self.reverseKGroup(curr, k)
+            return reversedHead
+        return head
 
     def reverseList(head, k):
         prev, curr = None, head
