@@ -6,3 +6,4 @@ class Solution:
             if node:
                 self.count += 1
                 dfs(node.left)
+                dfs(node.right)
