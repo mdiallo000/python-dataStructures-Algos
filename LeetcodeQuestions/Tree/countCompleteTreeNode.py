@@ -11,3 +11,5 @@ class Solution:
                 return
         dfs(root)
         return self.count
+
+    def Optimal(self, root):
