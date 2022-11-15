@@ -9,3 +9,5 @@ class Solution:
                 dfs(node.right)
             else:
                 return
+        dfs(root)
+        return self.count
