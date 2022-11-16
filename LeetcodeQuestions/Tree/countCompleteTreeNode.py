@@ -13,3 +13,4 @@ class Solution:
         return self.count
 
     def Optimal(self, root):
+        pass
