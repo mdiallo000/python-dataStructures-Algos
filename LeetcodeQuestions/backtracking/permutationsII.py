@@ -5,3 +5,4 @@ class Solution:
         def backtrack(index, perms):
             if len(perms) == len(nums):
                 output.append(perms[::])
+                return
