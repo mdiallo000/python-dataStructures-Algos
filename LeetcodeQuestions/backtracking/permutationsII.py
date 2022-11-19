@@ -13,3 +13,8 @@ class Solution:
 
             for n in count:
                 if count[n] > 0:
+                    perms.append(n)
+                    count[n] -= 1
+                    backtrack(perms)
+                    perms.pop()
+                    count[n] += 1
