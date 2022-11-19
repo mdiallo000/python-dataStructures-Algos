@@ -8,7 +8,7 @@ class Solution:
 
         def backtrack(perms):
             if len(perms) == len(nums):
-                output.append()
+                output.append(perms[::])
                 return
 
             for n in count:
@@ -18,3 +18,5 @@ class Solution:
                     backtrack(perms)
                     perms.pop()
                     count[n] += 1
+        backtrack([])
+        return output
