@@ -10,3 +10,6 @@ class Solution:
             if len(perms) == len(nums):
                 output.append()
                 return
+
+            for n in count:
+                if count[n] > 0:
