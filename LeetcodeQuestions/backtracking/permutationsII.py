@@ -1,1 +1,1 @@
-class Solution
+class Solution:
