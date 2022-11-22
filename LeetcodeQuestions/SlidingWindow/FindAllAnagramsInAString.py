@@ -7,7 +7,7 @@ class Solution:
             return []
 
         pCount = Counter(p)
-        window = defaultdict(0)
+        window = defaultdict(int)
         res = []
         for r in range(len(s)):
             #  i need to add each char into my window
@@ -20,5 +20,5 @@ class Solution:
                     window[s[r - plen]] -= 1
                     #  we know when the window and pCount are the same then we can return
             if window == pCount:
-                res.append(i - plen + 1)
+                res.append(r - plen + 1)
         return res
