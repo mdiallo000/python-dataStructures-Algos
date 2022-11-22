@@ -16,3 +16,4 @@ class Solution:
             #  we know when the window and pCount are the same then we can return
             if window == pCount:
                 res.append(i - plen + 1)
+        return res
