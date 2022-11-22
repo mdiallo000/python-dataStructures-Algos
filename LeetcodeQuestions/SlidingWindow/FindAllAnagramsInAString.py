@@ -5,3 +5,5 @@ class Solution:
 
         if len(s) < len(p):
             return []
+
+        pCount = Counter(p)
