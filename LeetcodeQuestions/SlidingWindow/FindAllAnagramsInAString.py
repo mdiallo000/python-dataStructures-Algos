@@ -17,7 +17,7 @@ class Solution:
                 if window[s[r - plen]] == 1:
                     del window[s[r - plen]]
                 else:
-
+                    window[s[r - plen]] -= 1
                     #  we know when the window and pCount are the same then we can return
             if window == pCount:
                 res.append(i - plen + 1)
