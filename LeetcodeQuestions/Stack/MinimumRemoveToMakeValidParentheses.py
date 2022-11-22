@@ -6,4 +6,4 @@ class Solution:
         for i, char in enumerate(s):
             if stack and stack[-1][0] == "(" and char == ")":
                 stack.pop()
-            elif char
+            elif char == "(" or char == ")"
