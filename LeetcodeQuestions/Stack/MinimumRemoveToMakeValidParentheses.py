@@ -12,3 +12,4 @@ class Solution:
                 oBrackets += 1
             if char == ")":
                 cBrackets += 1
+            stack.append(char)
