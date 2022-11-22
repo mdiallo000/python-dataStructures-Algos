@@ -14,9 +14,11 @@ class Solution:
             window[s[r]] += 1
             if r >= plen:
 
-                if s[r] in pCount and window:
-                    del window[s[r]]
-            #  we know when the window and pCount are the same then we can return
+                if window[s[r - plen]] == 1:
+                    del window[s[r - plen]]
+                else:
+
+                    #  we know when the window and pCount are the same then we can return
             if window == pCount:
                 res.append(i - plen + 1)
         return res
