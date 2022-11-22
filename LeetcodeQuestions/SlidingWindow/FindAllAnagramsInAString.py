@@ -7,3 +7,6 @@ class Solution:
             return []
 
         pCount = Counter(p)
+        window = defaultdict(0)
+
+        for r in range(len(s)):
