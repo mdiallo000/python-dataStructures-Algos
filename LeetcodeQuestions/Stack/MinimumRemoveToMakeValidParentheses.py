@@ -11,3 +11,4 @@ class Solution:
 
         while stack:
             char, i = stack.pop()
+            builder = builder[0:i] + builder[i+1:len(builder)]
