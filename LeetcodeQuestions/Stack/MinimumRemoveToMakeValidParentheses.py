@@ -10,3 +10,4 @@ class Solution:
                 stack.append([char, i])
 
         while stack:
+            char, i = stack.pop()
