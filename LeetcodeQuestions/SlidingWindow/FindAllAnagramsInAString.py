@@ -10,3 +10,5 @@ class Solution:
         window = defaultdict(0)
 
         for r in range(len(s)):
+            #  i need to add each char into my window
+            window[s[r]] += 1
