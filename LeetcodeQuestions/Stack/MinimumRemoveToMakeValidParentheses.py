@@ -6,4 +6,6 @@ class Solution:
 
         for char in s:
 
-            if
+            if stack and oBrackets < cBrackets:
+                continue
+            if char == "(":
