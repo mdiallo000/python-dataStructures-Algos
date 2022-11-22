@@ -12,7 +12,10 @@ class Solution:
         for r in range(len(s)):
             #  i need to add each char into my window
             window[s[r]] += 1
+            if r >= plen:
 
+                if s[r] in pCount and window:
+                    del window[s[r]]
             #  we know when the window and pCount are the same then we can return
             if window == pCount:
                 res.append(i - plen + 1)
