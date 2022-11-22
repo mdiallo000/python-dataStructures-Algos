@@ -8,3 +8,5 @@ class Solution:
                 stack.pop()
             elif char == "(" or char == ")":
                 stack.append([char, i])
+
+        while stack:
