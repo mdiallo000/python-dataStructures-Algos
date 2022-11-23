@@ -11,6 +11,8 @@ class NestedIterator:
                 return self.stack.pop()
             else:
                 for i in range(len(elem)-1, -1, -1):
+                    self.stack.append(elem[i])
+                next()
 
     def hasNext(self) -> bool:
         return self.stack
