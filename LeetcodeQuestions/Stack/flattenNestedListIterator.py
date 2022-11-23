@@ -6,4 +6,8 @@ class NestedIterator:
 
     def next(self) -> int:
 
+        for elem in self.stack:
+            if self.stack and self.stack[-1] == int:
+
     def hasNext(self) -> bool:
+        return self.stack
