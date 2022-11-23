@@ -8,6 +8,7 @@ class NestedIterator:
 
         for elem in self.stack:
             if self.stack and self.stack[-1] == int:
+                return self.stack.pop()
 
     def hasNext(self) -> bool:
         return self.stack
