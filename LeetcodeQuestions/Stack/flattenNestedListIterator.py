@@ -1,5 +1,5 @@
 class NestedIterator:
-    def __init__(self, nestedList: [NestedInteger]):
+    def __init__(self, nestedList):
         self.stack = []
         for n in range(len(nestedList)-1, -1, -1):
             self.stack.append(nestedList[n])
@@ -7,7 +7,7 @@ class NestedIterator:
     def next(self) -> int:
 
         for elem in self.stack:
-            if self.stack and self.stack[-1].is_integer():
+            if self.stack and self.stack[-1] == isinstance(elem, int):
                 return self.stack.pop()
             else:
                 for i in range(len(elem)-1, -1, -1):
