@@ -7,7 +7,7 @@ class NestedIterator:
     def next(self) -> int:
 
         for elem in self.stack:
-            if self.stack and self.stack[-1] == int:
+            if self.stack and self.stack[-1].is_integer():
                 return self.stack.pop()
             else:
                 for i in range(len(elem)-1, -1, -1):
