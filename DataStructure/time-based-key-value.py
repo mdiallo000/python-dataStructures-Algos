@@ -15,3 +15,5 @@ class TimeMap:
             return ""
         if timestamp < self.store[key][0][0]:
             return ""
+
+        left, right = 0, len(self.store[key])
