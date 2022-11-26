@@ -24,4 +24,4 @@ class TimeMap:
                 left = mid + 1
             else:
                 right = mid
-        return ""
+        return "" if right == 0 else self.store[key][right-1][1]
