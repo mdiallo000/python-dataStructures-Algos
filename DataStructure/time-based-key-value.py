@@ -11,3 +11,6 @@ class TimeMap:
         self.store[key][timestamp] = value
 
     def get(self, key: str, timestamp: int) -> str:
+
+        if key not in self.store:
+            return ""
