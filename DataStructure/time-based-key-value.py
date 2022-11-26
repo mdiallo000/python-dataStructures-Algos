@@ -13,3 +13,4 @@ class TimeMap:
 
         if key not in self.store:
             return ""
+        if timestamp < self.store[key][0][0]:
