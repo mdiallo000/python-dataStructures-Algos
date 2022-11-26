@@ -17,3 +17,5 @@ class TimeMap:
             return ""
 
         left, right = 0, len(self.store[key])
+        while left < right:
+            mid = left + (right - left) // 2
