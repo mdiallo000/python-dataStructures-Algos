@@ -18,4 +18,10 @@ class TimeMap:
 
         left, right = 0, len(self.store[key])
         while left < right:
-            mid = left + (right - left) // 2
+            mid = (right - left) // 2
+
+            if timestamp >= self.store[key][mid][0]:
+                left = mid + 1
+            else:
+                right = mid
+        return ""
