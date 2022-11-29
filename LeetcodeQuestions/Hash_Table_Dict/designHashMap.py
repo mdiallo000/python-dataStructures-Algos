@@ -2,6 +2,8 @@ class Buckect:
     def __init__(self) -> None:
         self.bucket = []
 
+    def get(self, key):
+
 
 class MyHashMap:
 
