@@ -6,6 +6,9 @@ class Buckect:
         for (k, v) in self.bucket:
             if k == key:
                 return v
+        return -1
+
+    def update(self, key, value):
 
 
 class MyHashMap:
