@@ -9,6 +9,7 @@ class Buckect:
         return -1
 
     def update(self, key, value):
+        found = False
 
 
 class MyHashMap:
