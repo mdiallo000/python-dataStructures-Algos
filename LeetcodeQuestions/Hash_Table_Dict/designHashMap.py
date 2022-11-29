@@ -1,7 +1,11 @@
+class Buckect:
+    def __init__(self) -> None:
+        self.bucket = []
+
+
 class MyHashMap:
 
     def __init__(self):
-        self.MyHashMap = set()
 
     def put(self, key: int, value: int) -> None:
 
