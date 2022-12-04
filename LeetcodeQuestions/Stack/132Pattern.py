@@ -1,5 +1,5 @@
 class Solution:
-    def find132pattern(self, nums: List[int]) -> bool:
+    def find132patternNaive(self, nums: List[int]) -> bool:
         # so all we need to determine is if there is a number that is both greather thab the previous and the
         #  i am thinking of maybe three loops, one on
 
@@ -11,3 +11,4 @@ class Solution:
                         return True
 
         return False
+    def
