@@ -15,10 +15,8 @@ class Solution:
     def find132pattern(nums):
 
         stack = []
-
+        curMin = nums[0]
         for curr in nums:
-            if len(stack) > 2 and stack[-2] < curr < stack[-1]:
-                return True
-            else:
-                stack.append(curr)
+            while stack and curr >= stack[-1][0]:
+                stack.pop()
         return False
