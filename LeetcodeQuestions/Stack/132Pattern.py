@@ -13,3 +13,12 @@ class Solution:
         return False
 
     def find132pattern(nums):
+
+        stack = []
+
+        for curr in nums:
+            if len(stack) > 2 and stack[-2] < curr < stack[-1]:
+                return True
+            else:
+                stack.append(curr)
+        return False
