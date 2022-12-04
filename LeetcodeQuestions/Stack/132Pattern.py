@@ -11,4 +11,5 @@ class Solution:
                         return True
 
         return False
-    def
+
+    def find132pattern(nums):
