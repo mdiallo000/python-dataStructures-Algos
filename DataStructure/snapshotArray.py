@@ -1,3 +1,6 @@
+import bisect
+
+
 class SnapshotArray:
 
     def __init__(self, n):
