@@ -19,4 +19,8 @@ class Solution:
         for curr in nums:
             while stack and curr >= stack[-1][0]:
                 stack.pop()
+            if stack and curr > stack[-1][1]:
+                return True
+            stack.append([curr, curMin])
+            curMin = min(curr, curMin)
         return False
