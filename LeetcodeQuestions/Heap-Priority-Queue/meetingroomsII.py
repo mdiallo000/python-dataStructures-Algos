@@ -7,7 +7,6 @@ class Solution:
 
         heap = [intervals[0][1]]
         heapq.heapify(heap)
-        res = 0
 
         for start, end in intervals[1:]:
 
