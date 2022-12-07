@@ -8,3 +8,8 @@ class Solution:
 
         for src, target in edges:
             graph[target] += 1
+        res = []
+
+        for node in graph:
+
+            if graph[node] == 0:
