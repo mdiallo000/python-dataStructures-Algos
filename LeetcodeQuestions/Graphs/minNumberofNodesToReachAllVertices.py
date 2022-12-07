@@ -4,3 +4,7 @@ class Solution:
         graph = {}
 
         for i in range(n):
+            graph[i] = 0
+
+        for src, target in edges:
+            graph[target] += 1
