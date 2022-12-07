@@ -15,3 +15,6 @@ class Solution:
                 heapq.heappush(heap, end)
             while start > heap[0]:
                 heapq.heappop(heap)
+
+            res = max(res, len(heap))
+        return res
