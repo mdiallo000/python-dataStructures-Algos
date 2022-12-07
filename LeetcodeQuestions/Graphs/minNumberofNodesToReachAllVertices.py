@@ -13,3 +13,5 @@ class Solution:
         for node in graph:
 
             if graph[node] == 0:
+                res.append(node)
+        return res
