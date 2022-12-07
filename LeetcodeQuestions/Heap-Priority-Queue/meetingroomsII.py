@@ -11,10 +11,8 @@ class Solution:
 
         for start, end in intervals[1:]:
 
-            if start <= heap[0]:
-                heapq.heappush(heap, end)
-            while start > heap[0]:
+            if start >= heap[0]:
                 heapq.heappop(heap)
+            heapq.heappush(heap, end)
 
-            res = max(res, len(heap))
-        return res
+        return len(heap)
