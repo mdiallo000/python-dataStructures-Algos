@@ -13,4 +13,5 @@ class Solution:
 
             if start <= heap[0]:
                 heapq.heappush(heap, end)
-            while start >
+            while start > heap[0]:
+                heapq.heappop(heap)
