@@ -3,3 +3,4 @@ class Solution:
         intervals.sort()
 
         heap = [intervals[0][1]]
+        heapq.heapify(heap)
