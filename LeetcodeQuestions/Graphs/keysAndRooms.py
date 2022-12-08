@@ -10,3 +10,6 @@ class Solution:
 
             for key in rooms[node]:
                 if not seen[key]:
+                    seen[key] = True
+                    stack.append(key)
+        return all(seen)
