@@ -26,3 +26,7 @@ class UnionFind:
         #  if two nodes have the same parent then there is node need to unite them
         if p1 == p2:
             return False
+
+        #  now we need to determine how we attach these two nodes based on their rank
+
+        if self.rank[p1] > self.rank[p2]:
