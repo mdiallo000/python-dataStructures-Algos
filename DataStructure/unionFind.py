@@ -12,3 +12,8 @@ class UnionFind:
     #  the union find data structures has a find and union method, the first helps find the ultimate parent of a node as while as apply path compression to improve the time complexity of future find operations. The union method unites the two nodes by first find the ultimae parents
 
     def find(self, node):
+        current_parent = self.parent[node]
+
+        while current_parent != self.parent[node]:
+
+        return current_parent
