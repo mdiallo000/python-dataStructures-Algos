@@ -22,3 +22,7 @@ class UnionFind:
     def union(self, n1, n2):
         #  we first find the ultimate parent of the nodes
         p1, p2 = self.find(n1), self.find(n2)
+
+        #  if two nodes have the same parent then there is node need to unite them
+        if p1 == p2:
+            return False
