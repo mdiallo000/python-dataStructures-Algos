@@ -20,3 +20,5 @@ class UnionFind:
         return current_parent
 
     def union(self, n1, n2):
+        #  we first find the ultimate parent of the nodes
+        p1, p2 = self.find(n1), self.find(n2)
