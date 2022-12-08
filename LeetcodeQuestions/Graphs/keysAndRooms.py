@@ -8,4 +8,5 @@ class Solution:
         while stack:
             node = stack.pop()
 
-            for keys in rooms[node]:
+            for key in rooms[node]:
+                if not seen[key]:
