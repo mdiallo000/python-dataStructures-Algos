@@ -6,3 +6,6 @@ class Solution:
         stack = [0]
 
         while stack:
+            node = stack.pop()
+
+            for keys in rooms[node]:
