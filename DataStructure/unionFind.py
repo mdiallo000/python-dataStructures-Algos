@@ -30,3 +30,10 @@ class UnionFind:
         #  now we need to determine how we attach these two nodes based on their rank
 
         if self.rank[p1] > self.rank[p2]:
+            self.parent[p2] = p1
+        elif self.rank[p1] < self.rank[p2]:
+            self.parent[p1] = p2
+        else:
+            self.parent[p1] = p2
+            self.rank[p2] += 1
+        return True
