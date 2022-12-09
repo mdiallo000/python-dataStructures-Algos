@@ -45,3 +45,6 @@ def kruskal(edges, n):
     heap = []
     for n1, n2, w in edges:
         heapq.heappush(heap, [w, n1, n2])
+    #  now we have created the heap we can go on using our disjoint set to create the spanning tree
+    disjoint_set = UnionFind()
+    min_spanning_tree
