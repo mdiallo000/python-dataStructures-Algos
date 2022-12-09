@@ -39,3 +39,5 @@ class UnionFind:
 
 
 def kruskal(edges, n):
+
+    #  we need a heap to keep track of the minimum weights between edges, since we want to create the minimum spanning tree based on this information
