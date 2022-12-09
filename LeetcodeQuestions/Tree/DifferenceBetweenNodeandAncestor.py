@@ -11,3 +11,6 @@ class Solution:
             currMin = min(currMin, node.val)
             self.res = max(self.res, abs(currMax - node.val),
                            abs(currMin - node.val))
+            dfs(node.left, currMin, currMax)
+            dfs(node.right. currMin, currMax)
+            return
