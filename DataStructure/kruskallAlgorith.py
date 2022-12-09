@@ -50,7 +50,7 @@ def kruskal(edges, n):
     #  our disjoint set will now create its parent object as well as its ranks
     min_spanning_tree = []
 
-    while heap:
+    while len(min_spanning_tree) < n-1:
         w, n1, n2 = heapq.heappop(heap)
 
         # we destructure the item from the top of the heap, and now we can try to union them together, if we aren't able to that means there already part of the same component and we need to avoid adding them into a min spanning tree to avoid cycles.
@@ -58,3 +58,4 @@ def kruskal(edges, n):
         if not disjoint_set.union(n1, n2):
             continue
         min_spanning_tree.append([n1, n2])
+    return min_spanning_tree
