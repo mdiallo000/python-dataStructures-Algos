@@ -9,4 +9,5 @@ class Solution:
 
             currMax = max(currMax, node.val)
             currMin = min(currMin, node.val)
-            self.res = max(self.res, abs(currMax - node.val))
+            self.res = max(self.res, abs(currMax - node.val),
+                           abs(currMin - node.val))
