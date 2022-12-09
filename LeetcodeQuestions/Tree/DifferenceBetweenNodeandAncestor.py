@@ -14,3 +14,5 @@ class Solution:
             dfs(node.left, currMin, currMax)
             dfs(node.right. currMin, currMax)
             return
+        dfs(root, root.val, root.val)
+        return self.res
