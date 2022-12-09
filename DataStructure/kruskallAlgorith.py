@@ -53,4 +53,7 @@ def kruskal(edges, n):
     while heap:
         w, n1, n2 = heapq.heappop(heap)
 
-        #  we destructure the item from the top of the heap, and now we can try to union them together, if we aren't able to that means there already part of the same component and we need to avoid adding them into a min spanning tree to avoid cycles.
+        # we destructure the item from the top of the heap, and now we can try to union them together, if we aren't able to that means there already part of the same component and we need to avoid adding them into a min spanning tree to avoid cycles.
+
+        if not disjoint_set.union(n1, n2):
+            continue
