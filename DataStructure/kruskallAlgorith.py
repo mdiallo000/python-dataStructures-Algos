@@ -57,3 +57,4 @@ def kruskal(edges, n):
 
         if not disjoint_set.union(n1, n2):
             continue
+        min_spanning_tree.append([n1, n2])
