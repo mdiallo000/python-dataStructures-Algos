@@ -22,13 +22,10 @@ class UnionFind:
     def union(self, n1, n2):
         #  we first find the ultimate parent of the nodes
         p1, p2 = self.find(n1), self.find(n2)
-
         #  if two nodes have the same parent then there is node need to unite them
         if p1 == p2:
             return False
-
         #  now we need to determine how we attach these two nodes based on their rank
-
         if self.rank[p1] > self.rank[p2]:
             self.parent[p2] = p1
         elif self.rank[p1] < self.rank[p2]:
