@@ -1,5 +1,5 @@
 class Solution:
-    def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
+    def maxAncestorDiff(self, root) -> int:
 
         self.res = 0
 
