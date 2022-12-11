@@ -3,3 +3,6 @@ class Solution:
 
         graph = defaultdict(set)
         email_accounts = {}
+
+        for account in accounts:
+            name = account[0]
