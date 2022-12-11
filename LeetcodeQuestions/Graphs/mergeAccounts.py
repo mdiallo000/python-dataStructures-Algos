@@ -6,3 +6,6 @@ class Solution:
 
         for account in accounts:
             name = account[0]
+            for email in account[1:]:
+                graph[email].add(account[1:])
+                graph[account[1:]].add(email)
