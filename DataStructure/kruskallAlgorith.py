@@ -1,5 +1,8 @@
 #  Kruskal Algorithm will allow to create a minimum spanning Tree using a disjoint set
 
+import heapq
+
+
 class UnionFind:
 
     def __init__(self, n):
@@ -24,10 +27,13 @@ class UnionFind:
     def union(self, n1, n2):
         #  we first find the ultimate parent of the nodes
         p1, p2 = self.find(n1), self.find(n2)
+
         #  if two nodes have the same parent then there is node need to unite them
         if p1 == p2:
             return False
+
         #  now we need to determine how we attach these two nodes based on their rank
+
         if self.rank[p1] > self.rank[p2]:
             self.parent[p2] = p1
         elif self.rank[p1] < self.rank[p2]:
@@ -59,3 +65,9 @@ def kruskal(edges, n):
             continue
         min_spanning_tree.append([n1, n2])
     return min_spanning_tree
+
+
+flights = [[1, 2, 100], [2, 3, 100], [3, 1, 100], [2, 4, 600], [3, 4, 200]]
+
+res = kruskal(flights, 4)
+print(res)
