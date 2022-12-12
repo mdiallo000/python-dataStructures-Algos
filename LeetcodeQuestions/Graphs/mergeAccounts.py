@@ -34,3 +34,4 @@ class Solution:
                 if email in ownership:
                     _ = disjointSet.union(idx, ownership[email])
                 ownership[email] = idx
+        res = defaultdict(set)
