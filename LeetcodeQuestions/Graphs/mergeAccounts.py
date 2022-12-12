@@ -1,7 +1,12 @@
 class UnionFind:
     def __init__(self, n):
         self.parent = {i: i for i in range(n)}
-        self.rank = {i: 0 for i in range(n)}
+        self.rank = {i: 1 for i in range(n)}
+
+    def find(self, node):
+
+        while node != self.parent[node]:
+            self.parent[node] = self.parent[self.parent[node]]
 
 
 class Solution:
