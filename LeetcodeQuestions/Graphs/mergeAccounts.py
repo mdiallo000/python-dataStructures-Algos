@@ -7,6 +7,8 @@ class UnionFind:
 
         while node != self.parent[node]:
             self.parent[node] = self.parent[self.parent[node]]
+            node = self.parent[node]
+        return node
 
 
 class Solution:
