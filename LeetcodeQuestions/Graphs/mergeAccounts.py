@@ -20,6 +20,7 @@ class UnionFind:
         else:
             self.parent[p1] = p2
             self.rank[p2] += self.rank[p1]
+        return True
 
 
 class Solution:
