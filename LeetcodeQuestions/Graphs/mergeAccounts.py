@@ -1,5 +1,7 @@
 class UnionFind:
-    def __init__(self) -> None:
+    def __init__(self, n):
+        self.parent = {i: i for i in range(n)}
+        self.rank = {i: 0 for i in range(n)}
 
 
 class Solution:
