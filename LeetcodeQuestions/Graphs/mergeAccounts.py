@@ -26,13 +26,7 @@ class UnionFind:
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
 
-        graph = defaultdict(set)
-        email_to_name = {}
+        ownership = {}
+        # {email : index of where withing the accounts lists it was found}
 
-        for account in accounts:
-            name = account[0]
-            for email in account[1:]:
-                graph[email].add(account[1:])
-                graph[account[1:]].add(email)
-                email_to_name[email] = name
-        print(graph)
+        for idx, account in enumerate(accounts):
