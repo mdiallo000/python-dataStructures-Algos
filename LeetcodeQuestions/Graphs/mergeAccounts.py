@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class UnionFind:
     def __init__(self, n):
         self.parent = {i: i for i in range(n)}
@@ -35,3 +38,6 @@ class Solution:
                     _ = disjointSet.union(idx, ownership[email])
                 ownership[email] = idx
         res = defaultdict(set)
+        for i, account in enumerate(accounts):
+            res[disjointSet.find(i)].update(account[1:])
+        return [[accounts[i][0]] + sorted(list(email)) for i, email in res.items()]
