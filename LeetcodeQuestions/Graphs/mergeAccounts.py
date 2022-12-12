@@ -30,6 +30,7 @@ class Solution:
         # {email : index of where withing the accounts lists it was found}
         disjointSet = UnionFind(len(accounts))
         for idx, account in enumerate(accounts):
-            for email in account[1:]
-            if email in ownership:
-                _ =
+            for email in account[1:]:
+                if email in ownership:
+                    _ = disjointSet.union(idx, ownership[email])
+                ownership[email] = idx
