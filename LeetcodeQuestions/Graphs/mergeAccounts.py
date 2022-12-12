@@ -1,3 +1,6 @@
+class UnionFind:
+
+
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
 
@@ -10,3 +13,4 @@ class Solution:
                 graph[email].add(account[1:])
                 graph[account[1:]].add(email)
                 email_to_name[email] = name
+        print(graph)
