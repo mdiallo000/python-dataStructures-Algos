@@ -15,4 +15,10 @@ class UnionFind:
                 else:
                     self.parent.append(-1)
                 self.rank.append(0)
-    def
+
+    def find(self, node):
+        if node != self.parent[node]:
+            self.parent[node] = self.find(self.parent[node])
+        return self.parent[node]
+
+    def union(self, )
