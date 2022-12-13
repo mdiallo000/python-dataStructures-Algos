@@ -8,3 +8,5 @@ class UnionFind:
         COLUMNS = len(grid[0])
 
         for r in range(ROWS):
+            for c in range(COLUMNS):
+                if grid[r][c] == "1":
