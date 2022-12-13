@@ -11,7 +11,7 @@ class UnionFind:
             for c in range(COLUMNS):
                 if grid[r][c] == "1":
                     self.parent.append(r * COLUMNS + c)
-                    count += 1
+                    self.count += 1
                 else:
                     self.parent.append(-1)
                 self.rank.append(0)
