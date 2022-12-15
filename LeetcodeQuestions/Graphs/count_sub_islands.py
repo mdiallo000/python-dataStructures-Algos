@@ -5,4 +5,6 @@ class Solution:
 
         def dfs(r, c):
 
-            if r == ROWS or r < 0
+            if r == ROWS or r < 0 or grid2[r][c] == 0 or c < 0 or c == COLUMNS:
+                return
+            grid2[r][c] == 0
