@@ -12,3 +12,13 @@ class Solution:
             dfs(r, c-1)
             dfs(r+1, c)
             dfs(r-1, c)
+
+        for r in range(ROWS):
+            for c in range(COLUMNS):
+                if grid2 == 1 and grid1[0]:
+                    dfs(r, c)
+        res = 0
+        for r in range(ROWS):
+            for c in range(COLUMNS):
+                if grid2 == 1 and grid1[0]:
+                    dfs(r, c)
