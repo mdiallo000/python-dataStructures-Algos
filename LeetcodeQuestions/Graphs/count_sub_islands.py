@@ -20,7 +20,7 @@ class Solution:
         res = 0
         for r in range(ROWS):
             for c in range(COLUMNS):
-                if grid2 == 1:
+                if grid2[r][c] == 1:
                     dfs(r, c)
                     res += 1
         return res
