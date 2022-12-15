@@ -15,10 +15,12 @@ class Solution:
 
         for r in range(ROWS):
             for c in range(COLUMNS):
-                if grid2 == 1 and grid1[0]:
+                if grid2[r][c] == 1 and grid1[r][c] == 0:
                     dfs(r, c)
         res = 0
         for r in range(ROWS):
             for c in range(COLUMNS):
-                if grid2 == 1 and grid1[0]:
+                if grid2 == 1:
                     dfs(r, c)
+                    res += 1
+        return res
