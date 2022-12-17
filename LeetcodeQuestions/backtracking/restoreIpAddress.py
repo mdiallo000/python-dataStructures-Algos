@@ -1,5 +1,5 @@
 class Solution:
-    def restoreIpAddresses(self, s: str) -> List[str]:
+    def restoreIpAddresses(self, s: str):
         res = []
         if len(s) > 12:
             return res
