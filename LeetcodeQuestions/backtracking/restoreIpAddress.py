@@ -11,3 +11,5 @@ class Solution:
                 return
             if dots > 4:
                 return
+
+            for j in range(idx, min(idx + 3, len(s))):
