@@ -5,10 +5,12 @@ class Solution:
 
         def dfs(idx, buying):
             if idx >= len(prices):
-                return dp[(idx, buying)]
+                return 0
+            #  if we go out of bounds then there is nothing to be bought and thus we must return zero
+
             if (idx, buying) in dp:
                 return dp[(idx, buying)]
-
+            #  if this day and state has been previously seen then we should just return the already cached values.
             cooldown = dfs(idx + 1, buying)
             if buying:
                 buy = dfs(idx + 1, not buying) - prices[idx]
