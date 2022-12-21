@@ -19,3 +19,8 @@ class Solution:
                 if not dfs(neigbor, 2 if state == 1 else 1):
                     return False
             return True
+
+        for n in range(1, n+1):
+            if not groups[n] and not dfs(n, 1):
+                return False
+        return True
