@@ -9,4 +9,7 @@ class Solution:
         # every node will start off with a score of one and as we find out how many nodes are below it we will then add that to the initial score
         score = [1] * n
 
-        def dfs_count(curr, parent, )
+        def dfs_count(curr, parent, depth):
+
+            for child in graph[curr]:
+                if child != parent:
