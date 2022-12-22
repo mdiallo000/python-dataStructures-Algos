@@ -12,11 +12,11 @@ class Solution:
             if not groups[node]:
                 groups[node] = state
             else:
-                return groups[node]
+                return groups[node] == state
 
-            for neigbor in graph[node]:
+            for edge in graph[node]:
 
-                if not dfs(neigbor, 2 if state == 1 else 1):
+                if not dfs(edge, 2 if state == 1 else 1):
                     return False
             return True
 
