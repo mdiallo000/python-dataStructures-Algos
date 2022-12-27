@@ -26,7 +26,7 @@ class Solution:
             res[curr] = count
             for child in graph[curr]:
                 if child != parent:
-                    dfs(child, curr, count + (n - score[curr] - score[curr]))
+                    dfs(child, curr, count + (n - score[child] - score[child]))
 
         dfs(0, -1, self.count)
         return res
