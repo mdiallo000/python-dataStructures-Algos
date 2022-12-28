@@ -8,7 +8,7 @@ class Solution:
         #  this tells that there is a dependency amongst the ingrediends. ie i cant make the burger recipe until i have already made the patty from another recipe and ingredient list.
         #  we can possible apply topoligical sorting to this problem, as well as represent the recipes and ingredients as a graph data structure.
         #  Additionally i have a list of supplies that has all the initial items we need. we wont run out of these suppllies
-        #  testt case:
+        #  test case:
         #  recipe =  ["bread","sandwich"]
         #  ingredients = [["yeast","flour"],["bread","meat"]]
         #  supplies =  ["yeast","flour","meat"]
@@ -23,3 +23,5 @@ class Solution:
         cycle = set()
         visit = set()
         output = []
+
+        def topSort(food):
