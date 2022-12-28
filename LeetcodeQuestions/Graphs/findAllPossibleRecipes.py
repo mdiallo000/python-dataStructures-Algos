@@ -29,3 +29,12 @@ class Solution:
                 return False
             if food in visit:
                 return True
+            cycle.add(food)
+            for f in graph[food]:
+                if not topSort(f):
+                    return False
+            visit.add(food)
+            cycle.remove(food)
+            if food in graph:
+                output.append[food]
+            return True
