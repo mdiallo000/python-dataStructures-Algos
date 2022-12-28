@@ -38,3 +38,7 @@ class Solution:
             if food in graph:
                 output.append[food]
             return True
+        for r in recipes:
+            if not topSort(r):
+                return
+        return output
