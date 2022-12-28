@@ -25,3 +25,7 @@ class Solution:
         output = []
 
         def topSort(food):
+            if food in cycle:
+                return False
+            if food in visit:
+                return True
