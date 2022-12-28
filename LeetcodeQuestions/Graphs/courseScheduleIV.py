@@ -21,3 +21,8 @@ class Solution:
                     return False
             visit.add(course)
             cycle.remove(course)
+            output.append(course)
+            return True
+        for c in range(numCourses):
+            if not topSort(c):
+                return
