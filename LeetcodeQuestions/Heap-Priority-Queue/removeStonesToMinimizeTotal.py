@@ -1,3 +1,6 @@
+import heapq
+
+
 class Solution:
     def minStoneSum(self, piles: List[int], k: int) -> int:
         #  we are given a list of numbers that represent the number of stones at that position. 
@@ -20,6 +23,20 @@ class Solution:
             #  after take the total of the max heap 
 
             maxHeap =  [-i for i in piles]
+            heapq.heapify(maxHeap)
+            
+            while k:
+                val =  heapq.heappop(maxHeap)
+                val = val * -1
+                if val:
+                    val = math.ceil(val/2)
+                    heapq.heappush(maxHeap, -val)
+                    
+                
+                
+                
+            
+            
             
             
             
