@@ -27,10 +27,9 @@ class Solution:
             
             while k:
                 val =  heapq.heappop(maxHeap)
-                val = val * -1
-                if val >= 0:
-                    val = math.ceil(val/2)
-                    heapq.heappush(maxHeap, -val)
+                val = math.ceil(val/2)
+                heapq.heappush(maxHeap, -val)
+                k-=1
             res =  [-i for i in maxHeap]
             return sum(res)
                 
