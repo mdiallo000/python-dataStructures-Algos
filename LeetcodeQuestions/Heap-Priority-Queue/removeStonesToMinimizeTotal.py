@@ -28,7 +28,7 @@ class Solution:
             while k:
                 val =  heapq.heappop(maxHeap)
                 val = val * -1
-                if val:
+                if val >= 0:
                     val = math.ceil(val/2)
                     heapq.heappush(maxHeap, -val)
                     
