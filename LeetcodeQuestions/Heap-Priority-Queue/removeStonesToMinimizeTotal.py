@@ -18,6 +18,12 @@ class Solution:
             #  make a max heap by turning all the piles values into negatives since python does not have an in built max heap
             # Now that you have the max heap, pop from it k times, perform the operations on the heap node value and push it back into the heap 
             #  after take the total of the max heap 
+
+            maxHeap =  [-i for i in piles]
             
-        
+            
+            
+            
+            
+            
           
