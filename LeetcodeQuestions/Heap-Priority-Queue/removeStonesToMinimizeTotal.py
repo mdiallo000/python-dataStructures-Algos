@@ -13,6 +13,11 @@ class Solution:
         #  one more time we take a 5 => 3
         #  [4,4,5,3] we have reduced the piles total to be 16
         #  The data structure that will allow us to do this efficiently is a max heap 
-        #  This way we can always select the greatest value in the maxHeap and perform the operations on that value. Repeat this k times. 
+        #  This way we can always select the greatest value in the maxHeap and perform the operations on that value. Repeat this k times.
+        #  Pseudo Code:
+            #  make a max heap by turning all the piles values into negatives since python does not have an in built max heap
+            # Now that you have the max heap, pop from it k times, perform the operations on the heap node value and push it back into the heap 
+            #  after take the total of the max heap 
+            
         
           
