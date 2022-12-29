@@ -31,8 +31,8 @@ class Solution:
                 if val >= 0:
                     val = math.ceil(val/2)
                     heapq.heappush(maxHeap, -val)
-                    
-                
+            res =  [-i for i in maxHeap]
+            return sum(res)
                 
                 
             
