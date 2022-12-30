@@ -22,3 +22,4 @@ class WordDictionary:
         #  this method allows us to establish whether a word exists or not in our dictionary
         curr = self.root
         for c in word:
+            if c not in curr.children:
