@@ -19,3 +19,4 @@ class WordDictionary:
         curr.end_of_word = True
 
     def search(self, word: str) -> bool:
+        #  this method allows us to establish whether a word exists or not in our dictionary
