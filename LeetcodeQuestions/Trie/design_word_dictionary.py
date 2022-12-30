@@ -20,3 +20,5 @@ class WordDictionary:
 
     def search(self, word: str) -> bool:
         #  this method allows us to establish whether a word exists or not in our dictionary
+        curr = self.root
+        for c in word:
