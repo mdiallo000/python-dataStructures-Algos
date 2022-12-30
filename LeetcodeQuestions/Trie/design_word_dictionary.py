@@ -7,6 +7,7 @@ class Trie_Node:
 class WordDictionary:
 
     def __init__(self):
+        self.root = Trie_Node()
 
     def addWord(self, word: str) -> None:
 
