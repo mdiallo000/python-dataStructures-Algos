@@ -1,4 +1,7 @@
 class Trie_Node:
+    def __init__(self) -> None:
+        self.children = {}
+        self.end_of_word = False
 
 
 class WordDictionary:
