@@ -25,7 +25,6 @@ class Solution:
 
             maxHeap =  [-i for i in piles]
             heapq.heapify(maxHeap)
-            
             while k:
                 val =  heapq.heappop(maxHeap)
                 val = math.ceil(val/2)
@@ -33,7 +32,7 @@ class Solution:
                 k-=1
             res =  [-i for i in maxHeap]
             return sum(res)
-                
+
                 
             
             
