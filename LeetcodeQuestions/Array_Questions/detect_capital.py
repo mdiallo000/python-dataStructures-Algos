@@ -8,5 +8,16 @@ class Solution:
         #  if we have this case "BestPlayer" count != 1 or the length of string return False
 
         count = 0
+        if len(word) == 1:
+            return True
         for i in range(len(word)):
             if word[i].isupper():
+                count += 1
+        print(count)
+        if count == len(word):
+            return True
+        elif count == 1 and word[0].isupper():
+            return True
+        elif count == 0:
+            return True
+        return False
