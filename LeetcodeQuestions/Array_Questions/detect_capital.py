@@ -9,3 +9,4 @@ class Solution:
 
         count = 0
         for i in range(len(word)):
+            if word[i].isupper():
