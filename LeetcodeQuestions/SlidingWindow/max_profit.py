@@ -1,33 +1,24 @@
-# You are given an array prices where prices[i] is the price of a given stock on the ith day.
-# You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-# Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-
-# Input: prices = [7,1,5,3,6,4]
-# Output: 5
-
-# Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-# Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
-
 class Solution:
-    def maxProfitBruteForce(self, prices: List[int]) -> int:
-        maxprofit = 0
-        profit_that_day = 0
-        for i in range(len(prices)):
-            for j in range(i+1, len(prices)):
-                profit_that_day = j - i
-                maxprofit = max(maxprofit, profit_that_day)
-        return maxprofit
-
     def maxProfit(self, prices: List[int]) -> int:
-        left = 0
-        right = 1
-        profit_of_the_day = 0
+        #  we are given stocks to buy and sell
+        #  the rules are simple, our goal is to maximize our profits, we can do so by buying low and selling high
+        #  we can easily come up with a naive solution where we see how much profit can be made by buy on each day and then selling on every subsequent day
+        # This would yield an O(n^2) algorithm
+        # max_profit = 0
+        # for today in range(len(prices)):
+        #     for future in range(today, len(prices)):
+        #         max_profit =  max(max_profit, (prices[future] - prices[today]))
+        # return max_profit
+
+        #  We can create a linear algorithm by applying the sliding window techinque were we only examine the window where we are generating profit and whenever we encouter a new low price we take that as our new starting point
+        today, future = 0, 0
         max_profit = 0
-        while right < len(prices):
-            if prices[left] > prices[right]:
-                left = right
-            else:
-                profit_of_the_day = prices[right] - prices[left]
-                max_profit = max(max_profit, profit_of_the_day)
-                right += 1
+        while future < len(prices):
+            if prices[future] < prices[today]:
+                today = future
+            max_profit = max(max_profit, (prices[future] - prices[today]))
+            future += 1
+
         return max_profit
+
+        #  with this technique we manage to effieciently finds the higest profit margin possible
