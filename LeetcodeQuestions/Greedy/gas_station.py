@@ -6,3 +6,5 @@ class Solution:
 
         total = 0
         res = 0
+
+        for i in range(len(cost)):
