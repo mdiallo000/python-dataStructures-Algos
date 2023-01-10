@@ -1,7 +1,6 @@
 def numRescueBoats(self, people: List[int], limit: int) -> int:
 
     l = 0
-    curr = 0
     boats = 0
     r = len(people)-1
     people.sort()
