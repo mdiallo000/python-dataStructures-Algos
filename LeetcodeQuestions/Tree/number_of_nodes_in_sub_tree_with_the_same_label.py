@@ -7,3 +7,22 @@ class Solution:
         # Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.
 
         # A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.
+        graph = [[] for _ in range(n)]
+        for a, b in edges:
+            graph[a].append(b)
+            graph[b].append(a)
+
+        ans = [0] * n
+
+        def dfs(vertex: int, parent: int, cnt: collections.Counter) -> None:
+            before = cnt[labels[vertex]]
+
+            for adjacent in graph[vertex]:
+                if adjacent != parent:
+                    dfs(adjacent, vertex, cnt)
+
+            cnt[labels[vertex]] += 1
+            ans[vertex] = cnt[labels[vertex]] - before
+
+        dfs(0, 0, collections.Counter())
+        return ans
