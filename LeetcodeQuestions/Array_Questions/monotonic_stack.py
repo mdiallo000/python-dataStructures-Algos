@@ -4,7 +4,7 @@ class Solution:
         #  What should my approach be?
         #  NOT sure if there is a silver bullet for this problem. We have to our disposal a couple of patterns
         #  what if we do two checks one for increasing and another for deacreasing?
-        def checKPositive(nums):
+        def check_positive(nums):
             for i in range(1, len(nums)):
                 if nums[i] < nums[i-1]:
                     return False
