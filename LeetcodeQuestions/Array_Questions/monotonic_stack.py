@@ -9,12 +9,16 @@ class Solution:
                 if nums[i] < nums[i-1]:
                     return False
             return True
-        #  In actuality all i need to check is if its not monotonic in its composition
-        #  So rather than attempting to see whether or not its monotonic lets see if it isnt
-        #  so how will i do it?
-     #  maybe i can use a stack?
-     #  Go through the list, if i find a number that is greater than the previous and future then we return false
-        #  after we have at least two elements inside of the stack i can then check to see whether or not current is less than the element on top of the stack but greater than the element on stack[-2]. If it is then we return false
+
+        def check_negative(nums):
+            for i in range(1, len(nums)):
+
+                #  In actuality all i need to check is if its not monotonic in its composition
+                #  So rather than attempting to see whether or not its monotonic lets see if it isnt
+                #  so how will i do it?
+             #  maybe i can use a stack?
+             #  Go through the list, if i find a number that is greater than the previous and future then we return false
+                #  after we have at least two elements inside of the stack i can then check to see whether or not current is less than the element on top of the stack but greater than the element on stack[-2]. If it is then we return false
         stack = []
 
         for num in nums:
