@@ -10,3 +10,4 @@ class Solution:
         #  so how will i do it?
      #  maybe i can use a stack?
      #  Go through the list, if i find a number that is greater than the previous and future then we return false
+        #  after we have at least two elements inside of the stack i can then check to see whether or not current is less than the element on top of the stack but greater than the element on stack[-2]. If it is then we return false
