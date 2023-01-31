@@ -18,3 +18,7 @@ class Solution:
         # scores = [1,3,5,10,15], ages = [1,2,3,4,5]
         #  zip  trough both list and add the age and score of each person into a tuple or list
         #  now with the new list we can check for the condition
+
+        info = []
+
+        for a, s in zip(ages, scores):
