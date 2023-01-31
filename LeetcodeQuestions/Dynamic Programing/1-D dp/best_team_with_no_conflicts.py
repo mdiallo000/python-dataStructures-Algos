@@ -14,4 +14,7 @@ class Solution:
         #  i am leaning towards a greedy solution
         #  but lets examine how this would would by hand anyways
         #  thus far we can pint point it down to sorting or some type of greedy?
-        #  after checking the related topics its clear that this will involve sorting than dynamic programing for better optimization
+        #  after checking the related topics its clear that this will involve sorting than  dynamic programing for better optimization
+        # scores = [1,3,5,10,15], ages = [1,2,3,4,5]
+        #  zip  trough both list and add the age and score of each person into a tuple or list
+        #  now with the new list we can check for the condition
