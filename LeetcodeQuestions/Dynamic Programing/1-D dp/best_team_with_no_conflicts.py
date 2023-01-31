@@ -7,10 +7,11 @@ class Solution:
         #  older player
 
         #  we get two lists, scores and ages
-        #  socre[i] == score for that player
+        #  score[i] == score for that player
         #  ages[i] == age of that player
         #   Potential pattern?
-        #  elimimate slow-fast pointers, two pointer, sliding window,
+        #  eliminate slow-fast pointers, two pointer, sliding window,
         #  i am leaning towards a greedy solution
         #  but lets examine how this would would by hand anyways
-        #  thus far we can pintpoint it down to sorting or some type of greedy?
+        #  thus far we can pint point it down to sorting or some type of greedy?
+        #  after checking the related topics its clear that this will involve sorting than dynamic programing for better optimization
