@@ -24,3 +24,5 @@ class Solution:
             data.append([a, s])
         n = len(data)
         dp_table = [0]
+        for i in range(n):
+            cur_score = data[i][1]
