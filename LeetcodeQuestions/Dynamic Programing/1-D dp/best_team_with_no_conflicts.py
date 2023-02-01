@@ -24,5 +24,12 @@ class Solution:
             data.append([a, s])
         n = len(data)
         dp_table = [0]
+        data.sort()
         for i in range(n):
             cur_score = data[i][1]
+            dp_table[i] = cur_score
+
+            for j in range(i):
+
+                if data[j][1] <= cur_score:
+                    dp[i] = max(dp[i], dp[j] + cur_score)
