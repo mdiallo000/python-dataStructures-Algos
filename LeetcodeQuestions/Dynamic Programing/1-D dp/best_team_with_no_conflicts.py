@@ -32,4 +32,5 @@ class Solution:
             for j in range(i):
 
                 if data[j][1] <= cur_score:
-                    dp[i] = max(dp[i], dp[j] + cur_score)
+                    dp_table[i] = max(dp_table[i], dp_table[j] + cur_score)
+        return max(dp_table)
