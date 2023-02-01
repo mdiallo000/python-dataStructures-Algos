@@ -19,6 +19,8 @@ class Solution:
         #  zip  trough both list and add the age and score of each person into a tuple or list
         #  now with the new list we can check for the condition
 
-        info = []
-
+        data = []
         for a, s in zip(ages, scores):
+            data.append([a, s])
+        n = len(data)
+        dp_table = [0]
