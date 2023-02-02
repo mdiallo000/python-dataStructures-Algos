@@ -11,3 +11,6 @@ class Solution:
         while curr:
             data.append(curr.val)
             curr = curr.next
+        data.sort()
+
+        curr = head
