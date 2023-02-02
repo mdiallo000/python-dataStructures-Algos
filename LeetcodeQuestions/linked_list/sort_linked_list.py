@@ -14,3 +14,5 @@ class Solution:
         data.sort()
 
         curr = head
+        pointer = 0
+        while curr and pointer < len(data):
