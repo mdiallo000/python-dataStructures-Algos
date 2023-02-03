@@ -16,3 +16,5 @@ class Solution:
         curr = head
         for n in data:
             curr.val = n
+            curr = curr.next
+        return head
