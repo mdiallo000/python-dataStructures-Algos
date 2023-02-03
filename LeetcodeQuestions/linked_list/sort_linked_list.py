@@ -14,9 +14,4 @@ class Solution:
         data.sort()
 
         curr = head
-        pointer = 0
-        while curr:
-            curr.val = data[pointer]
-            pointer += 1
-            curr = curr.next
-        return head
+        for n in data
