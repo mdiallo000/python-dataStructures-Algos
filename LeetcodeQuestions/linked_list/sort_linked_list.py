@@ -15,7 +15,7 @@ class Solution:
 
         curr = head
         pointer = 0
-        while curr and pointer < len(data):
+        while curr:
             curr.val = data[pointer]
             pointer += 1
             curr = curr.next
