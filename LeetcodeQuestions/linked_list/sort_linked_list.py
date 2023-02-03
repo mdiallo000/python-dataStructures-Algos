@@ -14,4 +14,5 @@ class Solution:
         data.sort()
 
         curr = head
-        for n in data
+        for n in data:
+            curr.val = n
