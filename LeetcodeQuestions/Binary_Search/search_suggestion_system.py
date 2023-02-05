@@ -21,4 +21,6 @@ class Solution:
         #  If no then we move the left pointer to the next word in the products and repeat the this process until we have a match.
         #  The same will apply for the right pointer
         #  If the both the left and right pointer happen to match with the search word that means every other word in between also matches and we can simply return at least three products that are withing this range
-        #
+
+        res = []
+        products.sort()
