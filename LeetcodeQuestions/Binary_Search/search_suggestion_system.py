@@ -24,3 +24,8 @@ class Solution:
 
         res = []
         products.sort()
+        print(products)
+
+    products = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
+    searchWord = "mouse"
+    suggestedProducts(products, searchWord)
