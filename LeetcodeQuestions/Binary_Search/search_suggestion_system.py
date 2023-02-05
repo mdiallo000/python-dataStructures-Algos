@@ -1,5 +1,5 @@
 
-def suggestedProducts(products: List[str], searchWord: str) -> List[List[str]]:
+def suggestedProducts(products, searchWord):
     # You are given an array of strings products and a string searchWord.
 
     # Design a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products.
@@ -25,6 +25,9 @@ def suggestedProducts(products: List[str], searchWord: str) -> List[List[str]]:
     res = []
     products.sort()
     print(products)
+    l, r = 0, len(searchWord)-1
+    for i in range(len(searchWord)):
+        curr = searchWord[i]
 
 
 products = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
