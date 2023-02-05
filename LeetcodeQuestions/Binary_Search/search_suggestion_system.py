@@ -15,3 +15,6 @@ class Solution:
 
         #  sort of stuck as to how i may approach the problem.
         #  Thus far i am thinking of a prefix tree that can help us derive the common products to the searchword.
+
+        #  so the way we solve the problem will involve using a bit of binary search indirectly
+        # We first sort
