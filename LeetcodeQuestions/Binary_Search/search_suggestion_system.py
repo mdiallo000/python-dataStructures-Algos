@@ -28,6 +28,10 @@ def suggestedProducts(products, searchWord):
     l, r = 0, len(searchWord)-1
     for i in range(len(searchWord)):
         curr = searchWord[i]
+        while l <=  r and (len(products) <= i or ):
+
+            for s in products[r]:
+                print(s)
 
 
 products = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
