@@ -32,6 +32,7 @@ def suggestedProducts(products, searchWord):
             l += 1
         while l <= r and (len(products) <= i or products[r][i] != curr):
             r -= 1
+        remain = r - l + 1
 
 
 products = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
