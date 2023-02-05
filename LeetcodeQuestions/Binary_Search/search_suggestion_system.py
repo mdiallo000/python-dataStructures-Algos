@@ -28,7 +28,7 @@ def suggestedProducts(products, searchWord):
     l, r = 0, len(searchWord)-1
     for i in range(len(searchWord)):
         curr = searchWord[i]
-        while l <=  r and (len(products) <= i or ):
+        while l <= r and (len(products) <= i or products[l][i] != curr):
 
             for s in products[r]:
                 print(s)
