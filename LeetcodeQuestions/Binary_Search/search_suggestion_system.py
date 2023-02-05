@@ -7,4 +7,11 @@ class Solution:
         # Return a list of lists of the suggested products after each character of searchWord is typed.
 
         #  The system needs to suggest not more than three product names from the list of products we are initially given
+
         #  We are looking for products that have a common prefix with the searchword that was given as well
+
+        #  ex: products = [mousepad, microphone, mackbook, iphone, chromebook, watch]
+        #  searchword = mackbook
+
+        #  sort of stuck as to how i may approach the problem.
+        #  Thus far i am thinking of a prefix tree that can help us derive the common products to the searchword.
