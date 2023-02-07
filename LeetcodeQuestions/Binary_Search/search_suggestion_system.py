@@ -35,6 +35,9 @@ def suggestedProducts(products, searchWord):
         remain = r - l + 1
         res.append([])
         for j in range(min(3, remain)):
+            res[-1].append(products[l + j])
+    print(res)
+    return res
 
 
 products = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
