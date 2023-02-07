@@ -16,7 +16,8 @@ class Solution:
                     return False
             return True
 
-        return check_negative(nums) and
+        return check_negative(nums) and check_positive(nums)
+    
         #  In actuality all i need to check is if its not monotonic in its composition
         #  So rather than attempting to see whether or not its monotonic lets see if it isnt
         #  so how will i do it?
