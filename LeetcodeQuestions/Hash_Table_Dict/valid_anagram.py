@@ -9,8 +9,11 @@ class Solution:
         # an anagram is defined as two words that have an equal amount of characters at the same frequency
         # So we can optimally solve this problem by getting a count of the two words and if they do then we have determined that these are anagrams of one another.
         #  simple pythonic solution:
-        return Counter(s) == Counter(t)
-    #  More fleshed out solution:
+        # return Counter(s) == Counter(t)
+
+        #  More fleshed out solution:
+        if len(s) != len(t):
+            return False
         t_count = defaultdict(int)
         s_count = defaultdict(int)
 
