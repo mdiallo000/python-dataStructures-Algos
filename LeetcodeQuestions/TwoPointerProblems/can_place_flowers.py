@@ -12,3 +12,20 @@ class Solution:
 
         #  the only thing thats comes to mind is kepping a count of the numbers as well as their position iniside of the list, but i cant see how that would solve the problem
         #  i dont see the naive approach either at this point into the problem
+
+        flowerbed.append(0)
+        flowerbed.insert(0, 0)
+        print(flowerbed)
+        if n == 0:
+            return True
+        for i in range(1, len(flowerbed)-1):
+            if flowerbed[i] == 1:
+                continue
+            if flowerbed[i-1] == 0 and flowerbed[i] == 0 and flowerbed[i+1] == 0:
+                flowerbed[i] = 1
+                n -= 1
+                if n == 0:
+                    return True
+        return False
+
+        #  my inital intuination was correct, but i overlooked one edge case where we could have a list like this [0,0,1]
