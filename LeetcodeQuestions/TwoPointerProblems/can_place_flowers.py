@@ -13,8 +13,7 @@ class Solution:
         #  the only thing thats comes to mind is kepping a count of the numbers as well as their position iniside of the list, but i cant see how that would solve the problem
         #  i dont see the naive approach either at this point into the problem
 
-        flowerbed.append(0)
-        flowerbed.insert(0, 0)
+        flowerbed = [0] + flowerbed + [0]
         print(flowerbed)
         if n == 0:
             return True
