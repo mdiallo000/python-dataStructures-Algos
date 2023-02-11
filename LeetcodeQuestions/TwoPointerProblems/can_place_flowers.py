@@ -28,4 +28,4 @@ class Solution:
                     return True
         return False
 
-        #  my inital intuination was correct, but i overlooked one edge case where we could have a list like this [0,0,1]
+        #  my initial intuition was correct, but i overlooked one edge case where we could have a list like this [0,0,1]
