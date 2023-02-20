@@ -4,14 +4,6 @@ class Solution:
         #  since we are looking for sub-arrays we should either do a two pointer or a sliding window
         window = set()
         res = 0
-        l, r = 0, k - 1
-        # while r < len(arr):
-        #     while l <= r:
-        #         window += arr[l]
-        #         l +=1
-        #     average =  window//k
-        #     if average >= threshold:
-        #         res +=1
-        #     r += k - 1
-        #     window = 0
-        # return res
+        l = 0
+
+        for r in range(len(arr)):
