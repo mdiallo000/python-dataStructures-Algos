@@ -6,3 +6,7 @@ class Solution:
         #  question worded kinda of weird
         #  i guess we need to dtermine the first and last occurence of the element that appears multiple times in the list
         left, right, count = {}, {}, Counter(nums)
+        for i, x in enumerate(nums):
+            if x not in left:
+                left[x] = i
+            right[x] = i
