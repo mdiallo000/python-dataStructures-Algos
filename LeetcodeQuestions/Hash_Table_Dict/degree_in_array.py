@@ -3,3 +3,6 @@
 class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:
         #  we need to find a contigous portion of the array that will contain the same degree of elems
+        #  question worded kinda of weird
+        #  i guess we need to dtermine the first and last occurence of the element that appears multiple times in the list
+        left, right, count = {}, {}, Counter(nums)
