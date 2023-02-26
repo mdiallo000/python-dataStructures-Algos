@@ -14,3 +14,8 @@ class Solution:
         ans = len(nums)
         degree = max(count.values())
         print(ans, degree, count)
+        for x in nums:
+            if count[x] == degree:
+                ans = min(ans, right[x] - left[x] + 1)
+
+        return ans
