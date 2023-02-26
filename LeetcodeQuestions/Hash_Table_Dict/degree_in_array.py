@@ -10,3 +10,7 @@ class Solution:
             if x not in left:
                 left[x] = i
             right[x] = i
+            # the left and right objects are meant to allow us to know where within the list we will find the start and end of the element
+        ans = len(nums)
+        degree = max(count.values())
+        print(ans, degree, count)
