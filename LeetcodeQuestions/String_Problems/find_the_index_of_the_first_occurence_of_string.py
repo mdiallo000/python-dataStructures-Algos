@@ -14,5 +14,5 @@ class Solution:
 
         if len(needle) > len(haystack):
             return -1
-        # we are essentially trying to seee if the word needle exists inside of haystack. I think a trie may work here but it might be overkill for this probelm. Since with a trie we can do some string matching
+        # we are essentially trying to see if the word needle exists inside of haystack. I think a trie may work here but it might be overkill for this problem. Since with a trie we can do some string matching
         #  the other idea that comes to mind is to use a sliding window and we can just check starting from each character if a window of len(needle) inside of haystack matches the word we are looking for
