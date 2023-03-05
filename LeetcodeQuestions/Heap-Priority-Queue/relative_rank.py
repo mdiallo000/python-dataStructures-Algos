@@ -35,17 +35,17 @@ class Solution:
         #  heap will look like like this [[-10,0], [-3, 1], [-8,2] ...]
 
         heapq.heapify(heap)
-        idx = 0
-        output = []
+        idx = 1
+        res = [0] * len(score)
         while heap:
             sc, pos = heapq.heappop(heap)
-            if idx == 0:
-                output.append([pos, "Gold Medal"])
             if idx == 1:
-                output.append([pos, "Silver Medal"])
+                res[pos] = "Gold Medal"
             if idx == 2:
-                output.append([pos, "Bronze Medal"])
+                res[pos] = "Silver Medal"
+            if idx == 3:
+                res[pos] = "Bronze Medal"
             else:
-                output.append([pos, str(idx)])
+                res[pos] = str(idx)
             idx += 1
-        res = [0] * len(score)
+        return res
