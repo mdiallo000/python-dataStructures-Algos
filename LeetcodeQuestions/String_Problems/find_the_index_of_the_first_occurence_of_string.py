@@ -16,7 +16,7 @@ class Solution:
             return -1
         # we are essentially trying to see if the word needle exists inside of haystack. I think a trie may work here but it might be overkill for this problem. Since with a trie we can do some string matching
         #  the other idea that comes to mind is to use a sliding window and we can just check starting from each character if a window of len(needle) inside of haystack matches the word we are looking for
-            # The downside is that this approach is higly inefficient due to all the  work we will need to do over and over again
+            # The downside is that this approach is highly inefficient due to all the  work we will need to do over and over again
         # However, what if we only consider searching a window if the first character happends to start with the first character of needle
         #  that may bring down the repetition a bit and increase efficiency
         haystack = [char for char in haystack]
