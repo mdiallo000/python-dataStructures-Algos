@@ -42,6 +42,10 @@ class Solution:
             if idx == 0:
                 output.append([pos, "Gold Medal"])
             if idx == 1:
-                output.append([pos, "Gold Medal"])
+                output.append([pos, "Silver Medal"])
             if idx == 2:
-                output.append([pos, "Gold Medal"])
+                output.append([pos, "Bronze Medal"])
+            else:
+                output.append([pos, str(idx)])
+            idx += 1
+        res = [0] * len(score)
