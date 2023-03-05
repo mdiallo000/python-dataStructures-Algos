@@ -31,3 +31,10 @@ class Solution:
         heap = []
         for i in range(len(score)):
             heap.append([-score[i]], i)
+
+        #  heap will look like like this [[-10,0], [-3, 1], [-8,2] ...]
+
+        heapq.heapify(heap)
+        idx = 0
+        output = []
+        while heap:
