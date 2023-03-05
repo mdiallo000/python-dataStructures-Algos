@@ -38,3 +38,4 @@ class Solution:
         idx = 0
         output = []
         while heap:
+            sc, pos = heapq.heappop(heap)
