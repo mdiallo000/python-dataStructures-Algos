@@ -39,3 +39,9 @@ class Solution:
         output = []
         while heap:
             sc, pos = heapq.heappop(heap)
+            if idx == 0:
+                output.append([pos, "Gold Medal"])
+            if idx == 1:
+                output.append([pos, "Gold Medal"])
+            if idx == 2:
+                output.append([pos, "Gold Medal"])
