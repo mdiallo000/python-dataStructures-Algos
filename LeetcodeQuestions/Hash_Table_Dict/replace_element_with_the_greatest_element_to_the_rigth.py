@@ -20,6 +20,5 @@ class Solution:
             temp = arr[i]
             arr[i] = curr_max
             curr_max = max(curr_max, temp)
-
         return arr
     #  This will be O(1) extra space and a linear algorithm

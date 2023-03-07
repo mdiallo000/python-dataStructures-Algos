@@ -5,6 +5,7 @@ class Solution:
         #  ex [5,2,c,d,+]
         #   [5] => 2[5,2] => c[ 5] => d[ 10] => +[5] => answer should 5
         #  5 => [5] => -2 [5,-2] =>4 [5,-2,4] => c [5, -2 ] => d [5 ,-4] => 9 [5,-4,9] => + [5,-4, 9, 5, 14] => + [18] => answer should be 18
+
         stack = []
 
         for char in operations:

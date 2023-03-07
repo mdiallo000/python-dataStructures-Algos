@@ -29,11 +29,7 @@ class Solution:
         #  what if i create an array with all the rankings in string format and then use that to attach it to the scores as a pop them off the list
         # medals =  ["Gold Medal", "Silver Medal"]
         heap = []
-        for i in range(len(score)):
-            heap.append([-score[i]], i)
-
         #  heap will look like like this [[-10,0], [-3, 1], [-8,2] ...]
-
         heapq.heapify(heap)
         idx = 1
         res = [0] * len(score)

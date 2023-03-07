@@ -14,7 +14,7 @@ class Solution:
         #  i dont see the naive approach either at this point into the problem
 
         flowerbed = [0] + flowerbed + [0]
-        print(flowerbed)
+
         if n == 0:
             return True
         for i in range(1, len(flowerbed)-1):
