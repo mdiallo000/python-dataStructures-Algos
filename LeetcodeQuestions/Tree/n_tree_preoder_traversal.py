@@ -23,7 +23,7 @@ class Solution:
         #  first off lets define preOrder tree traversal
         #  we will visit the current node
         #  next we will visit the left side, then we will visit the right side
-        # the problem is different from other binary search type questions since this one has a childrens field rather than the typical left, right arrangement
+        # the problem is different from other binary search type questions since this one has a children's field rather than the typical left, right arrangement
         #  i think each nodes will need a list where we can store its children nodes as well.
         #  okay now how do i go about traversing the tree and add each  node and its children
         #  so lets start from the root
