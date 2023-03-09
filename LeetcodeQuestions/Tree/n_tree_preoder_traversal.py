@@ -20,7 +20,15 @@ class TreeNode:
 # Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 class Solution:
     def preOderNthTree(root):
-
+        #  first off lets define preOrder tree traversal
+        #  we will visit the current node
+        #  next we will visit the left side, then we will visit the right side
+        # the problem is different from other binary search type questions since this one has a childrens field rather than the typical left, right arrangement
+        #  i think each nodes will need a list where we can store its children nodes as well.
+        #  okay now how do i go about traversing the tree and add each  node and its children
+        #  so lets start from the root
+        #  i add the current node in the list then i add a list for its children and then inside that list i will append all the child nodes.
+        #  next we will loop through this list and do the same thing over and over
         res = []
 
         def dfs(node):
