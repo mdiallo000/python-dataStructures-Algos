@@ -1,6 +1,6 @@
 
 class Solution:
-    #     Given the root of an n-ary tree, return the postorder traversal of its nodes' values.
+    #     Given the root of an n-ary tree, return the post_order traversal of its nodes' values.
 
     # Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)
 
