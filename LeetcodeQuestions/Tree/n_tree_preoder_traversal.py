@@ -1,3 +1,9 @@
+class TreeNode:
+    def __init__(self, val, children) -> None:
+        self.val = val
+        self.children = children
+
+
 class Solution:
     def preOderNthTree(root):
 
