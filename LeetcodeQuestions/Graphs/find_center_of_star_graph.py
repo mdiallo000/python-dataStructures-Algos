@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class Solution:
     #     There is an undirected star graph consisting of n nodes labeled from 1 to n. A star graph is a graph where there is one center node and exactly n - 1 edges that connect the center node with every other node.
 
