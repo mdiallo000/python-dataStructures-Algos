@@ -22,3 +22,7 @@ class Solution:
         #  all we need to do is use a hashtable
 
         count = defaultdict(int)
+
+        for u, v in edges:
+            count[u] += 1
+            count[v] += 1
