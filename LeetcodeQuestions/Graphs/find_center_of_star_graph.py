@@ -28,3 +28,6 @@ class Solution:
             count[v] += 1
 
         for node, edge in count.items():
+
+            if edge == len(edges):
+                return node
