@@ -32,4 +32,5 @@ class Solution:
             if edge == len(edges):
                 return node
     #  however i think we can use dfs to also find the center
-    #  we create the graph through an adjecency list and then keep track of
+    #  we create the graph through an adjacency list and then keep track of which nodes we have already seen
+    #  the center of the graph will be encountered a number of times
