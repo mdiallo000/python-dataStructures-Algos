@@ -16,3 +16,6 @@ class Solution:
     def findCenter(self, edges):
         #  the problem is actually pretty easy.
         #  The center will be the node with the most edges
+        #  all we need to do is use a hashtable
+
+        count = defaultdict(int)
