@@ -14,3 +14,5 @@ class Solution:
     # Output: 1
 
     def findCenter(self, edges):
+        #  the problem is actually pretty easy.
+        #  The center will be the node with the most edges
