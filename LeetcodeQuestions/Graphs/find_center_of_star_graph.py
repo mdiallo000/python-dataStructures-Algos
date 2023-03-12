@@ -26,3 +26,5 @@ class Solution:
         for u, v in edges:
             count[u] += 1
             count[v] += 1
+
+        for node, edge in count.items():
