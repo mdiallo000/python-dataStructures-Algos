@@ -38,3 +38,5 @@ class Solution:
 
             dfs(node.left, curr)
             dfs(node.right, curr)
+        dfs(root, [])
+        return res
