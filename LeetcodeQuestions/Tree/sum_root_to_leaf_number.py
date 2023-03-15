@@ -31,3 +31,7 @@ class Solution:
 
             if not node.left and not node.right:
                 s = "".join(curr + [str(node.val)])
+                res.append(s)
+                return
+
+            curr = curr + [str(node.val)]
