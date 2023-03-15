@@ -35,3 +35,6 @@ class Solution:
                 return
 
             curr = curr + [str(node.val)]
+
+            dfs(node.left, curr)
+            dfs(node.right, curr)
