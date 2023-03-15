@@ -31,7 +31,7 @@ class Solution:
 
             if not node.left and not node.right:
                 s = "".join(curr + [str(node.val)])
-                res.append(s)
+                res.append(int(s))
                 return
 
             curr = curr + [str(node.val)]
@@ -39,4 +39,4 @@ class Solution:
             dfs(node.left, curr)
             dfs(node.right, curr)
         dfs(root, [])
-        return res
+        return sum(res)
