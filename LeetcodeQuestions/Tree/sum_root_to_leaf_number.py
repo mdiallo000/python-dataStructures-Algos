@@ -30,3 +30,4 @@ class Solution:
                 return
 
             if not node.left and not node.right:
+                s = "".join(curr + [str(node.val)])
