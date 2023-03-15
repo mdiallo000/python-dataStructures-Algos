@@ -16,3 +16,7 @@ class Solution:
 
         preorder(root, 0)
         return total
+
+    def alternateMethod(self, root):
+
+        if not root:
