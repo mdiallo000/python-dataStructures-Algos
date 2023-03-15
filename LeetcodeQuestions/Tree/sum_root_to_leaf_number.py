@@ -28,3 +28,5 @@ class Solution:
 
             if not node:
                 return
+
+            if not node.left and not node.right:
