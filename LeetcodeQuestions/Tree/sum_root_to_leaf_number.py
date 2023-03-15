@@ -20,3 +20,11 @@ class Solution:
     def alternateMethod(self, root):
 
         if not root:
+            return 0
+
+        res = []
+
+        def dfs(node, curr):
+
+            if not node:
+                return
