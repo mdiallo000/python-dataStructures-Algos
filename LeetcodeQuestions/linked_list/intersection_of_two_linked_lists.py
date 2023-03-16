@@ -1,3 +1,3 @@
 class Solution:
 
-    def getIntersectionNode()
+    def getIntersectionNode(self, )
