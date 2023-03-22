@@ -10,3 +10,7 @@ class Solution:
         container = sorted(container, reverse=True)
 
         res = []
+
+        for h, n in container:
+            res.append(n)
+        return res
