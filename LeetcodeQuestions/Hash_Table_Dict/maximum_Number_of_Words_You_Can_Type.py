@@ -5,9 +5,11 @@ class Solution:
 
     def canBeTypedWord(self, text, brokenLetters):
 
-        map_words = defaultdict(set)
-        text = text.split(" ")
-
-        for w in text:
+        res = 0
+        for w in text.split(" "):
             for c in w:
-                map_words[w].add(c)
+                if c in brokenLetters:
+                    res -= 1
+                    break
+            res += 1
+        return res
