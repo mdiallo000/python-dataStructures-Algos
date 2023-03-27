@@ -1,3 +1,9 @@
+class ListNode:
+    def __init__(self, val) -> None:
+        self.val = val
+        self.next = None
+
+
 class Solution:
     #     # We’ll be given n lists that are all sorted in ascending order of popularity rank. We have to combine these lists into a single list that will be sorted by rank in ascending order, meaning from best to worst.
     # Since our task involves multiple lists, you should divide the problem into multiple tasks, starting with the problem of combining two lists at a time. Then, you should combine the result of those first two lists with the third list, and so on, until the very last one is reached.
