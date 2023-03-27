@@ -17,3 +17,5 @@ class Solution:
     # Connect the non-null list to the merged one and return.
 
     # # Let’s look at the code for the solution below:
+    #  this problem is essentially merge k list
+    #  we perform a routine merge between two lists
