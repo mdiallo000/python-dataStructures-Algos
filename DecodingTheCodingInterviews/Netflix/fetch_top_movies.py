@@ -42,4 +42,13 @@ class Solution:
         tail.next = l1 or l2
         return dummy.next
 
-    def MerKlist(self, heads):
+    def Merge_K_list(self, heads):
+        if len(heads) > 0:
+            curr = heads[0]
+
+            for i in range(1, len(heads)):
+
+                curr = self.mergeList(curr, heads[i])
+
+            return curr
+        return
