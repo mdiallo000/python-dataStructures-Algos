@@ -41,3 +41,5 @@ class Solution:
 
         tail.next = l1 or l2
         return dummy.next
+
+    def MerKlist(self, heads):
