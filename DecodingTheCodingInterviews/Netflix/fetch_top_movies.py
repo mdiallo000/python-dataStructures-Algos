@@ -1,5 +1,5 @@
 class ListNode:
-    def __init__(self, val) -> None:
+    def __init__(self, val):
         self.val = val
         self.next = None
 
@@ -26,3 +26,11 @@ class Solution:
     #  this problem is essentially merge k list
     #  we perform a routine merge between two lists
     def mergeList(self, l1, l2):
+        dummy = ListNode(-1)
+
+        tail = dummy
+
+        while l1 or l2:
+            if l1.val < l2.val:
+                tail.next, l1, =
+        tail.next = l1 or l2
