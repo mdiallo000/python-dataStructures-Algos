@@ -19,3 +19,4 @@ class Solution:
     # # Let’s look at the code for the solution below:
     #  this problem is essentially merge k list
     #  we perform a routine merge between two lists
+    def mergeList(self, l1, l2):
