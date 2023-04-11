@@ -57,6 +57,11 @@ class LinkedList:
     def insert_node(self, value, index):
         # with this method we are attempting to insert a node within the list.
         #  we can either insert from the head or the tail or in some position that lies within
+        if not self.head:
+            self.append_to_head(value)
+        if self.length == index:
+            self.append_to_tail(value)
+
         pass
 
     def pop(self):
