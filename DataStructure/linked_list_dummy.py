@@ -17,7 +17,17 @@ class LinkedList:
         self.length = None
 
     def append_to_head(self, value):
-        pass
+        #     so now we are trying to add a node to the head of the linked list
+        #  we can have two scenarios, one where the head is currently empty then in that case we would just set the head to point at the new node. Scenario two is the head is already occupied and we need to make the new node point at the head and then move the head pointer to be with the new node
+        if not self.head:
+            node = Node(value)
+            self.head = node
+            self.tail = node
+        else:
+
+            node = Node(value)
+            node.next = self.head
+            self.head = node
 
     def append_to_tail(self, value):
         pass
