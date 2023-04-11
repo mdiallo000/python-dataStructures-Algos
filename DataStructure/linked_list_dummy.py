@@ -44,7 +44,7 @@ class LinkedList:
             tail = node
             self.length += 1
 
-    def get_location(self, index):
+    def get_node(self, index):
         #  now we need to find where within the list a node may be located. with the use of an index we may pinpoint the nodes location by traversing the list until we reach the index position
 
         curr = self.head
@@ -65,7 +65,7 @@ class LinkedList:
         # the process  of inserting in between two nodes can be a bit complex.
         #  we would need to find the position of the node that occupies the
         else:
-            back_node = self.get_location(index-1)
+            back_node = self.get_node(index-1)
             node = Node(value)
             node.next = back_node.next
             back_node.next = node
