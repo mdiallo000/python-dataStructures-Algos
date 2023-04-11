@@ -15,6 +15,9 @@ class LinkedList:
 
         pass
 
+    def append_to_head(self, value):
+        pass
+
     def append_to_tail(self, value):
         pass
 
@@ -26,4 +29,13 @@ class LinkedList:
         pass
 
     def pop(self):
+        pass
+
+    def size(self):
+        pass
+
+    def remove_first_node(self):
+        pass
+
+    def print_list(self):
         pass
