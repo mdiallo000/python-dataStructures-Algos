@@ -24,3 +24,6 @@ class LinkedList:
     def insert_node(self, value, index):
 
         pass
+
+    def pop(self):
+        pass
