@@ -45,7 +45,11 @@ class LinkedList:
             self.length += 1
 
     def get_location(self, index):
-        pass
+        #  now we need to find where within the list a node may be located. with the use of an index we may pinpoint the nodes location by traversing the list until we reach the index position
+
+        curr = self.head
+        pos =
+        while
 
     def insert_node(self, value, index):
 
@@ -55,7 +59,8 @@ class LinkedList:
         pass
 
     def size(self):
-        pass
+        #  simply return the length of the linked list
+        return self.length
 
     def remove_first_node(self):
         pass
