@@ -49,10 +49,14 @@ class LinkedList:
 
         curr = self.head
         pos = 0
-        while
+        while pos != index:
+            cur = cur.next
+            pos += 1
+        return cur
 
     def insert_node(self, value, index):
-
+        # with this method we are attempting to insert a node within the list.
+        #  we can either insert from the head or the tail or in some position that lies within
         pass
 
     def pop(self):
