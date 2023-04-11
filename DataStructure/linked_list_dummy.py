@@ -64,6 +64,12 @@ class LinkedList:
 
         # the process  of inserting in between two nodes can be a bit complex.
         #  we would need to find the position of the node that occupies the
+        else:
+            back_node = self.get_location(index-1)
+            node = Node(value)
+            node.next = back_node.next
+            back_node.next = node
+            self.length += 1
 
     def pop(self):
         pass
