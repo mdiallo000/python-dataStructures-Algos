@@ -72,7 +72,8 @@ class LinkedList:
             self.length += 1
 
     def pop(self):
-        pass
+        if self.head:
+            self.head = self.head.next
 
     def size(self):
         #  simply return the length of the linked list
