@@ -9,12 +9,12 @@ class Node:
 
 
 class LinkedList:
-    # the linked list will need to know where the head of the list as well as the tail is located. Each intance of that
+    # the linked list will need to know where the head of the list as well as the tail is located. Each instance of that
 
     def __init__(self):
         self.head = None
         self.tail = None
-        self.length = None
+        self.length = 0
 
     def append_to_head(self, value):
         #     so now we are trying to add a node to the head of the linked list
@@ -23,11 +23,13 @@ class LinkedList:
             node = Node(value)
             self.head = node
             self.tail = node
+            self.length += 1
         else:
 
             node = Node(value)
             node.next = self.head
             self.head = node
+            self.length += 1
 
     def append_to_tail(self, value):
         pass
