@@ -6,3 +6,21 @@ class Node:
     def __init__(self, val) -> None:
         self.val = val
         self.next = None
+
+
+class LinkedList:
+    when
+
+    def __init__(self):
+
+        pass
+
+    def append_to_tail(self, value):
+        pass
+
+    def get_location(self, index):
+        pass
+
+    def insert_node(self, value, index):
+
+        pass
