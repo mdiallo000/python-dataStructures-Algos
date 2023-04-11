@@ -48,7 +48,7 @@ class LinkedList:
         #  now we need to find where within the list a node may be located. with the use of an index we may pinpoint the nodes location by traversing the list until we reach the index position
 
         curr = self.head
-        pos =
+        pos = 0
         while
 
     def insert_node(self, value, index):
@@ -66,4 +66,10 @@ class LinkedList:
         pass
 
     def print_list(self):
-        pass
+        #  printing the list is easy. All we need to do is traverse the list. Add all the node values into an array and then print the array once the traversal is over
+        res = []
+        curr = self.head
+        while curr:
+            res.append(curr.val)
+            curr = curr.next
+        print(res)
