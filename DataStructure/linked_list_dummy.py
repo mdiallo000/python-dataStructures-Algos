@@ -62,7 +62,8 @@ class LinkedList:
         if self.length == index:
             self.append_to_tail(value)
 
-        pass
+        # the process  of inserting in between two nodes can be a bit complex.
+        #  we would need to find the position of the node that occupies the
 
     def pop(self):
         pass
