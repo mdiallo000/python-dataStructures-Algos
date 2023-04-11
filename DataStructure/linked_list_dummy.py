@@ -9,11 +9,12 @@ class Node:
 
 
 class LinkedList:
-    when
+    # the linked list will need to know where the head of the list as well as the tail is located. Each intance of that
 
     def __init__(self):
-
-        pass
+        self.head = None
+        self.tail = None
+        self.
 
     def append_to_head(self, value):
         pass
