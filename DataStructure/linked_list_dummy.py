@@ -32,7 +32,17 @@ class LinkedList:
             self.length += 1
 
     def append_to_tail(self, value):
-        pass
+        #  what if we need to add a node to the end of the list how will we do it
+        #  i can think of two scenarios
+        #  we need to check if there is a head first probably, if there is no head then we should turn this method call to perform the append_to_tail method
+        #  now that we can safely assume that their is already a tail in the list we can then create a new node
+        if not self.head:
+            self.append_to_head(value)
+        else:
+            node = Node(value)
+            tail.next = node
+            tail = node
+            self.length += 1
 
     def get_location(self, index):
         pass
