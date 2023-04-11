@@ -63,7 +63,9 @@ class LinkedList:
         return self.length
 
     def remove_first_node(self):
-        pass
+        if self.head:
+            self.head = self.head.next
+            self.length -= 1
 
     def print_list(self):
         #  printing the list is easy. All we need to do is traverse the list. Add all the node values into an array and then print the array once the traversal is over
