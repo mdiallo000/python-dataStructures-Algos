@@ -72,8 +72,15 @@ class LinkedList:
             self.length += 1
 
     def pop(self):
-        if self.head:
-            self.head = self.head.next
+        #  we want to remove the last node from the linked list
+        curr = self.head
+
+        while curr.next.next:
+            curr = curr.next
+
+        curr.next = curr.next.next
+        self.tail = curr
+        self.length -= 1
 
     def size(self):
         #  simply return the length of the linked list
