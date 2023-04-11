@@ -14,7 +14,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-        self.
+        self.length = None
 
     def append_to_head(self, value):
         pass
