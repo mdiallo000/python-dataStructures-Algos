@@ -38,10 +38,10 @@ class MylinkedList:
         new_node = Node(value)
         if index == 0:
             return self.append_to_head(value)
-        
+
         if index == self.length:
             return self.append_to_tail(value)
-        
+
         back_node = self.get_location(index - 1)
         new_node.next = back_node.next
         back_node.next = new_node
@@ -80,13 +80,3 @@ class MylinkedList:
         while cur:
             print(cur.value)
             cur = cur.next
-
-
-data = MylinkedList()
-data.append_to_tail(2554)
-data.append_to_tail(0.35)
-data.append_to_tail(7)
-data.append_to_head(45)
-data.insert_node(100012, 2)
-data.remove_first_node()
-data.print_list()
