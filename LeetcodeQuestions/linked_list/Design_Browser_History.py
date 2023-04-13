@@ -21,6 +21,11 @@ class Solution:
         self.curr = self.browser
 
     def visit(self, url):
+        #  visiting a new site is essentially creating a new node and attaching it to the previous node
+        page = Node(url)
+        self.curr.next = page
+        page.prev = self.curr
+        self.curr = page
 
     def back(self, steps):
         pass
