@@ -5,3 +5,9 @@ class Solution:
 
     def visit(self, url):
         pass
+
+    def back(self, steps):
+        pass
+
+    def foward(self, steps):
+        pass
