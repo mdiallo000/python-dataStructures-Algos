@@ -17,10 +17,10 @@ class Node:
 class Solution:
 
     def __init__(self, homepage) -> None:
-        pass
+        self.browser = Node(homepage)
+        self.curr = self.browser
 
     def visit(self, url):
-        pass
 
     def back(self, steps):
         pass
