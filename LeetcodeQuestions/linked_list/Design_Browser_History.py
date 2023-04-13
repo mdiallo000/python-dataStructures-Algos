@@ -28,7 +28,12 @@ class Solution:
         self.curr = page
 
     def back(self, steps):
-        pass
+
+        #  we need to move back to our previous nodes however many times the steps integer would like
+        while steps and self.curr.prev:
+            self.curr = self.curr.prev
+            steps -= 1
+        return self.curr.val
 
     def forward(self, steps):
         pass
