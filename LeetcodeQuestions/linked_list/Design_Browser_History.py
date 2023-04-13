@@ -25,5 +25,5 @@ class Solution:
     def back(self, steps):
         pass
 
-    def foward(self, steps):
+    def forward(self, steps):
         pass
