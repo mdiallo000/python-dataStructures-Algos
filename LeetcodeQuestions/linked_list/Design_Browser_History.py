@@ -37,3 +37,7 @@ class Solution:
 
     def forward(self, steps):
         #  same thing as the above needs to happen but this time we need to use the next attribute
+        while steps and self.curr.next:
+            self.curr = self.curr.next
+            steps -= 1
+        return self.curr.val
