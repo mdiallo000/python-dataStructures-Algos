@@ -36,4 +36,4 @@ class Solution:
         return self.curr.val
 
     def forward(self, steps):
-        pass
+        #  same thing as the above needs to happen but this time we need to use the next attribute
