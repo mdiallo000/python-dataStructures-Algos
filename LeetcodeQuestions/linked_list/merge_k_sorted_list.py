@@ -30,5 +30,5 @@ class Solution:
         return dummy.next
 
 # Lessons learned
-    #  Could've been solved by making multiple comparissons with each node in the list, but that would lead to a complexity of N * k
+    #  Could've been solved by making multiple comparison with each node in the list, but that would lead to a complexity of N * k
     #  A better way of solving was to by pass all of these individual comparisons and use mergeSort technique, doing so will improve time complexity by N * log K
