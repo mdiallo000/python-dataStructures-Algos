@@ -30,3 +30,6 @@ def MergeSort(nums):
 
         left = nums[len(nums)//2:]
         right = nums[:len(nums)//2]
+
+        MergeSort(left)
+        MergeSort(right)
