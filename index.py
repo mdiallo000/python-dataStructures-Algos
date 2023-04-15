@@ -25,6 +25,8 @@ lst = [14, 7, 8, 12, 68, 45, 12, 32, 89, 41, 23]
 
 
 def MergeSort(nums):
+    #  we will continue dividing until there is one element left in the array
+    while len(nums) > 1:
 
-
-print(res)
+        left = nums[len(nums)//2:]
+        right = nums[:len(nums)//2]
