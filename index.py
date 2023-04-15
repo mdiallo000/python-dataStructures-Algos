@@ -33,3 +33,8 @@ def MergeSort(nums):
 
         MergeSort(left)
         MergeSort(right)
+
+    #  outside of this function
+    i = 0
+    j = 0
+    r = 0
