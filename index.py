@@ -48,3 +48,19 @@ def MergeSort(nums):
             nums[j] = right[r]
             r += 1
         j += 1
+    #  now we add the remaining elements in the array
+    while l < len(left):
+
+        nums[j] = left[l]
+        l += 1
+        j += 1
+
+    while r < len(right):
+        nums[j] = right[r]
+        r += 1
+        j += 1
+    return nums
+
+
+res = MergeSort(lst)
+print(res)
