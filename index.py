@@ -35,6 +35,16 @@ def MergeSort(nums):
         MergeSort(right)
 
     #  outside of this function
-    i = 0
+    l = 0
     j = 0
     r = 0
+
+    while r < len(right) and l < len(left):
+        if left[l] < right[r]:
+
+            nums[j] = left[l]
+            l += 1
+        else:
+            nums[j] = right[r]
+            r += 1
+        j += 1
