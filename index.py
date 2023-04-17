@@ -95,3 +95,7 @@ def selectionSort(nums):
     for i in range(len(nums)):
 
         minval = i
+        for j in range(1, len(nums)):
+
+            if nums[j] < nums[minval]:
+                minval = j
