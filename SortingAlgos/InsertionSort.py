@@ -7,7 +7,6 @@ def selection_sort(arr: int):
             arr[j+1] = arr[j]
             j -= 1
         arr[j+1] = key
-    print(arr)
     return arr
 
 
