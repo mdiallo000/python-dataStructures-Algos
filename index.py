@@ -103,3 +103,9 @@ def selectionSort(nums):
         tmp = nums[minval]
         nums[minval] = minval[i]
         minval[i] = tmp
+    return nums
+
+
+res = selectionSort(lst)
+
+print(res)
