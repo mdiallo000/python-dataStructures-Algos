@@ -99,3 +99,7 @@ def selectionSort(nums):
 
             if nums[j] < nums[minval]:
                 minval = j
+
+        tmp = nums[minval]
+        nums[minval] = minval[i]
+        minval[i] = tmp
