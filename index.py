@@ -6,20 +6,11 @@ from collections import Counter
 def bubbleSort(nums):
     #  bubble sort is a naive sorting algorithm that will sort the element in an array
     #  the time complexity that will result for performing the computation will be O(n^2)
+        for r in range(len(nums))
 
-    for r in range(len(nums)):
-
-        for j in range(r-1):
-            print(r, j)
-            if nums[j] > nums[j+1]:
-                tmp = nums[j]
-                nums[j] = nums[j+1]
-                nums[j+1] = tmp
         print(nums)
     return nums
 
-
-lst = [14, 7, 8, 12, 68, 45, 12, 32, 89, 41, 23]
 
 # res = bubbleSort(lst)
 
@@ -95,15 +86,18 @@ def selectionSort(nums):
     for i in range(len(nums)):
 
         minval = i
-        for j in range(1, len(nums)):
+        for j in range(i+1, len(nums)):
 
             if nums[j] < nums[minval]:
                 minval = j
-
-        tmp = nums[minval]
-        nums[minval] = minval[i]
-        minval[i] = tmp
+            if minval != i:
+                tmp = nums[minval]
+                nums[minval] = nums[i]
+                nums[i] = tmp
     return nums
+
+
+lst = [14, 7, 8, 12, 68, 45, 12, 32, 89, 41, 23]
 
 
 res = selectionSort(lst)
