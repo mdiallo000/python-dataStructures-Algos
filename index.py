@@ -90,4 +90,8 @@ def Merge(left, right):
 
 
 def selectionSort(nums):
+    #  selection sort is an naive sorting algorithm that looks for the minimum value and places it in front of the array
     # print(res)
+    for i in range(len(nums)):
+
+        minval = i
