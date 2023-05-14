@@ -46,4 +46,5 @@ def mergesort(arr):
 test = [1, 4, 57, 12, 1, 8, 76, 45, 12, 86, 35, 21]
 # print(mergesort(test))
 
-mergesort(test)
+res = mergesort(test)
+print(res)

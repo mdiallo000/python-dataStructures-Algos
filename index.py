@@ -3,13 +3,14 @@ from collections import Counter
 
 #  this will be a place where i will practice
 
-def bubbleSort(nums):
-    #  bubble sort is a naive sorting algorithm that will sort the element in an array
-    #  the time complexity that will result for performing the computation will be O(n^2)
-        for r in range(len(nums))
-
-        print(nums)
-    return nums
+# def bubbleSort(nums):
+#     #  bubble sort is a naive sorting algorithm that will sort the element in an array
+#     #  the time complexity that will result for performing the computation will be O(n^2)
+#         for r in range(len(nums)):
+#             for j in range():
+#                     pass
+#         print(nums)
+#     return nums
 
 
 # res = bubbleSort(lst)
@@ -101,5 +102,6 @@ lst = [14, 7, 8, 12, 68, 45, 12, 32, 89, 41, 23]
 
 
 res = selectionSort(lst)
-
-print(res)
+s = "hello my name is "
+print(s[0])
+# print(res)
