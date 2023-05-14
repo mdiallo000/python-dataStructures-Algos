@@ -13,3 +13,19 @@ class Solution:
         #  the other for the number of latenesses
 
         #  i will convert the string into a list of chars to iterate over them
+        counter = Counter(s)
+        print(counter['A'])
+        s = [char for char in s]
+        late = 0
+
+        for char in s:
+            if char == "L":
+                late += 1
+                if late == 3:
+                    break
+            else:
+                late = 0
+        if late < 3 and counter["A"] < 2:
+            return True
+        else:
+            return False
