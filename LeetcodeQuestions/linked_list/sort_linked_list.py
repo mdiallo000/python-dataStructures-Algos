@@ -18,3 +18,9 @@ class Solution:
             curr.val = n
             curr = curr.next
         return head
+
+
+class Answer:
+    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        #  we will essentially try to apply merge sort on the link list
