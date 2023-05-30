@@ -24,3 +24,4 @@ class Answer:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
         #  we will essentially try to apply merge sort on the link list
+        #  we will combine two techniques to get this done.
