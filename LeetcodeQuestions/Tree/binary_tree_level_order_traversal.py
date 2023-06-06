@@ -16,5 +16,16 @@ class Solution:
         # after we are done iterating over that level we will then add the node into the level list
 
         res = []
-        q = deque()
+        q = collections.deque()
         q.append(root)
+
+        while q:
+            size = len(q)
+            level = []
+            for _ in range(size):
+
+                node = q.popleft()
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
