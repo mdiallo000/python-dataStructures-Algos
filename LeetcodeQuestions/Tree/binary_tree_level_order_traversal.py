@@ -3,6 +3,13 @@
 import collections
 
 
+class TreeNode:
+    def __init__(self) -> None:
+        self.val = val
+        self.left = None
+        self.right = None
+
+
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         #  the level order traversal of a binary is one of the essential traversal algorithms
@@ -14,7 +21,8 @@ class Solution:
         #  once we pop a node out will then check whether the node has a left and right child node. If it does we add the children node inside of the queue
         #  the queue essentially keeps the order of the nodes based  on their levels
         # after we are done iterating over that level we will then add the node into the level list
-
+        if not root:
+            return []
         res = []
         q = collections.deque()
         q.append(root)
