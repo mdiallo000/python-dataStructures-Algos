@@ -20,4 +20,6 @@ class Solution:
         q = collections.deque()
         res = []
         q.append(root)
-        while q
+        while q:
+            size = len(q)
+            level = []
