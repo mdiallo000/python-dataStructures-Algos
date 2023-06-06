@@ -13,35 +13,7 @@ import re
 
 class Solution:
     def rightSideView_bfs(self, root: Optional[TreeNode]) -> List[int]:
-        #    result array
-        result = []
-        queue = collections.deque()
-        queue.append(root)
-    #  lets loop while there are still elements in our queue
-        while queue:
-            # lets get the length of the queue since we are only interested in looping at most each level
-            queue_length = len(queue)
-    #  lets keep track of the rightmost node in our queue, this is what we are interested in
-            right_side = None
-            for i in range(queue_length):
-                node = queue.popleft()
-                if node:
-                    right_side = node
-                    queue.append(node.left)
-                    queue.append(node.right)
-            if right_side:
-                result.append(right_side.val)
-        return result
-
-    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        if not root:
-            return None
-        result = []
-        right = self.rightSideView(root.right)
-        result.append(right)
-        return result
-
-    def getFrequency(lst):
-        freq = collections.defaultdict(int)
-        for wrd in lst:
-            freq[wrd[0]] += 1
+        #  this problem can be solved utilizing the same method used in finding the level order traversal of a binary tree
+        # This time however there is a small twist to it
+        # It would be really easy to just put the right child of the each node into the queue but that wouldn't really work
+        #
