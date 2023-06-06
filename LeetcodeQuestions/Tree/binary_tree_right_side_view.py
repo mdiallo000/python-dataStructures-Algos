@@ -13,7 +13,11 @@ import re
 
 class Solution:
     def rightSideView_bfs(self, root: Optional[TreeNode]) -> List[int]:
-        #  this problem can be solved utilizing the same method used in finding the level order traversal of a binary tree
+        # This problem can be solved utilizing the same method used in finding the level order traversal of a binary tree
         # This time however there is a small twist to it
         # It would be really easy to just put the right child of the each node into the queue but that wouldn't really work
         #
+        q = collections.deque()
+        res = []
+        q.append(root)
+        while q
