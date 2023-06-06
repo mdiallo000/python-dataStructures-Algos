@@ -10,5 +10,11 @@ class Solution:
         #  first we will add the root node into the queue
         #  we will run the traversal as long as there are items inside of the queue
         #  we will iterate over the queue and pop nodes out
-        #  once we pop a node out will then check whether the node has a left and right child node. If it does we add the children node inside of the quue
-        #  the queue essenetially keeps the order of the nodes based  on their levels
+        # we will initialize an levels array that will be filled up with every node in the tree
+        #  once we pop a node out will then check whether the node has a left and right child node. If it does we add the children node inside of the queue
+        #  the queue essentially keeps the order of the nodes based  on their levels
+        # after we are done iterating over that level we will then add the node into the level list
+
+        res = []
+        q = deque()
+        q.append(root)
