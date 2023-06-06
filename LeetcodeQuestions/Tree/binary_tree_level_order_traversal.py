@@ -29,3 +29,9 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
+                level.append(node.val)
+            # after we exit the loop we will then make a final check to make sure we are only adding none empty levels into our result array
+            if level:
+                res.append(level)
+
+        return res
