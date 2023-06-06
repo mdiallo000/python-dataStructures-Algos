@@ -4,7 +4,7 @@ import collections
 
 
 class TreeNode:
-    def __init__(self) -> None:
+    def __init__(self, val) -> None:
         self.val = val
         self.left = None
         self.right = None
