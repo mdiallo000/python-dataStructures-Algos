@@ -23,3 +23,5 @@ class Solution:
         while q:
             size = len(q)
             level = []
+
+            for _ in range(size):
