@@ -17,6 +17,7 @@ class Solution:
         # This time however there is a small twist to it
         # It would be really easy to just put the right child of the each node into the queue but that wouldn't really work
         # Thus far i sort of confused as to how i may proceed
+        #  okay my initial intuition is off since we dont actually need to consider the initilial test case i previously taught we had to look out for
         q = collections.deque()
         res = []
         q.append(root)
@@ -32,3 +33,7 @@ class Solution:
                         q.append(node.left)
                     if node.right:
                         q.append(node.right)
+            if right:
+                res.append(right)
+
+        return res
