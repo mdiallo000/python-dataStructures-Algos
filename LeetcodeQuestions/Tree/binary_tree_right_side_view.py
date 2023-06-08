@@ -26,8 +26,9 @@ class Solution:
 
             for _ in range(size):
                 node = q.popleft()
-
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
+                if node:
+                    right = node.val
+                    if node.left:
+                        q.append(node.left)
+                    if node.right:
+                        q.append(node.right)
