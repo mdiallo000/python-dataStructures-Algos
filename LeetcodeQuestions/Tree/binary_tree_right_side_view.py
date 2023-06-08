@@ -16,13 +16,13 @@ class Solution:
         # This problem can be solved utilizing the same method used in finding the level order traversal of a binary tree
         # This time however there is a small twist to it
         # It would be really easy to just put the right child of the each node into the queue but that wouldn't really work
-        #
+        # Thus far i sort of confused as to how i may proceed
         q = collections.deque()
         res = []
         q.append(root)
         while q:
             size = len(q)
-            level = []
+            right = None
 
             for _ in range(size):
                 node = q.popleft()
