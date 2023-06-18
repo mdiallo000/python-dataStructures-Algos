@@ -2,3 +2,10 @@
 class Solution:
 
     def findMinDifference(root):
+        res = []
+
+        def inorder(node):
+            if not node:
+                return
+
+            inorder(node.left)
