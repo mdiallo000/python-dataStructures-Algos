@@ -9,3 +9,5 @@ class Solution:
                 return
 
             inorder(node.left)
+            res.append(node.val)
+            inorder(node.right)
