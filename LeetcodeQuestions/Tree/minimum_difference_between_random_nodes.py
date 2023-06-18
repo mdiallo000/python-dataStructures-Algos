@@ -1,7 +1,15 @@
 # Find the minimum difference between two nodes in the binary search tree
+
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
 class Solution:
 
-    def findMinDifference(root):
+    def findMinDifference(self, root):
         res = []
 
         def inorder(node):
