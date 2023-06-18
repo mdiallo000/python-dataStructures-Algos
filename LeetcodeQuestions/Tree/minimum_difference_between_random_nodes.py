@@ -11,3 +11,10 @@ class Solution:
             inorder(node.left)
             res.append(node.val)
             inorder(node.right)
+        inorder(root)
+
+        minVal = max(res)
+
+        for i in range(1, len(res)):
+            minVal = min(minVal, res[i] - res[i-1])
+        return minVal
