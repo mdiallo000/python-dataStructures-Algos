@@ -35,7 +35,13 @@ class SeatManager:
     def __init__(self, n: int):
         self.heap = [-val for val in range(1, n+1)]
         self.heapq.heapify(self.heap)
+        print(self.heap)
 
     def reserve(self) -> int:
+        #  the function will just return the lowest numbered table within the heap, this will be easy to do with a min heap since the lowest numbered table will be root of the tree
+        val = heapq.heappop(self.heap)
+        return -val
 
     def unreserve(self, seatNumber: int) -> None:
+        #  to unreserve a table all we need to is put it back into the heap but make sure the number is negated
+        heapq.heappush(-seatNumber)
