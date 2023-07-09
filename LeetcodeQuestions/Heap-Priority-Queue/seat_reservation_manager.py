@@ -33,6 +33,8 @@ class SeatManager:
     #  the heapq will follow the min heap behavior
 
     def __init__(self, n: int):
+        self.heap = [-val for val in range(1, n+1)]
+        self.heapq.heapify(self.heap)
 
     def reserve(self) -> int:
 
