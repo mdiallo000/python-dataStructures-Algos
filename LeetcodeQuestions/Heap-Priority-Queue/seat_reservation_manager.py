@@ -6,7 +6,7 @@ import heapq
 
 # SeatManager(int n) Initializes a SeatManager object that will manage n seats numbered from 1 to n. All seats are initially available.
 # int reserve() Fetches the smallest-numbered unreserved seat, reserves it, and returns its number.
-# void unreserve(int seatNumber) Unreserves the seat with the given seatNumber.
+# void unreserve(int seatNumber) Unreserve the seat with the given seatNumber.
 
 
 # Example 1:
@@ -35,15 +35,15 @@ class SeatManager:
     #  the heapq will follow the min heap behavior
 
     def __init__(self, n: int):
-        self.heap = [-val for val in range(1, n+1)]
+        self.heap = [val for val in range(1, n+1)]
         self.heapq.heapify(self.heap)
         print(self.heap)
 
     def reserve(self) -> int:
         #  the function will just return the lowest numbered table within the heap, this will be easy to do with a min heap since the lowest numbered table will be root of the tree
         val = heapq.heappop(self.heap)
-        return -val
+        return val
 
     def unreserve(self, seatNumber: int) -> None:
         #  to unreserve a table all we need to is put it back into the heap but make sure the number is negated
-        heapq.heappush(-seatNumber)
+        heapq.heappush(self.heap, seatNumber)
