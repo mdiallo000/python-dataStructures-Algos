@@ -23,7 +23,8 @@
 
 # so we need to create an object which functions like a parking system.
 # With just two functions to do the bulk of the work
-# the init function takes in three arguments, big, medium, small, these will be integers that will let us no how much of each parking spot type is still available
+# the init function takes in three arguments, big, medium, small, these will be integers that will let us no how much of each parking spot type is still available. So right away i am thinking of some type of hastable where we can have the three types of parking spots as the keys and then we will map for its value the amount of spaces that have been allocated for that slot.
+# Now how do i deal with the fact that the ints 1,2,3 will represent the types again, maybe i can do some type of conversition to map
 class ParkingSystem:
 
     def __init__(self, big: int, medium: int, small: int):
